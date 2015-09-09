@@ -1,0 +1,101 @@
+/* IMPORT RESET */
+@import url("reset.css");
+
+/* IMPORT 12 COLUMN RESPONSIVE GS */
+@import url("responsive.gs.12col.css");
+
+/* Font - Bell Centennial Std */
+
+@font-face {
+    font-family: 'BellCentennialStdAddress_6527';
+    src: url('fonts/BellCentennialStdAddress_6527.eot');
+    src: url('fonts/BellCentennialStdAddress_6527.eot') format('embedded-opentype'),
+         url('fonts/BellCentennialStdAddress_6527.woff2') format('woff2'),
+         url('fonts/BellCentennialStdAddress_6527.woff') format('woff'),
+         url('fonts/BellCentennialStdAddress_6527.ttf') format('truetype'),
+         url('fonts/BellCentennialStdAddress_6527.svg#BellCentennialStdAddress_6527') format('svg');
+}
+
+/* Colours */
+
+/* Purple : #d40c86 */
+/* Orange : #f1b21a */
+
+
+/*	EXAMPLE STYLES */
+body {
+	font-family: sans-serif;
+	color: white;
+	background-color: black;
+	font-family: 'BellCentennialStdAddress_6527';
+	font-size: 72px;
+}
+
+i {
+	color: #d40c86;
+}
+
+h2, em {
+	color: #f1b21a;
+}
+
+h2{
+	text-align: center;
+	margin-top: 1em;
+}
+
+header {
+	line-height: 15em;
+	text-align: center;
+	/*background: #333;*/
+}
+
+
+article.first {
+	margin-top: 4em;
+}
+
+article {
+	line-height: 1.2em;
+	height: 8em;
+	text-align: center;
+	/*background: #666;*/
+}
+
+aside {
+	line-height: 20em;
+	text-align: center;
+	/*background: #999;*/
+}
+
+footer {
+	line-height: 15em;
+	text-align: center;
+	/*background: #BBB;*/
+}
+
+.introduction {
+    height:100vh;
+    width: 100%;
+    background: url('../images/stripe.png') no-repeat center center; 
+    background-color: #201d1e;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    position: relative;
+}
+
+a:link,
+a:visited,
+a:active,
+a:hover {
+	color: #04DC70;
+	text-decoration: none;
+	border-bottom: 6px solid #04DC70;
+}
+
+a:hover {
+	color: #72FFB9;
+}
+
