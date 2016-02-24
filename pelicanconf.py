@@ -6,6 +6,7 @@ AUTHOR = u'Team Droste'
 SITENAME = u'Droste'
 SITEURL = ''
 
+THEME = 'theme'
 PATH = 'content'
 
 TIMEZONE = 'Asia/Hong_Kong'
