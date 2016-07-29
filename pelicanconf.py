@@ -6,7 +6,6 @@ AUTHOR = u'Team Droste'
 SITENAME = u'Droste'
 SITEURL = ''
 
-THEME = 'theme'
 PATH = 'content'
 
 TIMEZONE = 'Asia/Hong_Kong'
@@ -30,7 +29,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

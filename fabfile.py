@@ -12,7 +12,7 @@ env.deploy_path = 'output'
 DEPLOY_PATH = env.deploy_path
 
 # Remote server configuration
-production = 'io@localhost:22'
+production = 'root@localhost:22'
 dest_path = '/var/www'
 
 # Rackspace Cloud Files configuration settings
