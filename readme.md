@@ -11,6 +11,12 @@ npm install semantic-ui --save # Install JS dependencies
 
 ### Theme Development
 
+Theme development is done in line with `SemanticUI` [best practices](http://semantic-ui.com/usage/theming.html).
+
+Source files for the theme are in `src` which build the pelican theme which is generated in `themes/drostehk`.
+
+**Never make changes in `themes/drostehk` directly**
+
 From the project root
 
 #### Build all files:
