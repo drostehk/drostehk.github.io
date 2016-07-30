@@ -1,5 +1,14 @@
 # Pelican : Droste.hk
 
+### Installation
+
+```
+git clone git@github.com:drostehk/drostehk.github.io.git # Clone repository
+cd drostehk.github.io && git checkout src # Checkout development branch
+conda env create -n drostehk -f environment.yml # Install python dependencies
+npm install semantic-ui --save # Install JS dependencies
+```
+
 ### Theme Development
 
 From the project root
