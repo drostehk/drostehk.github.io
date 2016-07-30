@@ -4,11 +4,15 @@
 
 From the project root
 
+#### Generation for Development
+
 ```bash
 pelican # generates the site into the `ourput` folder
 # or
 make html
 ```
+
+#### Live Reload
 
 ```bash
 pelican -r # tell Pelican to watch for your modifications
@@ -16,11 +20,7 @@ pelican -r # tell Pelican to watch for your modifications
 make regenerate
 ```
 
-```bash
-pelican content -s publishconf.py # generate for production
-# or
-make publish
-```
+#### Web Server with Live Reload
 
 ```bash
 ./develop_server.sh start # generate & run server
@@ -28,6 +28,17 @@ make publish
 # or
 make devserver
 ```
+
+#### Publish to Github Pages
+
+```bash
+pelican content -s publishconf.py # generate for production
+ghp-import -b master output
+git push origin master
+# or
+make github
+```
+
 
 #### Config Options
 

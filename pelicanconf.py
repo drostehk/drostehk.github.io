@@ -35,7 +35,8 @@ PLUGINS = [] # See http://docs.getpelican.com/en/3.6.3/plugins.html#plugins
 PLUGIN_PATHS = []
 
 # TEMPLATE_PAGES = None # See http://docs.getpelican.com/en/3.6.3/settings.html#template-pages
-# STATIC_PATHS = ['images', 'pdfs']
+STATIC_PATHS = ['images', 'pdfs']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 TYPOGRIFY = True
 # TYPOGRIFY_IGNORE_TAGS = []
@@ -103,3 +104,12 @@ DISPLAY_PAGES_ON_MENU = True
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+# Plugins 
+
+PLUGIN_PATH = './plugins'
+PLUGINS = ['ipynb.markup']
+
+# Jupyter Plugin
+
+MARKUP = ('md', 'ipynb')
