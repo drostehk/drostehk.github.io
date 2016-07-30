@@ -31,12 +31,12 @@ PATH = 'content'
 # PAGE_PATHS = ['pages']
 # PAGE_EXCLUDES = []
 
-PLUGINS = [] # See http://docs.getpelican.com/en/3.6.3/plugins.html#plugins
-PLUGIN_PATHS = []
-
 # TEMPLATE_PAGES = None # See http://docs.getpelican.com/en/3.6.3/settings.html#template-pages
-STATIC_PATHS = ['images', 'pdfs']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+STATIC_PATHS = ['images', 'extra']
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': {'path': 'CNAME'},
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+}
 
 TYPOGRIFY = True
 # TYPOGRIFY_IGNORE_TAGS = []
@@ -107,9 +107,10 @@ DISPLAY_PAGES_ON_MENU = True
 
 # Plugins 
 
-PLUGIN_PATH = './plugins'
-PLUGINS = ['ipynb.markup']
+PLUGINS = ['ipynb.markup'] # See http://docs.getpelican.com/en/3.6.3/plugins.html#plugins
+PLUGIN_PATHS = ['./plugins']
 
 # Jupyter Plugin
 
 MARKUP = ('md', 'ipynb')
+IGNORE_FILES = ['.ipynb_checkpoints']

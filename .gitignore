@@ -1,4 +1,6 @@
 *.pyc
 node_modules/
 output/
-semantic/dist/
+themes/
+.ipynb_checkpoints/
+
