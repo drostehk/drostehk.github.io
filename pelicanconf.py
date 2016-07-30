@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-
+from pelican.readers import HTMLReader
 
 # Basic Settings
 
@@ -17,7 +17,7 @@ USE_FOLDER_AS_CATEGORY = False
 DEFAULT_CATEGORY = 'general'
 # DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
-DEFAULT_METADATA = {}
+# DEFAULT_METADATA = {}
 
 DELETE_OUTPUT_DIRECTORY = True
 
@@ -28,20 +28,21 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # OUTPUT_PATH = 'output/'
 PATH = 'content'
-# PAGE_PATHS = ['pages']
-# PAGE_EXCLUDES = []
+PAGE_PATHS = ['pages']
+
+READERS = {"html": HTMLReader}
 
 # TEMPLATE_PAGES = None # See http://docs.getpelican.com/en/3.6.3/settings.html#template-pages
-STATIC_PATHS = ['images', 'extra']
+STATIC_PATHS = ['extra/CNAME', 'extra/favicon.ico']
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     'extra/favicon.ico': {'path': 'favicon.ico'},
 }
 
-TYPOGRIFY = True
+TYPOGRIFY = False
 # TYPOGRIFY_IGNORE_TAGS = []
 
-DIRECT_TEMPLATES = ['index', 'categories', 'archives']
+# DIRECT_TEMPLATES = ['index', 'categories', 'archives']
 # PAGINATED_DIRECT_TEMPLATES = ['index']
 # EXTRA_TEMPLATES_PATHS = []
 
@@ -51,8 +52,8 @@ DIRECT_TEMPLATES = ['index', 'categories', 'archives']
 
 # Url Settings
 
-# ARTICLE_URL = '{slug}.html'
-# ARTICLE_SAVE_AS = '{slug}.html'
+ARTICLE_URL = 'posts/{slug}.html'
+ARTICLE_SAVE_AS = 'posts/{slug}.html'
 # ARTICLE_LANG_URL = '{slug}-{lang}.html'
 # ARTICLE_LANG_SAVE_AS = '{slug}-{lang}.html'
 # DRAFT_URL = 'drafts/{slug}.html'
@@ -64,9 +65,9 @@ DIRECT_TEMPLATES = ['index', 'categories', 'archives']
 # PAGE_LANG_URL = 'pages/{slug}-{lang}.html'
 # PAGE_LANG_SAVE_AS = 'pages/{slug}-{lang}.html'
 # CATEGORY_URL = 'category/{slug}.html'
-# CATEGORY_SAVE_AS = 'category/{slug}.html'
+CATEGORY_SAVE_AS = ''
 # TAG_URL = 'tag/{slug}.html'
-# TAG_SAVE_AS = 'tag/{slug}.html'
+TAG_SAVE_AS = ''
 # AUTHOR_URL = 'author/{slug}.html'
 AUTHOR_SAVE_AS = ''
 # YEAR_ARCHIVE_SAVE_AS = '' 
@@ -78,17 +79,28 @@ AUTHOR_SAVE_AS = ''
 # YEAR_ARCHIVE_SAVE_AS = '' 
 # MONTH_ARCHIVE_SAVE_AS = '' 
 # DAY_ARCHIVE_SAVE_AS = '' 
-# AUTHORS_SAVE_AS = 'authors.html'
-# CATEGORIES_SAVE_AS = 'categories.html'
-# TAGS_SAVE_AS = 'tags.html'
+AUTHORS_SAVE_AS = ''
+CATEGORIES_SAVE_AS = ''
+TAGS_SAVE_AS = ''
 # INDEX_SAVE_AS = 'index.html'
 
 # Themes
 
-# THEME = 'themes/drostehk' # See http://docs.getpelican.com/en/3.6.3/themes.html
-THEME_STATIC_DIR = 'theme'
+THEME = 'themes/drostehk' # See http://docs.getpelican.com/en/3.6.3/themes.html
+THEME_STATIC_DIR = 'static'
 THEME_STATIC_PATHS = ['static']
-CSS_FILE = 'main.css'
+CSS_FILE = 'semantic.min.css'
+JS_FILE = 'semantic.min.js'
+
+# DROSTE.HK Settings
+
+MENUITEMS = [
+    ('Services', 'pages/services.html'),
+    ('Case Studies', 'pages/casestudies.html'),
+    ('Playground', 'pages/playground.html'),
+    ('About Us', 'pages/about.html')
+]
+
 
 # Feeds
 
