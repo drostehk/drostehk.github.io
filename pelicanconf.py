@@ -15,7 +15,7 @@ DEFAULT_LANG = u'en'
 
 USE_FOLDER_AS_CATEGORY = False
 DEFAULT_CATEGORY = 'general'
-# DISPLAY_PAGES_ON_MENU = True
+DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
 # DEFAULT_METADATA = {}
 
@@ -26,9 +26,9 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # MD_EXTENSIONS = ['codehilite(css_class=highlight)','extra'] # See http://pythonhosted.org/Markdown/extensions/
 
-# OUTPUT_PATH = 'output/'
 PATH = 'content'
 PAGE_PATHS = ['pages']
+OUTPUT_PATH = 'output/'
 
 READERS = {"html": HTMLReader}
 
@@ -84,16 +84,23 @@ CATEGORIES_SAVE_AS = ''
 TAGS_SAVE_AS = ''
 # INDEX_SAVE_AS = 'index.html'
 
+# Feeds
+
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
+
 # Themes
 
 THEME = 'themes/drostehk' # See http://docs.getpelican.com/en/3.6.3/themes.html
 THEME_STATIC_DIR = 'static'
 THEME_STATIC_PATHS = ['static']
-CSS_FILE = 'semantic.min.css'
-JS_FILE = 'semantic.min.js'
 
-# DROSTE.HK Settings
+# DROSTEHK THEME SETTINGS
 
+# Add 'We're Hiring'
 MENUITEMS = [
     ('Services', 'pages/services.html'),
     ('Case Studies', 'pages/casestudies.html'),
@@ -101,28 +108,15 @@ MENUITEMS = [
     ('About Us', 'pages/about.html')
 ]
 
-
-# Feeds
-
-# Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
-
-DEFAULT_PAGINATION = True
-DISPLAY_PAGES_ON_MENU = True
-
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+CSS_FILE = 'semantic.min.css'
+JS_FILE = 'semantic.min.js'
 
 # Plugins 
 
 PLUGINS = ['ipynb.markup'] # See http://docs.getpelican.com/en/3.6.3/plugins.html#plugins
 PLUGIN_PATHS = ['./plugins']
 
-# Jupyter Plugin
+# JUPYTER PLUGIN SETTINGS
 
 MARKUP = ('md', 'ipynb')
 IGNORE_FILES = ['.ipynb_checkpoints']
