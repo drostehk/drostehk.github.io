@@ -1,5 +1,21 @@
 # Pelican : Droste.hk
 
+### Theme Development
+
+From the project root
+
+#### Build all files:
+
+```bash
+gulp build
+```
+
+##### To watch for changes
+
+```
+gulp watch
+```
+
 ### Site Generation
 
 From the project root
