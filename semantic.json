@@ -8,12 +8,12 @@
       "themes": "src/themes/"
     },
     "output": {
-      "packaged": "themes/drostehk/",
-      "uncompressed": "themes/drostehk/components/",
-      "compressed": "themes/drostehk/components/",
-      "themes": "dist/themes/"
+      "packaged": "themes/drostehk/static/",
+      "uncompressed": "themes/drostehk/static/components/",
+      "compressed": "themes/drostehk/static/components/",
+      "themes": "themes/drostehk/static/themes/"
     },
-    "clean": "dist/"
+    "clean": "themes/drostehk/static/"
   },
   "permission": false,
   "autoInstall": false,
