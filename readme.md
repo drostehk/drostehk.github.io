@@ -2,16 +2,21 @@
 
 ## Installation
 
+### Clone Repo & Submodules from Github
 ```
-git clone git@github.com:drostehk/drostehk.github.io.git # Clone repository
-cd drostehk.github.io && git checkout src # Checkout development branch
+git clone git@github.com:drostehk/drostehk.github.io.git
+cd drostehk.github.io && git checkout src
 git submodule update --init --recursive
 ```
+
+### Install python dependencies
 ```
-conda env create -n drostehk -f environment.yml # Install python dependencies
+conda env create -n drostehk -f environment.yml
 ```
+
+### Install JS dependencies
 ```
-npm install semantic-ui --save # Install JS dependencies
+npm install semantic-ui --save
 ```
 
 ## Project Structure
