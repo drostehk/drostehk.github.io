@@ -122,6 +122,6 @@ PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
 ## Liquid-style Tags
 
 NOTEBOOK_DIR = 'notebooks'
-EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
+# EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
 
 
