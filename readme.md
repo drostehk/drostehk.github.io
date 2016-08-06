@@ -16,14 +16,12 @@ npm install semantic-ui --save # Install JS dependencies
 
 ## Project Structure
 
-```
+```bash
 drostehk.github.io
 |-- content # posts for the blog
-|   |-- < Markdown & Jupyter Notebook posts >
+|   |-- <# Markdown & Jupyter Notebook posts #>
 |   |-- extra
-|   |   `-- < Misc files - explicitly mapped to output in pelicanconf.py >
-|   |-- pages
-|   |   `-- < ?? Static pages ??>
+|   |   `-- <# Misc files - explicitly mapped to output in pelicanconf.py #>
 |-- develop_server.sh 
 |-- environment.yml # Conda Environement with Python Dependencies
 |-- gulpfile.js # Gulp Tasks
