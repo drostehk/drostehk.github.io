@@ -90,7 +90,7 @@ Source files for the theme are in `src` from which the pelican theme is generate
 
 The two LESS stylesheets you will most commonly edit are:
 
-```
+```bash
 src/site/globals/site.variables # Change SemanticUI Defaults
 src/site/globals/site.overrides # Additional Styles
 ```
