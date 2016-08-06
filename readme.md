@@ -18,10 +18,9 @@ npm install semantic-ui --save # Install JS dependencies
 
 ```bash
 drostehk.github.io
-|-- content # posts for the blog
-|   |-- <# Markdown & Jupyter Notebook posts #>
-|   |-- extra
-|   |   `-- <# Misc files - explicitly mapped to output in pelicanconf.py #>
+|-- content # Markdown posts for the blog
+|   |-- extra # Misc files - explicitly mapped to output in pelicanconf.py
+|   `-- notebooks # Jupyter notebooks
 |-- develop_server.sh 
 |-- environment.yml # Conda Environement with Python Dependencies
 |-- gulpfile.js # Gulp Tasks
@@ -64,7 +63,6 @@ drostehk.github.io
 |   `-- watch.js
 `-- themes
     `-- drostehk
-
 ```
 
 
@@ -106,7 +104,7 @@ gulp build
 
 ##### To watch for changes in the `src` directory
 
-```
+```bash
 gulp watch
 ```
 
@@ -116,7 +114,7 @@ Site development isdone following the conventions for `Pelican` [themes](http://
 
 The Jinja templates are located at `themes/drostehk/templates`. Inspect the following three Jinja templates to get an idea of the site structure:
 
-```
+```bash
 themes/drostehk/templates/base.html # All pages should extend the base template
 themes/drostehk/templates/index.html # The landing page
 themes/drostehk/templates/blog.html # An example of a `list` view
@@ -164,7 +162,10 @@ make github
 
 ## Content Development
 
-Content can be marked up in Markdown or as Jupyter Notebooks. Both should be added to `content/`.
+Content can be marked up in Markdown or as Jupyter Notebooks:
+
+* **Markdown** posts should be added to `content/`.
+* **Notebook** posts should be added to `content/notbooks/` with a Markdown posts referencing them.
 
 Content can be extended through [Liquid Tags](https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags#liquid-style-tags).
 
