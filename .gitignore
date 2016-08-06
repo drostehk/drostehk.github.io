@@ -4,4 +4,4 @@ output/
 .ipynb_checkpoints/
 _nb_header.html
 *.pid
-/drostehk/static/
+themes/drostehk/static/
