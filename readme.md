@@ -12,7 +12,9 @@ git submodule update --init --recursive
 ### Install python dependencies
 ```
 conda env create -n drostehk -f environment.yml
+source activate drostehk
 ```
+**NOTE** : You should always run `source activate drostehk` when running the pelican project locally as it activated the conda environment with all the python dependencies in it.
 
 ### Install JS dependencies
 ```
