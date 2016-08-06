@@ -1,6 +1,5 @@
 *.pyc
 node_modules/
 output/
-themes/
 .ipynb_checkpoints/
 
