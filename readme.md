@@ -41,8 +41,8 @@ drostehk.github.io
 |   |   |-- collections # A heterogeneous group of several elements which can usually be found together.
 |   |   |-- elements # A basic building block of a website
 |   |   |-- globals # Styles that are applied across the site.
-|   |   |   |-- reset.overrides # 
-|   |   |   |-- reset.variables
+|   |   |   |-- reset.overrides # ignore
+|   |   |   |-- reset.variables # ignore
 |   |   |   |-- site.overrides # additional CSS rules to be added to a definition for a theme. 
 |   |   |   `-- site.variables #  theme-wide defaults that each component can extend.
 |   |   |-- modules # An element where its behavior is an essential part of its definition
