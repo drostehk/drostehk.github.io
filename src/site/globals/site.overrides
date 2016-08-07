@@ -12,6 +12,15 @@
 div.prompt.input_prompt {
 	display: none;
 }
+p {
+	text-align: left;
+}
+
+.entry-content {
+	h1,h2,h3,h4,h5,h6 {
+		text-align: left;
+	}
+}
 
 div.input_area {
   border: 1px solid #cfcfcf;
