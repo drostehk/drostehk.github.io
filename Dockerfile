@@ -7,14 +7,14 @@ RUN curl -sL https://deb.nodesource.com/setup_4.x | /bin/bash -
 
 RUN apt-get install -y nodejs
 
+RUN npm install --global gulp-cli
+
 COPY ./ /var/www/drostehk
 
 WORKDIR /var/www/drostehk
 
 RUN conda env create -n drostehk -f environment.yml
 
-RUN ["/bin/bash", "-c", "set -x && ./setup.sh"]
-
 EXPOSE 8000
 
-ENTRYPOINT ["/bin/bash", "-c", "./start_dev.sh"]
+ENTRYPOINT ["/bin/bash", "-c", "set -x && ./start_dev.sh"]
