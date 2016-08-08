@@ -188,6 +188,6 @@ Content can be extended through [Liquid Tags](https://github.com/getpelican/peli
 1. git clone git@github.com:drostehk/drostehk.github.io.git
 2. cd drostehk.github.io && git checkout src
 3. git submodule update --init --recursive
-4. [Install Docker native](http://www.docker.com/products/overview)
+4. [Install Docker native](http://www.docker.com/products/overview) **Note:** If you're on a Mac you will need to install the latest [Docker for Mac Beta](https://docs.docker.com/docker-for-mac/) until version 1.13 is available because of [an issue with running npm install on volumes](https://forums.docker.com/t/npm-install-doesnt-complete-inside-docker-container/12640/24).
 5. Run docker-compose up
 6. After it finishes, [connect](http://localhost:8000)
