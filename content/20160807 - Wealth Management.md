@@ -7,11 +7,13 @@ Category: Case-Studies
 We have been working together with a well-established and successful wealth management company to automate their workflow. Automation is saving their team a significant amount of time, improving the accuracy of their reporting, allowing them to focus on engaging with their clients, and providing a more accelerated and deeper understanding of their business.
 
 We initially met with the company in early 2015 to discuss how we could work together to address some of the organization's pain points and optimize their workflows through automation. During discussions with the team we identified key problems that they wanted to solve including:
+
 - Reducing the amount of time employees spent manually checking and entering data feeds received from fund custodians.
 - Reducing errors introduced during manual entry of information received from clients and custodians.
 - Accelerating and improving the accuracy of their client reporting process.
 
 Through our discussions we also discovered that we could provide additional value to the company beyond solving these problems. By transitioning their data collection, processing and analysis from an Excel and Access-based workflows to a customizable web service where all of their data was consolidated, it would now be possible to:
+
 - Understand their clients and business more holistically.
 - Create dashboards and visualizations to help them better understand and react to changes in client portfolios.
 - Validate entered information to reduce manual entry errors.
