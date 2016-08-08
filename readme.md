@@ -183,7 +183,7 @@ Content can be extended through [Liquid Tags](https://github.com/getpelican/peli
 * [Available Pelican Plugins](https://github.com/getpelican/pelican-plugins#pelican-plugins)
 
 
-#### Alternative install / setup / run option.
+## Alternative install / setup / run option.
 
 1. [Install Docker native](http://www.docker.com/products/overview)
 2. Run docker-compose up
