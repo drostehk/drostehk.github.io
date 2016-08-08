@@ -183,8 +183,11 @@ Content can be extended through [Liquid Tags](https://github.com/getpelican/peli
 * [Available Pelican Plugins](https://github.com/getpelican/pelican-plugins#pelican-plugins)
 
 
-## Alternative install / setup / run option.
+## Alternative Docker install / setup / run option.
 
-1. [Install Docker native](http://www.docker.com/products/overview)
-2. Run docker-compose up
-3. After it finishes, [connect](http://localhost:8000)
+1. git clone git@github.com:drostehk/drostehk.github.io.git
+2. cd drostehk.github.io && git checkout src
+3. git submodule update --init --recursive
+4. [Install Docker native](http://www.docker.com/products/overview)
+5. Run docker-compose up
+6. After it finishes, [connect](http://localhost:8000)
