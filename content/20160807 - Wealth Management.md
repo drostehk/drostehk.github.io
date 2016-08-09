@@ -1,6 +1,7 @@
 Title: Creating additional value by automating wealth management
 Date: 2016-08-07 17:30
 Category: Case-Studies
+Summary: We have been working together with a well-established and successful wealth management company to automate their workflow.
 
 ## Background
 
