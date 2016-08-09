@@ -50,6 +50,7 @@ dependencies:
   - backports-abc==0.4
   - backports.shutil-get-terminal-size==1.0.0
   - backports.ssl-match-hostname==3.4.0.2
+  - beautifulsoup4
   - blinker==1.4
   - docutils==0.12
   - feedgenerator==1.8
