@@ -1,0 +1,14 @@
+# This config is only for development and never for a remote environment.
+version: '2'
+
+services:
+  drostehk:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: drostehk
+    image: droste/drostehk
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/var/www/drostehk

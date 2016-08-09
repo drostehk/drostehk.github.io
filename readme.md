@@ -28,17 +28,17 @@ drostehk.github.io
 |-- content # Markdown posts for the blog
 |   |-- extra # Misc files - explicitly mapped to output in pelicanconf.py
 |   `-- notebooks # Jupyter notebooks
-|-- develop_server.sh 
+|-- develop_server.sh
 |-- environment.yml # Conda Environement with Python Dependencies
 |-- gulpfile.js # Gulp Tasks
 |-- Makefile # Make Tasks
 |-- node_modules # Node Dependencies - don't edit
-|-- pelicanconf.py # Main config 
+|-- pelicanconf.py # Main config
 |-- plugins # Submodules - don't edit
 |-- publishconf.py # Config file with additional settings for production
 |-- readme.md # You are here
-|-- semantic.json # Config file for Semantic UI 
-|-- src # CSS Styles 
+|-- semantic.json # Config file for Semantic UI
+|-- src # CSS Styles
 |   |-- definitions # SemanticUI defaults - ignore
 |   |-- semantic.less # ignore
 |   |-- site
@@ -47,7 +47,7 @@ drostehk.github.io
 |   |   |-- globals # Styles that are applied across the site.
 |   |   |   |-- reset.overrides # ignore
 |   |   |   |-- reset.variables # ignore
-|   |   |   |-- site.overrides # additional CSS rules to be added to a definition for a theme. 
+|   |   |   |-- site.overrides # additional CSS rules to be added to a definition for a theme.
 |   |   |   `-- site.variables #  theme-wide defaults that each component can extend.
 |   |   |-- modules # An element where its behavior is an essential part of its definition
 |   |   `-- views # A way to present common website content like comments, activity feeds
@@ -181,3 +181,13 @@ Content can be extended through [Liquid Tags](https://github.com/getpelican/peli
 
 * [Available Markdown Extensions](http://pythonhosted.org/Markdown/extensions/)
 * [Available Pelican Plugins](https://github.com/getpelican/pelican-plugins#pelican-plugins)
+
+
+## Alternative Docker install / setup / run option.
+
+1. git clone git@github.com:drostehk/drostehk.github.io.git
+2. cd drostehk.github.io && git checkout src
+3. git submodule update --init --recursive
+4. [Install Docker native](http://www.docker.com/products/overview) **Note:** If you're on a Mac you will need to install the latest [Docker for Mac Beta](https://docs.docker.com/docker-for-mac/) until version 1.13 is available because of [an issue with running npm install on volumes](https://forums.docker.com/t/npm-install-doesnt-complete-inside-docker-container/12640/24).
+5. Run docker-compose up
+6. After it finishes, [connect](http://localhost:8000)

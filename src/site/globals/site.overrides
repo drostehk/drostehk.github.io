@@ -2,7 +2,9 @@
         Droste Overrides
 *******************************/
 
-
+.pusher {
+    margin-top: 3.7rem
+}
 
 /*******************************
         Jupyter Notebooks
