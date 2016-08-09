@@ -1,8 +1,8 @@
 Title: Markdown Test Post
 Slug: md-test
 Date: 2016-08-10 14:00
-Category: posts
-Tags: markdown test
+Category: Posts
+Tags: markdown, test
 Author: Team Droste 
 Summary: Test post featuring everything markdown can create!
 

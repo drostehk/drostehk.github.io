@@ -3,7 +3,52 @@
 *******************************/
 
 .pusher {
-    margin-top: 3.7rem
+    margin-top: 3.7rem;
+}
+
+.hentry {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.entry-title {
+    position: absolute;
+    top: 290px;
+    left: 200px;
+    width: 100%;
+    color: #fff;
+    text-shadow: #000 .1em .1em .2em;
+ }
+
+.post-info {
+    position: absolute;
+    top: 318px;
+    left: 200px;
+    width: 100%;
+}
+
+.cell {
+	position: relative;
+	.dark {
+		display: none;
+		background: black;
+		opacity: 0.3;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&:hover .dark {
+		display: block;
+	}
+	&:hover img {
+		opacity: 0.8;
+	}
+}
+
+img {
+	width: 100%;
 }
 
 /*******************************
@@ -19,6 +64,9 @@ p {
 }
 
 .entry-content {
+	width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 	h1,h2,h3,h4,h5,h6, ul, ol {
 		text-align: left;
 	}
@@ -28,8 +76,14 @@ div.input_area {
   border: 1px solid #cfcfcf;
   border-radius: 2px;
   background: #f7f7f7;
-  line-height: 1.21429em;
-  text-align: left;
+  line-height: 1.7;
+}
+
+.text_cell_render.border-box-sizing.rendered_html {
+	font-size: 1.2rem;
+	ol, ul, p {
+		line-height: 1.7;
+	}
 }
 
 div.inner_cell {
@@ -68,9 +122,15 @@ a.anchor-link {
 	}
 }
 
+/* Output prompt inline */
+.prompt.output_prompt {
+    float: left;
+}
+
 /* Syntax highlighting */
 .highlight { 
-	background: #f8f8f8; 
+	background: #f8f8f8;
+	margin-left: 1%; 
 	.hll { background-color: #ffffcc }
 	.c { color: #408080; font-style: italic } /* Comment */
 	.err { border: 1px solid #FF0000 } /* Error */
