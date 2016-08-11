@@ -6,8 +6,8 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    container_name: drostehk
-    image: droste/drostehk
+    container_name: drostehk-github-io
+    image: drostehk/drostehk-github-io
     ports:
       - "8000:8000"
     volumes:
