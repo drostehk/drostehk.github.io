@@ -1,4 +1,4 @@
-FROM continuumio/anaconda:4.1.1
+FROM continuumio/anaconda3:4.1.1
 MAINTAINER Bill McCord <bill@droste.hk>
 
 RUN apt-get update && apt-get install -y curl make
