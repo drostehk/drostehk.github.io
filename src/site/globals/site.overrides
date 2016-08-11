@@ -6,25 +6,16 @@
     margin-top: 3.7rem;
 }
 
-.hentry {
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-.entry-title {
+.meta-text {
     position: absolute;
-    top: 290px;
-    left: 200px;
+    top: 50%;
+    left: 10%;
     width: 100%;
     color: #fff;
-    text-shadow: #000 .1em .1em .2em;
  }
 
-.post-info {
-    position: absolute;
-    top: 318px;
-    left: 200px;
-    width: 100%;
+.meta-text .entry-title {
+	text-shadow: #000 .1em .1em .2em;
 }
 
 .cell {
@@ -50,6 +41,11 @@
 img {
 	width: 100%;
 }
+
+.eight.wide.column {
+	height: 614px;
+}
+
 
 /*******************************
         Jupyter Notebooks
