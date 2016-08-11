@@ -42,10 +42,6 @@ img {
 	width: 100%;
 }
 
-.eight.wide.column {
-	height: 614px;
-}
-
 
 /*******************************
         Jupyter Notebooks
