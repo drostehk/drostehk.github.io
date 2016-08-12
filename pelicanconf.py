@@ -33,11 +33,12 @@ OUTPUT_PATH = 'output/'
 READERS = {"html": HTMLReader}
 
 # TEMPLATE_PAGES = None # See http://docs.getpelican.com/en/3.6.3/settings.html#template-pages
-STATIC_PATHS = ['extra/CNAME', 'extra/favicon.ico','img']
+STATIC_PATHS = ['extra/CNAME', 'extra/favicon.ico','img','fonts']
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     'extra/favicon.ico': {'path': 'favicon.ico'},
-    'img': {'path': 'img'}
+    'img': {'path': 'img'},
+    'fonts': {'path': 'static/fonts'}
 }
 
 TYPOGRIFY = False

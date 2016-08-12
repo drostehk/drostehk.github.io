@@ -15,6 +15,7 @@
  }
 
 .meta-text .entry-title {
+	font-size: 52px;
 	text-shadow: #000 .1em .1em .2em;
 }
 
@@ -47,21 +48,108 @@ img {
         Jupyter Notebooks
 *******************************/
 
-/* Hide line numbers */
-div.prompt.input_prompt {
-	display: none;
-}
-p {
-	text-align: left;
+
+@font-face {
+    font-family: 'Cooper Hewitt' ;
+    src: url(../fonts/CooperHewitt-Medium.otf);
 }
 
-.entry-content {
-	width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-	h1,h2,h3,h4,h5,h6, ul, ol {
-		text-align: left;
-	}
+@font-face {
+    font-family: 'Cooper Hewitt Bold' ;
+    src: url(../fonts/CooperHewitt-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Cooper Hewitt Light' ;
+    src: url(../fonts/CooperHewitt-Light.otf);
+}
+
+.container {
+    width:96% !important;
+    font-family: 'Cooper Hewitt','Source Sans Pro', 'Open Sans', 'Helvetica', Sans;
+}
+
+.text_cell_render h1 {
+    text-align: center;
+    font-family: 'Cooper Hewitt Light';
+    font-size: 52px;
+}
+
+h2, h3 {
+    font-family: 'Cooper Hewitt Bold';
+}
+
+.text_cell_render p,
+.text_cell_render h2,
+.text_cell_render h3,
+.text_cell_render h4,
+.text_cell_render ul,
+.text_cell_render ol,
+.text_cell_render table {
+    max-width: 860px;
+    margin: 0 auto;
+    line-height: 30px;
+}
+
+.text_cell_render p,
+.text_cell_render ul,
+.text_cell_render ol,
+.text_cell_render table {
+    font-family: 'Cooper Hewitt' ;
+    font-size: 20px;
+    padding-bottom : 26px;
+}
+
+.text_cell_render h4 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.text_cell.rendered .input_prompt {
+    display : none !important;
+}
+
+.text_cell_render table {
+    width: 860px;
+    margin: 26px auto;
+    text-align: center;
+}
+
+.text_cell_render td,
+.text_cell_render th {
+    padding: 8px;
+    text-align: center;
+}
+
+.text_cell_render table thead {
+    background-color: #333;
+    color: white;
+    font-family: 'Cooper Hewitt Light';
+    text-align: center;
+}
+
+.CodeMirror {
+    padding: 8px 20px;
+}
+.CodeMirror pre {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+div.output_text pre {
+    color: #333;
+    font-size: 18px;
+    line-height: 26px;
+}
+.output_png img{
+    margin: 0 auto;
+    margin-top: 12px;
+    display: block;
+    min-width: 600px;
+}
+
+div.prompt.input_prompt {
+	display: none;
 }
 
 div.input_area {
@@ -69,13 +157,9 @@ div.input_area {
   border-radius: 2px;
   background: #f7f7f7;
   line-height: 1.7;
-}
-
-.text_cell_render.border-box-sizing.rendered_html {
-	font-size: 1.2rem;
-	ol, ul, p {
-		line-height: 1.7;
-	}
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 div.inner_cell {
@@ -104,14 +188,6 @@ div.cell {
   border-left-width: 1px;
   padding-left: 5px;
   background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
-}
-
-/* Only show anchor links on hover */
-a.anchor-link {
-	opacity: 0;
-	&:hover {
-		opacity: 1;
-	}
 }
 
 /* Output prompt inline */
@@ -190,4 +266,5 @@ a.anchor-link {
 	.vi { color: #19177C } /* Name.Variable.Instance */
 	.il { color: #666666 }
 }
+
 
