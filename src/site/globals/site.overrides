@@ -8,15 +8,17 @@
 
 .meta-text {
     position: absolute;
-    top: 50%;
+    bottom: 2%;
     left: 10%;
-    width: 100%;
-    color: #fff;
+    // width: 100%;
+    // color: #fff;
+    background: rgba(0,0,0,0.1);
+    padding: 10px;
  }
 
 .meta-text .entry-title {
-	font-size: 52px;
-	text-shadow: #000 .1em .1em .2em;
+	font-size: 20px;
+	// text-shadow: #000 .1em .1em .2em;
 }
 
 .cell {
@@ -41,6 +43,15 @@
 
 img {
 	width: 100%;
+}
+
+
+/*******************************
+        Index Page
+*******************************/
+.index_container {
+  width: 65%;
+  margin: auto;
 }
 
 
@@ -76,7 +87,10 @@ img {
 }
 
 h2, h3 {
-    font-family: 'Cooper Hewitt Bold';
+    // font-family: 'Cooper Hewitt Bold';
+    a {
+      color: black;
+    }
 }
 
 .text_cell_render p,

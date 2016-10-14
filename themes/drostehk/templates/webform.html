@@ -1,0 +1,36 @@
+{% extends "base.html" %} 
+{% block content %}
+<section id="form">
+{% block content_title %}
+<h2>All articles - in webform</h2>
+{% endblock %}
+
+  <div class="ui middle aligned center aligned grid">
+    <h2 class="column">
+        <img src="assets/images/logo.png" class="image">
+        <div class="content">
+            Log-in to your account
+      </div>
+    </h2>
+    <form class="ui teal image header">
+      <div class="ui stacked segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="email" placeholder="E-mail address" style="cursor: auto;">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="Password" style="cursor: auto;">
+          </div>
+        </div>
+        <div class="ui fluid large teal submit button">Login</div>
+      </div>
+    </form>
+    <div class="ui message"></div>
+  </div>
+</section>
+<!-- /#content -->
+{% endblock content %}
