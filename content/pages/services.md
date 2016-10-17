@@ -1,4 +1,4 @@
-Title: Services
+Title: Case Studies
 Slug: services
 Date: 2016-10-17 22:00
 Category: pages, static

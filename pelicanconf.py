@@ -33,10 +33,10 @@ OUTPUT_PATH = 'output/'
 READERS = {"html": HTMLReader}
 
 # TEMPLATE_PAGES = None # See http://docs.getpelican.com/en/3.6.3/settings.html#template-pages
-TEMPLATE_PAGES = {
-    'playground.html': 'themes/drostehk/templates/playground.html',
-    'about.html': 'themes/drostehk/templates/about.html'
-}
+# TEMPLATE_PAGES = {
+#     'themes/drostehk/templates/playground.html': 'themes/drostehk/templates/playground.html',
+#     'themes/drostehk/templates/about.html': 'themes/drostehk/templates/about.html'
+# }
 STATIC_PATHS = ['extra/CNAME', 'extra/favicon.ico','img','fonts']
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
@@ -50,7 +50,7 @@ TYPOGRIFY = False
 
 # DIRECT_TEMPLATES = ['index', 'categories', 'archives']
 # PAGINATED_DIRECT_TEMPLATES = ['index']
-# EXTRA_TEMPLATES_PATHS = []
+EXTRA_TEMPLATES_PATHS = ['templates']
 
 # SUMMARY_MAX_LENGTH = 50
 

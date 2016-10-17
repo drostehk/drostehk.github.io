@@ -5,9 +5,9 @@
     <h2 class="ui center aligned header">All articles</h2>
     {% endblock %}
 
-    {% if articles_page is defined %}
+    {% if articles is defined %}
     <div class="ui stackable two column grid">
-        {% for article in articles_page.object_list %}
+        {% for article in articles %}
         {% if loop.first %}
         <div class="sixteen wide column">
             <!-- <div class="cell">
@@ -55,8 +55,6 @@
             {% endif %}
             {% endfor %}
         </div>
-    {% else %}
-      <div>There is nothing in the article_pages variable</div>
     {% endif %}
     </section><!-- /#content -->
     {% endblock content %}

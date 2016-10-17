@@ -78,6 +78,7 @@ img {
 .container {
     width:96% !important;
     font-family: 'Cooper Hewitt','Source Sans Pro', 'Open Sans', 'Helvetica', Sans;
+    margin: auto;
 }
 
 .text_cell_render h1 {

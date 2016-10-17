@@ -1,58 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<section id="content" class="index_container">
-    {% block content_title %}
-    <h2 class="ui center aligned header">All articles</h2>
-    {% endblock %}
+    <section id="content" class="index_container">
+        {% block content_title %}
+        <h2 class="ui center aligned header">Kickass Graphic</h2>
+        {% endblock %}
 
-    <div class="ui stackable two column grid">
-        {% for article in articles_page.object_list %}
-        {% if loop.first %}
-        <div class="sixteen wide column">
-            <!-- <div class="cell">
-                <div class="dark"></div> -->
-                <article class="hentry">
-                    {% if article.featured_image %}
-                    <img src="{{ article.featured_image }}">
-                    {% endif %}
-                    <div class="meta-text">
-                        <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
-                        <footer class="post-info">
-                            <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
-                            <address class="vcard author">by
-                                {% for author in article.authors %}
-                                <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                                {% endfor %} in {{ article.category }}
-                            </address>
-                        </footer><!-- /.post-info -->
-                    </div>
-                </article>
-            <!-- </div> -->
-            </div>
-            {% else %} 
-            <div class="eight wide column">
-<!--                 <div class="cell">
-                    <div class="dark"></div> -->
-                    <article class="hentry">
-                        {% if article.featured_image %}
-                        <img src="{{ article.featured_image }}">
-                        {% endif %}
-                        <div class="meta-text">
-                            <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
-                            <footer class="post-info">
-                                <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
-                                <address class="vcard author">by
-                                    {% for author in article.authors %}
-                                    <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                                    {% endfor %} in {{ article.category }}
-                                </address>
-                            </footer><!-- /.post-info -->
-                        </div>
-                    </article>
-                <!-- </div> -->
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
+        <img src="/img/stripe.png">
     </section><!-- /#content -->
-    {% endblock content %}
+
+    <style type="text/css">         
+    </style>
+{% endblock content %}

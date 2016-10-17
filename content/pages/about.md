@@ -6,6 +6,7 @@ Tags: about
 Author: Team Droste 
 Summary: About Us
 Image: /img/price-vs-carat.png
+Template: about
 
 
 **Data Science** is creative problem solving with data as the raw material
@@ -20,3 +21,4 @@ We help companies **define** and **implement** strategies to make data part of t
 
 [logo]: /img/stripe.png "Logo"
 
+ACTUALLY THIS IS NOT BEING REFERENCED BY THE TEMPLATE NOW ------
