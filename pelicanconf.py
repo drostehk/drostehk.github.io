@@ -27,12 +27,16 @@ DELETE_OUTPUT_DIRECTORY = True
 # MD_EXTENSIONS = ['codehilite(css_class=highlight)','extra'] # See http://pythonhosted.org/Markdown/extensions/
 
 PATH = 'content'
-PAGE_PATHS = ['pages']
+# PAGE_PATHS = ['pages']
 OUTPUT_PATH = 'output/'
 
 READERS = {"html": HTMLReader}
 
 # TEMPLATE_PAGES = None # See http://docs.getpelican.com/en/3.6.3/settings.html#template-pages
+TEMPLATE_PAGES = {
+    'playground.html': 'themes/drostehk/templates/playground.html',
+    'about.html': 'themes/drostehk/templates/about.html'
+}
 STATIC_PATHS = ['extra/CNAME', 'extra/favicon.ico','img','fonts']
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
@@ -104,10 +108,10 @@ THEME_STATIC_PATHS = ['static']
 
 # Add 'We're Hiring'
 MENUITEMS = [
-    ('Services', 'pages/services.html'),
-    ('Case Studies', 'pages/casestudies.html'),
-    ('Playground', 'pages/playground.html'),
-    ('About Us', 'pages/about.html')
+    ('Services', '/pages/services.html'),
+    ('Case Studies', '/pages/casestudies.html'),
+    ('Playground', '/pages/playground.html'),
+    ('About Us', '/pages/about.html')
 ]
 
 CSS_FILE = 'semantic.min.css'
