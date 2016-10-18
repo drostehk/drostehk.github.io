@@ -5,6 +5,7 @@ Category: pages, static
 Tags: 'case studies'
 Author: Team Droste 
 Summary: Case Studies Placeholder
+Template: casestudies
 
 
 Some pretty stuff here

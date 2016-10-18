@@ -130,4 +130,7 @@ PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
 NOTEBOOK_DIR = 'notebooks'
 # EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
 
+# cache may be playing with my reload
+# http://docs.getpelican.com/en/3.6.3/faq.html
+LOAD_CONTENT_CACHE = False
 

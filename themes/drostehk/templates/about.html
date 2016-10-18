@@ -8,10 +8,23 @@
     {% endblock %}
 
     <div>Here is a page about us</div>
+    <p>Here is some info about the page {{page.title}}</p>
 
+    <p> 
     {% for article in articles %}
         {{ article.title }}
     {% endfor %}
+    </p>
+    hihi
+    <p>
+    {% for page in pages %}
+        {{ page.title }}
+    {% endfor %}
+    </p>
+
+    <div>
+        {{page.content}}
+    </div>
 
     <div>
         <h2>Company Intro</h2>

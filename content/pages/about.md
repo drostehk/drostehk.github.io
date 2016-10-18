@@ -21,4 +21,3 @@ We help companies **define** and **implement** strategies to make data part of t
 
 [logo]: /img/stripe.png "Logo"
 
-ACTUALLY THIS IS NOT BEING REFERENCED BY THE TEMPLATE NOW ------
