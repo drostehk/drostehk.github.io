@@ -7,7 +7,12 @@ Author: Team Droste
 Summary: About Us
 Image: /img/price-vs-carat.png
 Template: about
-
+DalePic: /img/dale.jpg
+DaleBlurb: Lorem ipsum dolor sit amet, an vidisse aperiri vim, everti offendit pro at, nam no indoctum repudiare. An populo melius praesent vis, dicta scribentur qui ei. No his exerci epicurei electram, ad sit vidisse voluptua constituto. Tollit laoreet per an, hinc quaeque quo ea, paulo nostrum nec ei.
+DaleCallout: This is Dale's special quote
+BillPic: /img/bill.jpg
+BillBlurb: Lorem ipsum dolor sit amet, an vidisse aperiri vim, everti offendit pro at, nam no indoctum repudiare. An populo melius praesent vis, dicta scribentur qui ei. No his exerci epicurei electram, ad sit vidisse voluptua constituto. Tollit laoreet per an, hinc quaeque quo ea, paulo nostrum nec ei.
+BillCallout: This is a special quote from Bill
 
 **Data Science** is creative problem solving with data as the raw material
 

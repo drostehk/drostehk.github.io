@@ -1,54 +1,138 @@
 {% extends "base.html" %}
 {% block content %}
-<section id="content">
+  <section id="content">
+    <div class="container">
+      {% block content_title %}
+        <h2>About Us</h2>
+      {% endblock %}
 
-<div class="container">
-    {% block content_title %}
-    <h2>About Us</h2>
-    {% endblock %}
 
-    <div>Here is a page about us</div>
-    <p>Here is some info about the page {{page.title}}</p>
+      <div class="ui item">
+        Team Stuff
+      </div>
 
-    <p> 
-    {% for article in articles %}
-        {{ article.title }}
-    {% endfor %}
-    </p>
-    hihi
-    <p>
-    {% for page in pages %}
-        {{ page.title }}
-    {% endfor %}
-    </p>
 
-    <div>
+      <!-- Dale left image -->
+      <div class="ui items">
+        <div class="item">
+          <div class="image">
+            <img class="ui image profile_pic" src="{{page.dalepic}}">
+          </div>
+          <div class="content">
+            <div class="header">
+              Dale Foo
+            </div>
+            <div class="ui label callout">
+              {{page.dalecallout}}
+            </div>
+            <div class="description">
+              This is a blurb.
+              {{page.daleblurb}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bill right image -->
+      <div class="ui items">
+        <div class="item">
+          <div class="content">
+            <div class="header">
+              Bill McCord
+            </div>
+            <div class="ui label callout">
+              {{page.billcallout}}
+            </div>
+            <div class="description">
+              This is a blurb.
+              {{page.billblurb}}
+            </div>
+          </div>
+          <div class="image">
+            <img class="ui image profile_pic" src="{{page.dalepic}}">
+          </div>
+        </div>
+      </div>
+
+      <!-- Dale left image -->
+      <div class="ui items">
+        <div class="item">
+          <div class="image">
+            <img class="ui image profile_pic" src="{{page.dalepic}}">
+          </div>
+          <div class="content">
+            <div class="header">
+              Dale Foo
+            </div>
+            <div class="ui label callout">
+              {{page.dalecallout}}
+            </div>
+            <div class="description">
+              This is a blurb.
+              {{page.daleblurb}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bill right image -->
+      <div class="ui items">
+        <div class="item">
+          <div class="content">
+            <div class="header">
+              Bill McCord
+            </div>
+            <div class="ui label callout">
+              {{page.billcallout}}
+            </div>
+            <div class="description">
+              This is a blurb.
+              {{page.billblurb}}
+            </div>
+          </div>
+          <div class="image">
+            <img class="ui image profile_pic" src="{{page.dalepic}}">
+          </div>
+        </div>
+      </div>
+      
+      <div>Here is a page about us</div>
+      <p>Here is some info about the page {{page.title}}</p>
+
+
+      <p>
+        {% for article in articles %}
+          {{ article.title }}
+        {% endfor %}
+      </p>
+      hihi
+      <p>
+        {% for page in pages %}
+          {{ page.title }}
+        {% endfor %}
+      </p>
+      <div>
         {{page.content}}
-    </div>
-
-    <div>
+      </div>
+      <div>
         <h2>Company Intro</h2>
         <div>
-            With the promises of Big Data and AI, human intelligence and expertise have remained essential to creating value from data. Droste combines human ingenuity with sophisticated analytical techniques to identify opportunities for your business. It is our mandate to deliver on the great promise of data.
-            
+          With the promises of Big Data and AI, human intelligence and expertise have remained essential to creating value from data. Droste combines human ingenuity with sophisticated analytical techniques to identify opportunities for your business. It is our mandate to deliver on the great promise of data.
+          
         </div>
         <div>
-            Droste is based in Hong Kong and was established as a data science consultancy in 2014. Data Science is an approach to extracting knowledge and insights from complex data. We have a proven track record creating value by applying data science in the retail and finance sectors. In retail, we optimized a jewelry company's inventory based on gold price fluctuations; and enabled self-service analytics for world's leading consumer goods sourcing company. In finance, we've helped wealth managers mitigate risk with our portfolio management system; developed a global FX rates service for eCommerce; and designed a credit scoring algorithm for a P2P lending company using mobile and social media data.
-            
+          Droste is based in Hong Kong and was established as a data science consultancy in 2014. Data Science is an approach to extracting knowledge and insights from complex data. We have a proven track record creating value by applying data science in the retail and finance sectors. In retail, we optimized a jewelry company's inventory based on gold price fluctuations; and enabled self-service analytics for world's leading consumer goods sourcing company. In finance, we've helped wealth managers mitigate risk with our portfolio management system; developed a global FX rates service for eCommerce; and designed a credit scoring algorithm for a P2P lending company using mobile and social media data.
+          
         </div>
         <div>
-            We understand that data challenges aren't purely technical or even about data. Value is created with a deep understanding of your operations, domain and the opportunities they present. We design our engagements to closely integrate with your existing business and to grow its capacity for gainful outcomes. Enabling data-driven decisions, however, requires a diverse set of skills. That's why our team of data professionals draw their expertise across design, tech, analytics and business. Data Science only becomes effective at the intersection of these domains.
-            
+          We understand that data challenges aren't purely technical or even about data. Value is created with a deep understanding of your operations, domain and the opportunities they present. We design our engagements to closely integrate with your existing business and to grow its capacity for gainful outcomes. Enabling data-driven decisions, however, requires a diverse set of skills. That's why our team of data professionals draw their expertise across design, tech, analytics and business. Data Science only becomes effective at the intersection of these domains.
+          
         </div>
         <div>
-            As it is challenging to fine-tune the required skills mix, established organisations often struggle to compose effective data science teams. Droste benefits those organisation by lending its expertise in machine learning, data architecture, and data strategy. We complement existing teams and work closely with management to devise and execute on end-to-end data solutions.
-            
+          As it is challenging to fine-tune the required skills mix, established organisations often struggle to compose effective data science teams. Droste benefits those organisation by lending its expertise in machine learning, data architecture, and data strategy. We complement existing teams and work closely with management to devise and execute on end-to-end data solutions.
+          
         </div>
+      </div>
     </div>
-</div>
-
-
-
-
-</section><!-- /#content -->
-{% endblock content %}
+    </section><!-- /#content -->
+  {% endblock content %}
