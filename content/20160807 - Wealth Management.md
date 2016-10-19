@@ -3,6 +3,7 @@ Date: 2016-08-07 17:30
 Category: Case Studies
 Summary: We have been working together with a well-established and successful wealth management company to automate their workflow.
 Image: /img/price-vs-carat.png
+Colour: '#F4C31E'
 
 ## Background
 

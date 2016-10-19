@@ -5,7 +5,7 @@ Category: Posts
 Tags: markdown, test
 Author: Team Droste 
 Summary: Test post featuring everything markdown can create!
-
+Colour: '#F4C31E'
 
 Features
 ===

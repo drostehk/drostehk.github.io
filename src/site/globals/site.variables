@@ -5,18 +5,27 @@
 @pageMinWidth  : 1049px;
 @pageOverflowX : visible;
 
+/*-------------------
+     Fonts
+--------------------*/
+
+@importGoogleFonts : true;
+@headerFont        : 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : 'Railway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@googleFontFamily  : 'Lato:400italic,400|Railway:400,700';
+
 @emSize: 13px;
 @fontSize : 13px;
-@fontName : 'Arial';
-@importGoogleFonts : false;
 
 @bigSize : (18 / 13);
-
 @h1: 2.25em;
 
-@defaultBorderRadius: 0.2307em;
 
+
+
+@defaultBorderRadius: 0.2307em;
 @disabledOpacity: 0.3;
+
 
 /* Colors */
 @blue: #80A6CD;
@@ -27,7 +36,9 @@
 @secondaryColor: @black;
 
 /* Links */
-@linkColor: #4078C0;
+/* @linkColor: #4078C0; */
+@linkColor: tomato;
+
 @linkHoverColor: @linkColor;
 @linkHoverUnderline: underline;
 

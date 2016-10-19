@@ -17,7 +17,7 @@ We help companies **define** and **implement** strategies to make data part of t
 
 [a link](/img/price-vs-carat.png)
 
-![alt text][logo]
+![alt text][logo]{.ui .fluid .image}
 
 [logo]: /img/stripe.png "Logo"
 

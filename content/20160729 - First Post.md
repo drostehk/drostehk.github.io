@@ -5,6 +5,7 @@ Category: Posts
 Author: Droste Team
 Summary: My first post, read it to find out.
 Image: /img/price-vs-carat.png
+Colour: '#F4C31E'
 
 {% notebook 20160729.ipynb %}
 

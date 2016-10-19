@@ -2,7 +2,7 @@
 {% block content %}
 <section id="content" class="index_container">
     {% block content_title %}
-    <h2 class="ui center aligned header">All articles</h2>
+    <!-- <h2 class="ui center aligned header">All articles</h2> -->
     {% endblock %}
 
     {% if articles is defined %}
@@ -14,7 +14,7 @@
                 <div class="dark"></div> -->
                 <article class="hentry">
                     {% if article.featured_image %}
-                    <img src="{{ article.featured_image }}">
+                    <img class="ui fluid image desaturate" src="{{ article.featured_image }}">
                     {% endif %}
                     <div class="meta-text">
                         <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
@@ -36,9 +36,9 @@
                     <div class="dark"></div> -->
                     <article class="hentry">
                         {% if article.featured_image %}
-                        <img src="{{ article.featured_image }}">
+                        <img class="ui fluid image desaturate" src="{{ article.featured_image }}">
                         {% endif %}
-                        <div class="meta-text">
+                        <div class="meta-text" style="background-color: {{article.colour}}">
                             <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
                             <footer class="post-info">
                                 <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
