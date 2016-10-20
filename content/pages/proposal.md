@@ -6,7 +6,7 @@ Tags: proposal
 Author: Team Droste 
 Summary: Proposal
 Link: /pages/thankyou.html
-Template: proposal
+Template: contact
 
-
+Share a bit about your project, and what you are hoping to achieve
 

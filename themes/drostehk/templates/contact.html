@@ -1,0 +1,34 @@
+{% extends "base.html" %} 
+{% block content %}
+<section id="fm">
+  {% block content_title %}
+  <h2>{{page.title}}</h2>
+  <h3>{{page.content}}</h3>
+  {% endblock %}
+
+    <script type="text/javascript">var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)
+    {window.location='{{ page.link }}';}"></iframe>
+
+    <div class="ui inverted segment">
+
+      <form class="ui inverted form" action="https://docs.google.com/forms/d/e/1FAIpQLSepF0kcGRz-nRd24ZCfo3bmxUHLf7DHG1LPh4vF5FjJw9Nzcw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;" id="mG61Hd">
+
+        <div class="field">
+          <label>email</label>
+          <input type="email" class=" exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Email" aria-describedby="i.desc.227649005 i.err.227649005" name="entry.1045781291" value="" required="" dir="auto" data-initial-dir="auto" data-initial-value="" placeholder="Your Email *">
+        </div>
+        <div class="field">
+          <label>message</label>
+          <textarea class=" exportTextarea" jsname="YPqjbf" rows="10" tabindex="0" aria-label="Message" jscontroller="gZjhIf" jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" required="" name="entry.839337160" dir="auto" data-initial-dir="auto" data-initial-value="" placeholder="Your Message *"></textarea>
+          <input class="ui submit button" type="submit" form="mG61Hd" style="margin:1em 0 0 0;"/>
+        </div>
+      </form>
+    </div>
+
+
+</section>
+<!-- /#content -->
+{% endblock content %}
+
+
