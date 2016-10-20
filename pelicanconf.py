@@ -125,6 +125,9 @@ PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.youtube', 'liquid_tags.vimeo',
            'liquid_tags.include_code', 'liquid_tags.notebook','representative_image']
 
+# PELICAN_COMMENT_SYSTEM = True
+# PELICAN_COMMENT_SYSTEM_IDENTICON_DATA = ('author',)
+
 ## Liquid-style Tags
 
 NOTEBOOK_DIR = 'notebooks'

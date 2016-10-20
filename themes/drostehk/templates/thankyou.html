@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="ui inverted vertical masthead center aligned segment">
+    <div class="ui text container">
+        <h2 class="ui inverted header">{{page.content}}</h2> 
+    </div>
+    <a href="{{page.linkto}}">
+        <div class="ui huge primary button">
+            Check out the playground
+            <i class="right arrow icon"></i>
+        </div>
+    </a>
+</div>
+
+{% endblock %}
