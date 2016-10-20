@@ -10,15 +10,17 @@
 --------------------*/
 
 @importGoogleFonts : true;
-@headerFont        : 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-@pageFont          : 'Railway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-@googleFontFamily  : 'Lato:400italic,400|Railway:400,700';
+@headerFont        : 'Cooper Hewitt', 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : 'Cooper Hewitt', 'Railway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@googleFontFamily  : 'Lato:400italic, 400|Railway:400,700';
 
 @emSize: 13px;
 @fontSize : 13px;
 
 @bigSize : (18 / 13);
 @h1: 2.25em;
+@h2: 1.714em;
+@h3: 1.4em;
 
 
 
@@ -40,7 +42,8 @@
 @linkColor: tomato;
 
 @linkHoverColor: @linkColor;
-@linkHoverUnderline: underline;
+// @linkHoverUnderline: underline;
+@linkHoverUnderline: none;
 
 /* Borders */
 @borderColor: rgba(0, 0, 0, 0.13);

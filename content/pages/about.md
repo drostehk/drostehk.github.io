@@ -10,9 +10,15 @@ Template: about
 DalePic: /img/dale.jpg
 DaleBlurb: Lorem ipsum dolor sit amet, an vidisse aperiri vim, everti offendit pro at, nam no indoctum repudiare. An populo melius praesent vis, dicta scribentur qui ei. No his exerci epicurei electram, ad sit vidisse voluptua constituto. Tollit laoreet per an, hinc quaeque quo ea, paulo nostrum nec ei.
 DaleCallout: This is Dale's special quote
-BillPic: /img/bill.jpg
+BillPic: /img/bill.png
 BillBlurb: Lorem ipsum dolor sit amet, an vidisse aperiri vim, everti offendit pro at, nam no indoctum repudiare. An populo melius praesent vis, dicta scribentur qui ei. No his exerci epicurei electram, ad sit vidisse voluptua constituto. Tollit laoreet per an, hinc quaeque quo ea, paulo nostrum nec ei.
-BillCallout: This is a special quote from Bill
+BillCallout: Java. Code it don't drink it
+DicksonPic: /img/dickson.png
+DicksonBlurb: Lorem ipsum dolor sit amet, an vidisse aperiri vim, everti offendit pro at, nam no indoctum repudiare. An populo melius praesent vis, dicta scribentur qui ei. No his exerci epicurei electram, ad sit vidisse voluptua constituto. Tollit laoreet per an, hinc quaeque quo ea, paulo nostrum nec ei.
+DicksonCallout: Code is cool, code is fun. 0000111
+ShivamPic: /img/shivam.png
+ShivamBlurb: Lorem ipsum dolor sit amet, an vidisse aperiri vim, everti offendit pro at, nam no indoctum repudiare. An populo melius praesent vis, dicta scribentur qui ei. No his exerci epicurei electram, ad sit vidisse voluptua constituto. Tollit laoreet per an, hinc quaeque quo ea, paulo nostrum nec ei.
+ShivamCallout: They call me Sparky
 
 **Data Science** is creative problem solving with data as the raw material
 
