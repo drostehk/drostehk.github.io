@@ -49,7 +49,10 @@
   
   <div class="ui fixed borderless stackable main menu">
     <div class="ui borderless container" style="min-width: 800px;">    
-      <a href="/" class="active item">Droste</a>
+      <!-- <div class="item"> -->
+        <a href="/" class="item" style="padding-top:0;padding-bottom:0;">
+          <img class="" src="/img/temp_logo.png"> Droste</a>
+      <!-- </div> -->
       {% for title, link in MENUITEMS %}
         <a href="{{ link }}" class="item">{{ title }}</a>
       {% endfor %}
