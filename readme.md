@@ -19,6 +19,7 @@ source activate drostehk
 ### Install JS dependencies
 ```
 npm install semantic-ui --save
+npm install d3 --save
 ```
 
 ## Project Structure
