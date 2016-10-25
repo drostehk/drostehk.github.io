@@ -1,63 +1,61 @@
-{% extends "base.html" %}
-{% block content %}
-  <section id="content" class="index_container">
+{% extends "base.html" %} {% block content %}
+<section id="content" class="index_container">
+  <div class="ui text container">
     {% block content_title %}
-      <!-- <h2 class="ui center aligned header">All articles</h2> -->
-    {% endblock %}
-    {% if articles is defined %}
-      <div class="ui stackable two column grid">
-        {% for article in articles %}
-          {% if loop.first %}
-            <div class="sixteen wide column">
-              <!-- <div class="cell">
-                <div class="dark"></div> -->
-                <article class="hentry">
-                  <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
-                    {% if article.featured_image %}
-                      <img class="ui fluid image desaturate" src="{{ article.featured_image }}">
-                    {% endif %}
-                    <div class="meta-text">
-                      <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
-                      <footer class="post-info">
-                        <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
-                        <address class="vcard author">by
-                          {% for author in article.authors %}
-                            <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                          {% endfor %} in {{ article.category }}
-                        </address>
-                        </footer><!-- /.post-info -->
-                      </div>
-                    </a>
-                  </article>
-                  <!-- </div> -->
-                </div>
-              {% else %}
-                <div class="eight wide column">
-                  <!--                 <div class="cell">
-                    <div class="dark"></div> -->
-                    <article class="hentry">
-                      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
-                        {% if article.featured_image %}
-                          <img class="ui fluid image desaturate" src="{{ article.featured_image }}">
-                        {% endif %}
-                        <div class="meta-text" style="background-color: {{article.colour}}">
-                          <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
-                          <footer class="post-info">
-                            <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
-                            <address class="vcard author">by
-                              {% for author in article.authors %}
-                                <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                              {% endfor %} in {{ article.category }}
-                            </address>
-                            </footer><!-- /.post-info -->
-                          </div>
-                        </a>
-                      </article>
-                      <!-- </div> -->
-                    </div>
-                  {% endif %}
-                {% endfor %}
-              </div>
+    <!-- <h2 class="ui center aligned header">All articles</h2> -->
+    {% endblock %} {% if articles is defined %}
+    <div class="ui stackable two column grid">
+    {% for article in articles %} {% if loop.first %}
+      <div class="sixteen wide column">
+        <!-- <div class="cell">
+                  <div class="dark"></div> -->
+        <article class="hentry">
+          <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
+            {% if article.featured_image %}
+              <img class="ui fluid image desaturate" src="{{ article.featured_image }}">
             {% endif %}
-            </section><!-- /#content -->
-          {% endblock content %}
+            <div class="meta-text">
+              <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+              </header>
+              <footer class="post-info">
+                <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
+                <address class="vcard author">by {% for author in article.authors %}
+                  <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> {% endfor %} in {{ article.category }}
+                </address>
+              </footer>
+          <!-- /.post-info -->
+            </div>
+          </a>
+        </article>
+      <!-- </div> -->
+      </div>
+    {% else %}
+    <div class="eight wide column">
+      <!--                 <div class="cell">
+                      <div class="dark"></div> -->
+      <article class="hentry">
+        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
+        {% if article.featured_image %}
+          <img class="ui fluid image desaturate" src="{{ article.featured_image }}">
+        {% endif %}
+          <div class="meta-text" style="background-color: {{article.colour}}">
+            <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+            </header>
+            <footer class="post-info">
+              <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
+              <address class="vcard author">by {% for author in article.authors %}
+                <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> {% endfor %} in {{ article.category }}
+              </address>
+            </footer>
+          <!-- /.post-info -->
+          </div>
+        </a>
+      </article>
+    <!-- </div> -->
+    </div>
+  {% endif %} {% endfor %}
+  </div>
+  {% endif %}
+</section>
+<!-- /#content -->
+{% endblock content %}

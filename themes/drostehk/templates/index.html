@@ -1,11 +1,13 @@
 {% extends "base.html" %} {% block content %}
 <section id="content" class="index_container">
-  {% block content_title %}
-  <h2 class="ui center aligned header">Kickass Graphic</h2> {% endblock %}
-  <div id="d3"></div>
-  <div class="canvas_div">
-      <canvas id="canvas_id"></canvas>
-      <!-- <h1>Droste</h1> -->
+  <div class="ui text container">
+      {% block content_title %}
+      <h2 class="ui center aligned header">Kickass Graphic</h2> {% endblock %}
+      <div id="d3"></div>
+      <div class="canvas_div">
+          <canvas id="canvas_id"></canvas>
+          <!-- <h1>Droste</h1> -->
+      </div>
   </div>
   <!-- <img class="ui fluid image" src="/img/stripe.png"> -->
 </section>
@@ -13,13 +15,16 @@
 
 
 <!-- SWARM -->
+<style type="text/css">#content {background-color:#303162;}</style> <!-- // blue -->
 <style type="text/css">#canvas_id {width:100%;height:100%;}</style>
 <script>
 
-var colour = d3.scale.category10();
+var color = d3.scale.ordinal()
+      .range(["#C6276C", "#F7B95F", "#FFFFFF"]); // pink, orange, white
 
-var data = d3.range(500).map(function() {
-  return {xloc: 0, yloc: 0, xvel: 0, yvel: 0, colour: colour(Math.ceil(3 * Math.random()))};
+var data = d3.range(540).map(function(ind) { // ie 27 groups of 20
+  return {xloc: 0, yloc: 0, xvel: 0, yvel: 0, 
+    group: ind % 27, colour: color(ind % 3)};
 });
 
 var width = 960,
@@ -34,10 +39,10 @@ var y = d3.scale.linear()
     .domain([-5, 5])
     .range([0, height]);
 
-var time0 = Date.now(),
-    time1;
+// var time0 = Date.now(),
+//     time1;
 
-var fps = d3.select("#fps span");
+// var fps = d3.select("#fps span");
 
 var canvas = d3.select("canvas")
     .attr("width", width)
@@ -51,30 +56,47 @@ context.strokeWidth = 1.5;
 // canvas.on("mousemove", function() {
 
 // });
+var swarm_wrapper = function() {
+    var f = function() {
+      context.clearRect(0, 0, width, height);
 
-var f = function() {
-  context.clearRect(0, 0, width, height);
+      data.forEach(function(d) {
+        d.xloc += d.xvel;
+        d.yloc += d.yvel;
+        d.xvel += 0.5 * ((0.05 * (Math.random() - .5)) - (0.05 * d.xvel) - (0.0005 * d.xloc));
+        d.yvel += 0.5 * (0.05 * (Math.random() - .5) - 0.05 * d.yvel - 0.0005 * d.yloc);
+        context.strokeStyle = d.colour;
+        context.fillStyle = d.colour;
+        context.beginPath();
+        context.arc(x(d.xloc), y(d.yloc), Math.min(2 + 1000 * Math.abs(d.xvel * d.yvel), 10), 0, angle);
+        context.fill();
+        context.stroke();
+      });
 
-  data.forEach(function(d) {
-    d.xloc += d.xvel;
-    d.yloc += d.yvel;
-    d.xvel += 0.5 * ((0.05 * (Math.random() - .5)) - (0.05 * d.xvel) - (0.0005 * d.xloc));
-    d.yvel += 0.5 * (0.05 * (Math.random() - .5) - 0.05 * d.yvel - 0.0005 * d.yloc);
-    context.strokeStyle = d.colour;
-    context.fillStyle = d.colour;
-    context.beginPath();
-    context.arc(x(d.xloc), y(d.yloc), Math.min(2 + 1000 * Math.abs(d.xvel * d.yvel), 10), 0, angle);
-    context.fill();
-    context.stroke();
-  });
+      // time1 = Date.now();
+      // fps.text(Math.round(1000 / (time1 - time0)));
+      // time0 = time1;
+    };
+    // d3.timer(f, 3000);
+    //setInterval(f, 20);
+}
 
-  time1 = Date.now();
-  fps.text(Math.round(1000 / (time1 - time0)));
-  time0 = time1;
-};
+var logo_wrapper = function() {
+    var f = function() {
+        context.clearRect(0,0, width, height);
 
-// d3.timer(f, 3000);
-setInterval(f, 50);
+        data.forEach(function(data, index, array) {
+            // console.log('data, index ' + data +' '+ index );
+            //console.log('hihi');
+            console.log(data.group);
+        });
+    }
+    f();
+}
+
+swarm_wrapper();
+logo_wrapper();
+
 
 </script>
 
