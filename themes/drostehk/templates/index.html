@@ -2,34 +2,35 @@
 <section id="content" class="index_container">
   <div class="ui text container">
       {% block content_title %}
-      <h2 class="ui center aligned header">Kickass Graphic</h2> {% endblock %}
+      <!-- <h2 class="ui center aligned header">Kickass Graphic</h2> {% endblock %} -->
       <div id="d3"></div>
-      <div class="canvas_div">
-          <canvas id="canvas_id"></canvas>
-          <!-- <h1>Droste</h1> -->
-      </div>
   </div>
   <!-- <img class="ui fluid image" src="/img/stripe.png"> -->
 </section>
-<!-- /#content -->
 
 
-<!-- SWARM -->
-<style type="text/css">#content {background-color:#303162;}</style> <!-- // blue -->
-<style type="text/css">#canvas_id {width:100%;height:100%;}</style>
-<script>
+<style type="text/css">
+  #content {background-color:#303162;}
+</style> <!-- // blue -->
 
-var color = d3.scale.ordinal()
-      .range(["#C6276C", "#F7B95F", "#FFFFFF"]); // pink, orange, white
 
-var data = d3.range(540).map(function(ind) { // ie 27 groups of 20
+
+
+
+<script type="text/javascript">
+  
+
+var data = d3.range(20).map(function(ind) { 
   return {xloc: 0, yloc: 0, xvel: 0, yvel: 0, 
-    group: ind % 27, colour: color(ind % 3)};
+    colour_i: Math.floor(3 * Math.random())}; // colour_i is 0, 1 or 2
 });
-
 var width = 960,
     height = 500,
     angle = 2 * Math.PI;
+
+var colours = ["#C6276C", "#F7B95F", "#FFFFFF"];
+var radi = [10, 8, 5];
+var coords = [[0,0],[10,10],[20,20]];
 
 var x = d3.scale.linear()
     .domain([-5, 5])
@@ -39,215 +40,80 @@ var y = d3.scale.linear()
     .domain([-5, 5])
     .range([0, height]);
 
-// var time0 = Date.now(),
-//     time1;
+var svgContainer = d3.select("#d3").append("svg")
+  .attr('width', width)
+  .attr('height', height);
 
-// var fps = d3.select("#fps span");
+var circles = svgContainer.selectAll('circle')
+    .data(data)
+  .enter().append('circle')
+    .attr("cx", 0 )
+    .attr("cy", 0)
+    .attr("r", 1 );
+    // .style("fill", function(d) { return color[d.color_i]; });
 
-var canvas = d3.select("canvas")
-    .attr("width", width)
-    .attr("height", height);
 
-var context = canvas.node().getContext("2d");
-// context.fillStyle = "steelblue";
-// context.strokeStyle = "#666";
-context.strokeWidth = 1.5;
+var gradient = svgContainer.append("svg:defs")
+    .append("svg:linearGradient")
+    .attr("id", "gradient")
+    .attr("x1", "0%")
+    .attr("y1", "0%")
+    .attr("x2", "100%")
+    .attr("y2", "100%")
+    .attr("spreadMethod", "pad");
 
-// canvas.on("mousemove", function() {
+ gradient.append("svg:stop")
+    .attr("offset", "0%")
+    .attr("stop-color", "#C6276C")
+    .attr("stop-opacity", 1);
 
-// });
-var swarm_wrapper = function() {
-    var f = function() {
-      context.clearRect(0, 0, width, height);
+gradient.append("svg:stop")
+    .attr("offset", "100%")
+    .attr("stop-color", "#F7B95F")
+    .attr("stop-opacity", 1);
 
-      data.forEach(function(d) {
-        d.xloc += d.xvel;
-        d.yloc += d.yvel;
-        d.xvel += 0.5 * ((0.05 * (Math.random() - .5)) - (0.05 * d.xvel) - (0.0005 * d.xloc));
-        d.yvel += 0.5 * (0.05 * (Math.random() - .5) - 0.05 * d.yvel - 0.0005 * d.yloc);
-        context.strokeStyle = d.colour;
-        context.fillStyle = d.colour;
-        context.beginPath();
-        context.arc(x(d.xloc), y(d.yloc), Math.min(2 + 1000 * Math.abs(d.xvel * d.yvel), 10), 0, angle);
-        context.fill();
-        context.stroke();
-      });
 
-      // time1 = Date.now();
-      // fps.text(Math.round(1000 / (time1 - time0)));
-      // time0 = time1;
-    };
-    // d3.timer(f, 3000);
-    //setInterval(f, 20);
-}
 
 var logo_wrapper = function() {
-    var f = function() {
-        context.clearRect(0,0, width, height);
 
-        data.forEach(function(data, index, array) {
-            // console.log('data, index ' + data +' '+ index );
-            //console.log('hihi');
-            console.log(data.group);
-        });
-    }
-    f();
+  console.log('inside logo');
+  // data.forEach(function(d) {
+  //   d.xloc = x(coords[d.colour_i][0]);
+  //   d.yloc = y(coords[d.colour_i][1]);
+  // });
+
+  // circles
+  //   .attr("transform", function(d) { return "translate(" + x(d.xloc) + "," + y(d.yloc) + ")"; })
+  //   .attr("r", function(d) { return radi[d.colour_i]; })
+  //   .attr("fill", function(d) { return colours[d.colour_i]; })
 }
 
-swarm_wrapper();
-logo_wrapper();
+var swarm_wrapper = function() {
+  console.log('hihi');
 
-
-</script>
-
-
-
-
-<!-- N-BODY PROBLEM bl.ocks.org/mbostock -->
-<!-- 
-<script src="//d3js.org/d3.v4.0.0-alpha.33.min.js"></script>
-<script>
-
-var canvas = document.querySelector("canvas"),
-    context = canvas.getContext("2d"),
-    width = canvas.width,
-    height = canvas.height;
-
-var n = 400,
-    pi = Math.PI,
-    tau = 2 * pi;
-
-var nodes = d3.range(n).map(function() {
-  var r = Math.random() * width / 3,
-      a = Math.random() * tau,
-      x = width / 2 + r * Math.cos(a),
-      y = height / 2 + r * Math.sin(a);
-  return {
-    x: x,
-    y: y,
-    vx: (height / 2 - y) * 0.006,
-    vy: (x - width / 2) * 0.006
-  };
-});
-
-var force = d3.forceSimulation(nodes)
-    .drag(0)
-    .alphaDecay(0)
-    .force("charge", d3.forceManyBody().strength(0.02))
-    .force("center", d3.forceCenter(width / 2, height / 2))
-    .on("tick", ticked);
-
-var stroke = d3.scaleLinear()
-    .domain([0, 10])
-    .range(["magenta", "yellow"]);
-
-function ticked() {
-  context.clearRect(0, 0, width, height);
-  context.lineWidth = 4;
-  context.lineCap = "square";
-
-  for (var i = 0, node, vx, vy; i < n; ++i) {
-    node = nodes[i];
-    context.beginPath();
-    context.moveTo(node.x, node.y);
-    context.lineTo(node.x + node.vx * 3, node.y + node.vy * 3);
-    context.strokeStyle = stroke(node.vx * node.vx + node.vy * node.vy);
-    context.stroke();
-  }
-}
-</script>
- -->
-
-
-<!-- COLLISION CIRCLES -->
-<!-- 
-<script type="text/javascript">
-var w = 1280,
-  h = 800;
-
-var nodes = d3.range(200).map(function() {
-    return {
-      radius: Math.random() * 12 + 4
-    };
-  }),
-  color = d3.scale.category10();
-
-var force = d3.layout.force()
-  .gravity(0.05)
-  .charge(function(d, i) {
-    return i ? 0 : -2000;
-  })
-  .nodes(nodes)
-  .size([w, h]);
-
-var root = nodes[0];
-root.radius = 0;
-root.fixed = true;
-
-force.start();
-
-var svg = d3.select("#d3").append("svg:svg")
-  .attr("width", w)
-  .attr("height", h);
-
-svg.selectAll("circle")
-  .data(nodes.slice(1))
-  .enter().append("svg:circle")
-  .attr("r", function(d) {
-    return d.radius - 2;
-  })
-  .style("fill", function(d, i) {
-    return color(i % 3);
-  });
-
-force.on("tick", function(e) {
-  var q = d3.geom.quadtree(nodes),
-    i = 0,
-    n = nodes.length;
-
-  while (++i < n) {
-    q.visit(collide(nodes[i]));
-  }
-
-  svg.selectAll("circle")
-    .attr("cx", function(d) {
-      return d.x;
-    })
-    .attr("cy", function(d) {
-      return d.y;
+  for (var i = 0; i < 1000; i++) {
+    data.forEach(function(d) {
+      d.xloc += d.xvel;
+      d.yloc += d.yvel;
+      d.xvel += 0.03 * (Math.random() - .5) - 0.05 * d.xvel - 0.0005 * d.xloc;
+      d.yvel += 0.03 * (Math.random() - .5) - 0.05 * d.yvel - 0.0005 * d.yloc;
     });
-});
 
-svg.on("mousemove", function() {
-  var p1 = d3.mouse(this);
-  root.px = p1[0];
-  root.py = p1[1];
-  force.resume();
-});
+    circles
+      .attr("transform", function(d) { return "translate(" + x(d.xloc) + "," + y(d.yloc) + ")"; })
+      .attr("r", function(d) { return Math.min(1 + 1000 * Math.abs(d.xvel * d.yvel), 15); })
+      .style("stroke", function(d) { return colours[d.colour_i]; })
+      .style("fill",  "none");
+  }
 
-function collide(node) {
-  var r = node.radius + 16,
-    nx1 = node.x - r,
-    nx2 = node.x + r,
-    ny1 = node.y - r,
-    ny2 = node.y + r;
-  return function(quad, x1, y1, x2, y2) {
-    if (quad.point && (quad.point !== node)) {
-      var x = node.x - quad.point.x,
-        y = node.y - quad.point.y,
-        l = Math.sqrt(x * x + y * y),
-        r = node.radius + quad.point.radius;
-      if (l < r) {
-        l = (l - r) / l * .5;
-        node.x -= x *= l;
-        node.y -= y *= l;
-        quad.point.x += x;
-        quad.point.y += y;
-      }
-    }
-    return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
-  };
-}
+  // logo_wrapper();
+
+};
+
+
+var t = d3.timer(swarm_wrapper);
+
 </script>
- -->
+
+
 {% endblock content %}
