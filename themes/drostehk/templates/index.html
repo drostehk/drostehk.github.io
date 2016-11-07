@@ -19,99 +19,110 @@
 
 <script type="text/javascript">
   
+  var width = 960,
+      height = 500;
 
-var data = d3.range(20).map(function(ind) { 
-  return {xloc: 0, yloc: 0, xvel: 0, yvel: 0, 
-    colour_i: Math.floor(3 * Math.random())}; // colour_i is 0, 1 or 2
-});
-var width = 960,
-    height = 500,
-    angle = 2 * Math.PI;
+  var x = d3.scale.linear()
+      .domain([-5, 5])
+      .range([0, width]);
 
-var colours = ["#C6276C", "#F7B95F", "#FFFFFF"];
-var radi = [10, 8, 5];
-var coords = [[0,0],[10,10],[20,20]];
+  var y = d3.scale.linear()
+      .domain([-5, 5])
+      .range([0, height]);
 
-var x = d3.scale.linear()
-    .domain([-5, 5])
-    .range([0, width]);
+  var data = d3.range(3).map(function(ind) {
+    return {
+      xloc: 0, 
+      yloc: 0,
+      xdel: 0, 
+      ydel: 0
+    };
+  });
 
-var y = d3.scale.linear()
-    .domain([-5, 5])
-    .range([0, height]);
+  // var colours = ["#C6276C", "#FFFFFF", "#F7B95F"];
+  var colours = ["url(#gradient)", "#303162", "#FFFFFF"];
+  var radii = [height / 3 , height / 4 , height / 5 ];
 
-var svgContainer = d3.select("#d3").append("svg")
-  .attr('width', width)
-  .attr('height', height);
+  var svg = d3.select("#d3").append("svg")
+    .attr('width', width)
+    .attr('height', height);
 
-var circles = svgContainer.selectAll('circle')
-    .data(data)
-  .enter().append('circle')
-    .attr("cx", 0 )
-    .attr("cy", 0)
-    .attr("r", 1 );
-    // .style("fill", function(d) { return color[d.color_i]; });
+  var gradient = svg.append("svg:defs")
+      .append("svg:linearGradient")
+      .attr("id", "gradient")
+      .attr("x1", "0%")
+      .attr("y1", "0%")
+      .attr("x2", "100%")
+      .attr("y2", "100%")
+      .attr("spreadMethod", "pad");
+
+  gradient.append("svg:stop")
+      .attr("offset", "0%")
+      .attr("stop-color", "#C6276C")
+      .attr("stop-opacity", 1);
+
+  gradient.append("svg:stop")
+      .attr("offset", "100%")
+      .attr("stop-color", "#F7B95F")
+      .attr("stop-opacity", 1);
+
+  var circles = svg.selectAll('circle')
+      .data(data)
+      .enter().append('circle')
+      .attr("cx", function(d) { return d.xloc; } )
+      .attr("cy", function(d) { return d.yloc; })
+      // .attr("cx", function(d) { return x(d.xloc); } )
+      // .attr("cy", function(d) { return y(d.yloc); })
+      .attr("r", 1 );
+  // var bg = svg.select()
+  
+  var stopSwarm = false;
+
+  d3.timer(function() {
+
+    if (!stopSwarm) {
+      data.forEach(function(d) {
+        d.xloc += d.xdel;
+        d.yloc += d.ydel;
+        d.xdel += 0.03 * (Math.random() - .5) - 0.05 * d.xdel - 0.0005 * d.xloc;
+        d.ydel += 0.03 * (Math.random() - .5) - 0.05 * d.ydel - 0.0005 * d.yloc;
+      });
+
+      circles
+        .transition()
+        .duration(100)
+        .attr("transform", function(d) { return "translate(" + x(d.xloc) + "," + y(d.yloc) + ")"; })
+        .attr("r", function(d) { return Math.min(1 + 1000 * Math.abs(d.xdel * d.ydel), 15); })
+        // .attr("r", 15)
+        .style("stroke", function(d, i) { return colours[i]; })
+        .style("fill",  "none");
+        // .each(temp_func);
+    } else {
+      data.forEach(function(d, i) {
+        d.xloc = 0;
+        d.yloc = 0;
+        d.xdel = 0;
+        d.ydel = 0;
+        // d.radius = radii[i]; // logo stuff        
+      });
+
+      circles
+        .transition()
+        .duration(100)
+        .attr("transform", function(d) { return "translate(" + x(d.xloc) + "," + y(d.yloc) + ")"; })
+        .attr("r", function(d, i) { return radii[i]; })
+        .style("fill",  function(d, i) { return colours[i]; });
+
+    }
 
 
-var gradient = svgContainer.append("svg:defs")
-    .append("svg:linearGradient")
-    .attr("id", "gradient")
-    .attr("x1", "0%")
-    .attr("y1", "0%")
-    .attr("x2", "100%")
-    .attr("y2", "100%")
-    .attr("spreadMethod", "pad");
 
- gradient.append("svg:stop")
-    .attr("offset", "0%")
-    .attr("stop-color", "#C6276C")
-    .attr("stop-opacity", 1);
+    // return stopSwarm;
 
-gradient.append("svg:stop")
-    .attr("offset", "100%")
-    .attr("stop-color", "#F7B95F")
-    .attr("stop-opacity", 1);
+  });
 
 
 
-var logo_wrapper = function() {
-
-  console.log('inside logo');
-  // data.forEach(function(d) {
-  //   d.xloc = x(coords[d.colour_i][0]);
-  //   d.yloc = y(coords[d.colour_i][1]);
-  // });
-
-  // circles
-  //   .attr("transform", function(d) { return "translate(" + x(d.xloc) + "," + y(d.yloc) + ")"; })
-  //   .attr("r", function(d) { return radi[d.colour_i]; })
-  //   .attr("fill", function(d) { return colours[d.colour_i]; })
-}
-
-var swarm_wrapper = function() {
-  console.log('hihi');
-
-  for (var i = 0; i < 1000; i++) {
-    data.forEach(function(d) {
-      d.xloc += d.xvel;
-      d.yloc += d.yvel;
-      d.xvel += 0.03 * (Math.random() - .5) - 0.05 * d.xvel - 0.0005 * d.xloc;
-      d.yvel += 0.03 * (Math.random() - .5) - 0.05 * d.yvel - 0.0005 * d.yloc;
-    });
-
-    circles
-      .attr("transform", function(d) { return "translate(" + x(d.xloc) + "," + y(d.yloc) + ")"; })
-      .attr("r", function(d) { return Math.min(1 + 1000 * Math.abs(d.xvel * d.yvel), 15); })
-      .style("stroke", function(d) { return colours[d.colour_i]; })
-      .style("fill",  "none");
-  }
-
-  // logo_wrapper();
-
-};
-
-
-var t = d3.timer(swarm_wrapper);
 
 </script>
 
