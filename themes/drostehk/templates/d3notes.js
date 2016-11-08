@@ -1,3 +1,34 @@
+// paths 
+// https://squiggle.city/~frencil/archives/20150501.html
+// using Orbit and Particle js objects
+// interp1
+var i1 = d3.select("#interp1").append("g").attr("transform","scale(10)");
+var i1o = new Orbit().id("i1o").duration(4000)
+    .tension(0.5).interpolate("cardinal-closed")
+    .path([ [2, 10], [10, 2], [18, 10], [10, 18] ])
+    .appendTo(i1);
+var i1p = new Particle().type("neutron").id("i1p").scale(1).appendTo(i1);
+i1o.attachParticle(i1p.node);
+
+// interp2
+var i2 = d3.select("#interp2").append("g").attr("transform","scale(10)");
+var i2o = new Orbit().id("i2o").duration(4000)
+    .tension(0.1).interpolate("monotone")
+    .path([ [2, 10], [10, 2], [18, 10], [10, 18] ])
+    .appendTo(i2);
+var i2p = new Particle().type("neutron").id("i2p").scale(1).appendTo(i2);
+i2o.attachParticle(i2p.node);
+
+// interp3
+var i3 = d3.select("#interp3").append("g").attr("transform","scale(10)");
+var i3o = new Orbit().id("i3o").duration(4000)
+    .tension(0.9).interpolate("step")
+    .path([ [2, 10], [10, 2], [18, 10], [10, 18] ])
+    .appendTo(i3);
+var i3p = new Particle().type("neutron").id("i3p").scale(1).appendTo(i3);
+i3o.attachParticle(i3p.node);
+
+
 // force layout and collision notes & code
 
 var force = d3.layout.force()
@@ -8,7 +39,7 @@ var force = d3.layout.force()
 force.start()
 
 
-where nodes
+// where nodes
 nodes = [
 {amount: 20},
 {amount: 10},
@@ -16,14 +47,14 @@ nodes = [
 ]; 
 
 
-now
+// now
 node = vis.selectAll("circle")  
   .data(force.nodes()) // here it is
   .enter().append("circle")
   .style("fill", "steelblue");
   .attr("r", 10)
 
-now write tick
+// now write tick
 function tick() {
   node.attr("cx", function(d) {return d.x;})
       .attr("cy", function(d) {return d.y;});
@@ -70,7 +101,7 @@ function messWithNodePosition(alpha) {
     d.y += (center.y - d.y) * 0.1 * alpha;
   }
 }
-where
+// where
 var centreVariable = {
   oneCentre: {x: 300, y: 400},
   twoCentre: {x: 900, y: 400}
