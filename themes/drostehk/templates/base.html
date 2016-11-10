@@ -50,24 +50,28 @@
 </head>
 <body>
   
-  <div class="ui fixed borderless stackable main menu">
-    <div class="ui borderless container" style="min-width: 800px;">    
-      <!-- <div class="item"> -->
+  <div class="ui droste fixed borderless stackable main menu">
+    <div class="ui borderless container">    
+      <!-- <div class="column"> -->
         <a href="/" class="item" style="padding-top:0;padding-bottom:0;">
           <img class="" src="/img/temp_logo.png"> Droste</a>
-      <!-- </div> -->
+      <!-- </div>/ -->
       {% for title, link in MENUITEMS %}
-        <a href="{{ link }}" class="item">{{ title }}</a>
+        <!-- <div class="column"> -->
+          <a href="{{ link }}" class="item">{{ title }}</a>
+        <!-- </div> -->
       {% endfor %}
-      <div class="ui right borderless menu">
-        <div class="ui item">
-          <a href="/pages/joinus.html" class="ui button">Join the Team</a>
-        </div>
-        <!-- <a href="/pages/proposal.html"> -->
-          <div class="ui item">
-            <a href="/pages/proposal.html" class="ui primary button">Request Proposal</a>
+      <!-- <div class="column"> -->
+        <div class="ui right borderless menu item">
+          <div class="ui ">
+            <a href="/pages/joinus.html" class="ui button">Join the Team</a>
           </div>
-        <!-- </a> -->
+          <!-- <a href="/pages/proposal.html"> -->
+            <div class="ui ">
+              <a href="/pages/proposal.html" class="ui primary button">Request Proposal</a>
+            </div>
+          <!-- </a> -->
+        <!-- </div> -->
       </div>
     </div>
   </div>

@@ -32,7 +32,26 @@ img.desaturate {
   filter: grayscale(100%);
 }
 
+/*******************************
+        Mobile Overrides
+*******************************/
+/*// for our right aligned menu */
+.droste .ui.right.menu.item  {
+  width: auto !important;
+  padding: 10px !important;
+}
 
+
+@media only screen and (max-width: 1048px) {
+
+  .droste.main.menu .item {
+    
+  }
+
+  .ui.menu .ui.container {
+    padding-top: 10px;
+  }
+}
 
 
 
