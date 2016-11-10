@@ -37,7 +37,7 @@ READERS = {"html": HTMLReader}
 #     'themes/drostehk/templates/playground.html': 'themes/drostehk/templates/playground.html',
 #     'themes/drostehk/templates/about.html': 'themes/drostehk/templates/about.html'
 # }
-STATIC_PATHS = ['extra/CNAME', 'extra/favicon.ico','img','fonts']
+STATIC_PATHS = ['extra/CNAME', 'extra/favicon.ico','img','fonts', '2016/community/img']
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     'extra/favicon.ico': {'path': 'favicon.ico'},
@@ -110,9 +110,12 @@ THEME_STATIC_PATHS = ['static']
 MENUITEMS = [
     ('Services', '/pages/services.html'),
     ('Case Studies', '/pages/casestudies.html'),
+    ('Community', '/pages/community.html'),
     ('Playground', '/pages/playground.html'),
     ('About Us', '/pages/about.html')
 ]
+
+COMMUNITY = 'Community'
 
 CSS_FILE = 'semantic.min.css'
 JS_FILE = 'semantic.min.js'

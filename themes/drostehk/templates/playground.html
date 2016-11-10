@@ -5,7 +5,7 @@
     <!-- <h2 class="ui center aligned header">All articles</h2> -->
     {% endblock %} {% if articles is defined %}
     <div class="ui stackable two column grid">
-    {% for article in articles %} {% if loop.first %}
+    {% for article in articles if article.category and article.category != COMMUNITY %} {% if loop.first %}
       <div class="sixteen wide column">
         <!-- <div class="cell">
                   <div class="dark"></div> -->

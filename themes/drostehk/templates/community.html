@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="content">
+
+<div class="ui text container">
+    <p>start HTML</p>
+
+    <div class="ui text container">
+        {% block content_title %}
+        <h1>Welcome to the Hong Kong Data Science Community</h1>
+        {% endblock %}
+
+        <div class="ui three column grid">
+            <div class="two wide column"></div>
+            <div class="twelve wide column">
+                <div class="ui center aligned basic segment">
+                    <a href="https://www.facebook.com/groups/symbolkey/"><img src="/img/s&k.png"></a>
+                </div>
+            </div>
+            <div class="two wide column"></div>
+        </div>
+
+        <div class="">
+            <p>Symbol & Key is a series of talks organised to support exchanges and foster connections in Hong Kong's Data Science community. </p><p>The talks are entry-level, but at the vanguard of the discipline, so it should be accessible to aspiring data scientists and experts alike.</p>
+        </div>
+        
+    </div> 
+
+    <div class="article divider"></div>
+
+
+
+    <p>here is our community loop</p>
+
+    <article class="hentry">
+        
+        {% for article in articles if article.category and article.category == COMMUNITY %}
+            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
+                <h1>{{ article.title }}</h1>
+                {% if article.featured_image %}
+                  <img class="ui fluid image desaturate" src="{{ article.featured_image }}">
+                  hihi
+                {% endif %}
+            </a>
+            <h3><time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time> at {{article.event_location}}</h3>
+            <div class="">
+                {{article.content}}
+            </div>
+            <div class="article divider"></div>
+        {% endfor %}
+ 
+    </article>
+
+    <p>END HTML</p>
+
+</section><!-- /#content -->
+{% endblock content %}
