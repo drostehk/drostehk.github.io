@@ -75,6 +75,7 @@ CATEGORY_SAVE_AS = ''
 # TAG_URL = 'tag/{slug}.html'
 TAG_SAVE_AS = ''
 # AUTHOR_URL = 'author/{slug}.html'
+AUTHOR_URL = 'pages/about.html'
 AUTHOR_SAVE_AS = ''
 # YEAR_ARCHIVE_SAVE_AS = '' 
 # MONTH_ARCHIVE_SAVE_AS = '' 
@@ -114,6 +115,10 @@ MENUITEMS = [
     ('Playground', '/pages/playground.html'),
     ('About Us', '/pages/about.html')
 ]
+
+SOCIAL = (
+  ('twitter', 'http://twitter.com/symbolandkey')
+)
 
 COMMUNITY = 'Community'
 

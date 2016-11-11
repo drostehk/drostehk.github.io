@@ -37,12 +37,14 @@
         {% for article in articles if article.category and article.category == COMMUNITY %}
             <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
                 <h1>{{ article.title }}</h1>
-                {% if article.featured_image %}
-                  <img class="ui fluid image desaturate" src="{{ article.featured_image }}">
-                  hihi
-                {% endif %}
             </a>
-            <h3><time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time> at {{article.event_location}}</h3>
+            <h3>
+                <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
+                 at {{article.event_location}}
+            </h3>
+            {% if article.featured_image %}
+              <img class="ui image" src="{{ article.featured_image }}">
+            {% endif %}
             <div class="">
                 {{article.content}}
             </div>

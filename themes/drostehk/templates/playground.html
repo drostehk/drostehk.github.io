@@ -12,7 +12,7 @@
         <article class="hentry">
           <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
             {% if article.featured_image %}
-              <img class="ui fluid image desaturate" src="{{ article.featured_image }}">
+              <img class="ui fluid image" src="{{ article.featured_image }}">
             {% endif %}
             <div class="meta-text">
               <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
@@ -36,7 +36,7 @@
       <article class="hentry">
         <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
         {% if article.featured_image %}
-          <img class="ui fluid image desaturate" src="{{ article.featured_image }}">
+          <img class="ui fluid image" src="{{ article.featured_image }}">
         {% endif %}
           <div class="meta-text" style="background-color: {{article.colour}}">
             <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>

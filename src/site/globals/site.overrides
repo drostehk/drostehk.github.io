@@ -2,8 +2,16 @@
         Droste Overrides
 *******************************/
 
+html {
+  margin: 0;
+  height: 100%;
+}
+
 body {
   min-width: auto;
+  min-height: 100%;
+  background-color: #fafafa;
+
   .ui.text.container {
     max-width: 900px!important;
   }
@@ -14,7 +22,18 @@ body {
   }
 
   .pusher {
-      margin-top: 3.7rem;
+    margin-top: 3.7rem;
+    height: 100%;
+  }
+
+  a {
+    color: yellowgreen;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: teal;
+    text-decoration: none;
   }
 }
 
@@ -30,10 +49,17 @@ body {
 article.hentry {
   // position: relative;
   overflow: hidden;
+  h3 {
+    margin-top: 10px;
+  }
+  img.desaturate {
+    filter: grayscale(100%);
+  }
 }
 
-img.desaturate {
-  filter: grayscale(100%);
+
+#content img {
+  margin: auto;
 }
 
 .ui.droste.menu .logo.item img {
@@ -42,8 +68,8 @@ img.desaturate {
 
 .article.divider {
   width: auto;
-  border-bottom: 1px solid grey;
-  margin: 20px;
+  border-bottom: 1px solid black;
+  margin: 20px 0;
 }
 
 
@@ -103,6 +129,7 @@ img.desaturate {
 
 .entry-content, #content {
   padding-top: 30px;
+  height: 100%;
   img {
     max-width: 100%;
   }
