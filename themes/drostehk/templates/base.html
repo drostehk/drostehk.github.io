@@ -50,32 +50,39 @@
 </head>
 <body>
   
-  <div class="ui droste fixed borderless stackable main menu">
-    <div class="ui borderless container">    
-      <!-- <div class="column"> -->
-        <a href="/" class="logo item">
-          <img class="" src="/img/temp_logo.png">
-        </a>
-      <!-- </div>/ -->
-      {% for title, link in MENUITEMS %}
+  <div class="computer tablet only row">
+    <div class="ui droste top fixed borderless collapsible main menu">
+      <div class="ui borderless container">    
         <!-- <div class="column"> -->
-          <a href="{{ link }}" class="item">{{ title }}</a>
-        <!-- </div> -->
-      {% endfor %}
-      <!-- <div class="column"> -->
-        <div class="ui right borderless menu item">
-          <div class="ui ">
-            <a href="/pages/joinus.html" class="ui button">Join the Team</a>
-          </div>
-          <!-- <a href="/pages/proposal.html"> -->
+          <a href="/" class="logo item">
+            <img class="" src="/img/temp_logo.png">
+          </a>
+        <!-- </div>/ -->
+        {% for title, link in MENUITEMS %}
+          <!-- <div class="column"> -->
+            <a href="{{ link }}" class="item">{{ title }}</a>
+          <!-- </div> -->
+        {% endfor %}
+        <!-- <div class="column"> -->
+          <div class="ui right borderless menu item">
             <div class="ui ">
-              <a href="/pages/proposal.html" class="ui primary button">Request Proposal</a>
+              <a href="/pages/joinus.html" class="ui button">Join the Team</a>
             </div>
-          <!-- </a> -->
-        <!-- </div> -->
+            <!-- <a href="/pages/proposal.html"> -->
+              <div class="ui ">
+                <a href="/pages/proposal.html" class="ui primary button">Request Proposal</a>
+              </div>
+            <!-- </a> -->
+          <!-- </div> -->
+        </div>
       </div>
     </div>
   </div>
+
+  <style type="text/css">
+    
+
+  </style>
 
 
   <!-- Sidebar Menu -->
