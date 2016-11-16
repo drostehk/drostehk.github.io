@@ -10,6 +10,13 @@
 
 ;(function ($, window, document, undefined) {
 
+
+  $(document).on('click', '.right.menu.open', function(e){
+    e.preventDefault();
+    $('.ui.vertical.menu').toggle();
+  });
+
+
 $.site = $.fn.site = function(parameters) {
   var
     time           = new Date().getTime(),

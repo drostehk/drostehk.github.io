@@ -50,31 +50,55 @@
 </head>
 <body>
   
-  <div class="computer tablet only row">
-    <div class="ui droste top fixed borderless collapsible main menu">
-      <div class="ui borderless container">    
-        <!-- <div class="column"> -->
-          <a href="/" class="logo item">
+  <div class="ui page grid">
+    
+    <div class="computer tablet only row">
+      <div class="ui droste top fixed borderless collapsible main menu">
+        <div class="ui borderless container">    
+          <!-- <div class="column"> -->
+            <a href="/" class="logo item">
+              <img class="" src="/img/temp_logo.png">
+            </a>
+          <!-- </div>/ -->
+          {% for title, link in MENUITEMS %}
+            <!-- <div class="column"> -->
+              <a href="{{ link }}" class="item">{{ title }}</a>
+            <!-- </div> -->
+          {% endfor %}
+          <!-- <div class="column"> -->
+            <div class="ui right borderless menu item">
+              <div class="ui ">
+                <a href="/pages/joinus.html" class="ui button">Join the Team</a>
+              </div>
+              <!-- <a href="/pages/proposal.html"> -->
+                <div class="ui ">
+                  <a href="/pages/proposal.html" class="ui primary button">Request Proposal</a>
+                </div>
+              <!-- </a> -->
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mobile only narrow row">
+      <div class="ui droste top fixed borderless collapsible main menu">
+        <div class="ui borderless container">    
+          <a href="/" class="logo item"> <!-- brand ? -->
             <img class="" src="/img/temp_logo.png">
           </a>
-        <!-- </div>/ -->
+          <div class="right menu open">
+            <a href="" class="menu item">
+              <i class="ellipsis horizontal icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="ui droste vertical navbar menu">
         {% for title, link in MENUITEMS %}
           <!-- <div class="column"> -->
             <a href="{{ link }}" class="item">{{ title }}</a>
           <!-- </div> -->
-        {% endfor %}
-        <!-- <div class="column"> -->
-          <div class="ui right borderless menu item">
-            <div class="ui ">
-              <a href="/pages/joinus.html" class="ui button">Join the Team</a>
-            </div>
-            <!-- <a href="/pages/proposal.html"> -->
-              <div class="ui ">
-                <a href="/pages/proposal.html" class="ui primary button">Request Proposal</a>
-              </div>
-            <!-- </a> -->
-          <!-- </div> -->
-        </div>
+        {% endfor %}  
       </div>
     </div>
   </div>
@@ -83,6 +107,33 @@
     
 
   </style>
+
+  <script type="text/javascript">
+    var button;
+    $(window).resize(function(it){
+      var width, list;
+      it.preventDefault();
+      width = $(this).width();
+      list = $('.ui.menu .content');
+      if (width > 768) {
+        return list.css('display', 'block');
+      } else {
+        return list.css('display', 'none');
+      }
+    });
+    button = $('.ui.button');
+    button.on('click', function(it){
+      var list, display;
+      it.preventDefault();
+      list = $('.ui.menu .content');
+      display = list.css('display');
+      if (display === 'none') {
+        return list.css('display', 'block');
+      } else {
+        return list.css('display', 'none');
+      }
+    });
+  </script>
 
 
   <!-- Sidebar Menu -->
@@ -93,7 +144,7 @@
     {% endfor %}
   </div>
   <!-- Page Contents -->
-  <div class="pusher">
+  <div class="pusher"> <!-- // was pusher -->
     <!-- <div class="ui text container"> -->
       {% block content %}
       {% endblock %}

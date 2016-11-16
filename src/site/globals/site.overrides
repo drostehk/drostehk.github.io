@@ -22,7 +22,7 @@ body {
   }
 
   .pusher {
-    margin-top: 3.7rem;
+    // margin-top: 3.7rem;
     height: 100%;
   }
 
@@ -77,10 +77,18 @@ article.hentry {
         Mobile Overrides
 *******************************/
 /*// for our right aligned menu */
-.droste .ui.right.menu.item  {
-  width: auto !important;
-  padding: 10px !important;
+.ui.droste {
+  .ui.right.menu.item {  
+    width: auto !important;
+    padding: 10px !important;
+  }
+  &.vertical.menu {
+    margin-top: 70px !important;    
+    width: 100%;
+    display: none;
+  }
 }
+
 
 // computer
 @media only screen and (min-width: 992px) {
@@ -94,11 +102,13 @@ article.hentry {
   .tablet.only.row {
     display: block!important;
   }
-
+  .mobile.only.row {
+    display: none;
+  }
 }
 
 //mobile
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 767px) {
   .computer.only.row {
     display: none;
   }
@@ -106,7 +116,9 @@ article.hentry {
     display: none;
     // display: block!important;
   }
-
+  .mobile.only.row {
+    display: block!important;
+  }
 }
 
 
