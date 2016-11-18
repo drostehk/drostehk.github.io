@@ -90,11 +90,36 @@ article.hentry {
 }
 
 
+// stupid mobile
+  .d_row  {
+      display: flex !important;
+      flex-direction: row;
+  }
+  .d_col {
+      /*width: 200px;*/
+      /*border: 1px solid black;*/
+      /*padding: 5px;*/
+  }
+  @media only screen and (max-width: 700px) {
+      .d_row {
+          flex-direction: column;
+      }
+      .d_row:nth-child(even) {
+          flex-direction: column-reverse !important;
+          justify-content: flex-end !important;
+      }
+  }
+
+
 // computer
 @media only screen and (min-width: 992px) {
   .computer.only.row {
     display: block!important;
   }
+  .mobile.only.row {
+    display: none;
+  }
+
 }
 
 // tablet
@@ -118,6 +143,9 @@ article.hentry {
   }
   .mobile.only.row {
     display: block!important;
+  }
+  .mobile.hidden {
+    display: none;
   }
 }
 
