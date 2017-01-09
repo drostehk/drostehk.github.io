@@ -35,6 +35,22 @@ body {
     color: teal;
     text-decoration: none;
   }
+
+  .ui.grid.normal {
+    margin: inherit;
+  }
+
+  .ui.primary.button {
+    background-color: #bf1136;
+  }
+
+  .team {
+    margin-top: 15px;
+    .ui.items>.item>.image {
+      margin: auto;
+    }
+  }
+
 }
 
 
@@ -73,6 +89,7 @@ article.hentry {
 }
 
 
+
 /*******************************
         Mobile Overrides
 *******************************/
@@ -100,54 +117,54 @@ article.hentry {
       /*border: 1px solid black;*/
       /*padding: 5px;*/
   }
-  @media only screen and (max-width: 700px) {
-      .d_row {
-          flex-direction: column;
-      }
-      .d_row:nth-child(even) {
-          flex-direction: column-reverse !important;
-          justify-content: flex-end !important;
-      }
-  }
+  // @media only screen and (max-width: 700px) {
+  //     .d_row {
+  //         flex-direction: column;
+  //     }
+  //     .d_row:nth-child(even) {
+  //         flex-direction: column-reverse !important;
+  //         justify-content: flex-end !important;
+  //     }
+  // }
 
 
-// computer
-@media only screen and (min-width: 992px) {
-  .computer.only.row {
-    display: block!important;
-  }
-  .mobile.only.row {
-    display: none;
-  }
+// // computer
+// @media only screen and (min-width: 992px) {
+//   .computer.only.row {
+//     display: block!important;
+//   }
+//   .mobile.only.row {
+//     display: none;
+//   }
 
-}
+// }
 
-// tablet
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .tablet.only.row {
-    display: block!important;
-  }
-  .mobile.only.row {
-    display: none;
-  }
-}
+// // tablet
+// @media only screen and (min-width: 768px) and (max-width: 991px) {
+//   .tablet.only.row {
+//     display: block!important;
+//   }
+//   .mobile.only.row {
+//     display: none;
+//   }
+// }
 
 //mobile
-@media only screen and (max-width: 767px) {
-  .computer.only.row {
-    display: none;
-  }
-  .tablet.only.row {
-    display: none;
-    // display: block!important;
-  }
-  .mobile.only.row {
-    display: block!important;
-  }
-  .mobile.hidden {
-    display: none;
-  }
-}
+// @media only screen and (max-width: 767px) {
+//   .computer.only.row {
+//     display: none;
+//   }
+//   .tablet.only.row {
+//     display: none;
+//     // display: block!important;
+//   }
+//   .mobile.only.row {
+//     display: block!important;
+//   }
+//   .mobile.hidden {
+//     display: none;
+//   }
+// }
 
 
 

@@ -6,181 +6,265 @@
         <h2>Team Droste</h2>
       {% endblock %}
 
-      <div class="">
-        Team Stuff
-      </div>
-
       <div class="content">
           <h2>Company Intro</h2>
           <div>
-            Droste is based in Hong Kong and was established as a data science consultancy in 2014. Data Science is an approach to extracting knowledge and insights from complex data. We have a proven track record creating value by applying data science in the retail and finance sectors. In retail, we optimized a jewelry company's inventory based on gold price fluctuations; and enabled self-service analytics for world's leading consumer goods sourcing company. In finance, we've helped wealth managers mitigate risk with our portfolio management system; developed a global FX rates service for eCommerce; and designed a credit scoring algorithm for a P2P lending company using mobile and social media data.
-            
+            Droste is based in Hong Kong and was established as a data science consultancy in 2014. 
+          </div>
+          <div class="ui center aligned inverted segment">
+            <h2><b>Droste</b> is a Data Science Consultancy</h2>
+          </div>
+          <div>
+          Data Science is an approach to extracting knowledge and insights from complex data. We have a proven track record creating value by applying data science in the retail and finance sectors. </br>
+          In retail, we optimized a jewelry company's inventory based on gold price fluctuations; and enabled self-service analytics for world's leading consumer goods sourcing company. </br>
+          In finance, we've helped wealth managers mitigate risk with our portfolio management system; developed a global FX rates service for eCommerce; and designed a credit scoring algorithm for a P2P lending company using mobile and social media data.  
           </div>
           <div class="ui inverted segment">
             With the promises of Big Data and AI, human intelligence and expertise have remained essential to creating value from data. Droste combines human ingenuity with sophisticated analytical techniques to identify opportunities for your business. It is our mandate to deliver on the great promise of data.
             
           </div>
           <div>
-            We understand that data challenges aren't purely technical or even about data. Value is created with a deep understanding of your operations, domain and the opportunities they present. We design our engagements to closely integrate with your existing business and to grow its capacity for gainful outcomes. Enabling data-driven decisions, however, requires a diverse set of skills. That's why our team of data professionals draw their expertise across design, tech, analytics and business. Data Science only becomes effective at the intersection of these domains.
+            We understand that data challenges aren't purely technical or sometimes even about data. Value is created with a deep understanding of your operations, domain and the opportunities they present. We design our engagements to closely integrate with your existing business and to grow its capacity for gainful outcomes. Enabling data-driven decisions, however, requires a diverse set of skills. That's why our team of data professionals draw their expertise across design, tech, analytics and business. Data Science only becomes effective at the intersection of these domains.
             
           </div>
-          <div class="ui inverted segment">
-            <p>I'm here to tell you something, and you will probably read me first.</p>
+          <div class="ui center aligned inverted segment">
+            <h2>I'm here to tell you something, and you will probably read me first.</h2>
           </div>
           <div>
             As it is challenging to fine-tune the required skills mix, established organisations often struggle to compose effective data science teams. Droste benefits those organisation by lending its expertise in machine learning, data architecture, and data strategy. We complement existing teams and work closely with management to devise and execute on end-to-end data solutions.
             
           </div>
-      </div>
+      <!-- </div> -->
+      <div class="team">
 
-      <!-- Bill left image -->
-      <div class="ui items">
-        <div class="item d_row">
-          <div class="image d_col">
-            <img class="ui image profile_pic" src="{{page.billpic}}">
-          </div>
-          <div class="content d_col">
-            <div class="header">
-              Bill McCord
-            </div>
-            <div class="ui label callout">
-              {{page.billcallout}}
-            </div>
-            <div class="description">
-              {{page.billblurb}}
-            </div>
-          </div>
-        </div>
-      </div>
+        <h2>The Team</h2>
 
-      <!-- Dickson right image -->
-      <div class="ui items">
-        <div class="item d_row">
-          <div class="content d_col">
-            <div class="header">
-              Dickson Kwong
+        <!-- Mart left image -->
+        <div class="ui items">
+          <div class="item">
+            <div class="image">
+              <img class="ui image profile_pic" src="{{page.martpic}}">
             </div>
-            <div class="ui label callout">
-              {{page.dicksoncallout}}
-            </div>
-            <div class="description">
-              {{page.dicksonblurb}}
-            </div>
-          </div>
-          <div class="image d_col">
-            <img class="ui image profile_pic" src="{{page.dicksonpic}}">
-          </div>
-        </div>
-      </div>
-
-<style type="text/css">
-</style>
-
-      <!-- Shivam left image -->
-      <div class="ui items">
-        <div class="item">
-          <div class="image">
-            <img class="ui image profile_pic" src="{{page.shivampic}}">
-          </div>
-          <div class="content">
-            <div class="header">
-              Shivam Gaur
-            </div>
-            <div class="ui label callout">
-              {{page.shivamcallout}}
-            </div>
-            <div class="description">
-              This is a blurb.
-              {{page.shivamblurb}}
+            <div class="content">
+              <div class="header">
+                Mart van de Ven
+              </div>
+              <div class="ui right floated label callout">
+                {{page.martcallout}}
+              </div>
+              <div class="title">
+                {{page.marttitle}}
+              </div>
+              <div class="description">
+                {{page.martblurb}}
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-
-      <!-- experiment with items again -->
-      <!-- Dale  image -->
-      <div class="container">
-          <div class="ui grid">
-            <div class="eight column row">
-              <div class="computer only hidden column"></div>
-              <div class="ui fifteen wide column items">
-                <div class="item">
-                  <div class="left floated image">
-                    <img class="" src="{{page.dalepic}}">
-                  </div>
-                  <div class="middle aligned content">
-                    <!-- <img class="ui image profile_pic" src="{{page.dalepic}}"> -->
-                    <div class="header">
-                      Dale Foo
-                    </div>
-                    <!-- <div class="ui label callout"> -->
-                    <div class="meta">
-                      {{page.dalecallout}}
-                    </div>
-                    <div class="description">
-                      {{page.daleblurb}}
-                    </div>
-                  </div>
+        <!-- Bill right image  -->
+        <!-- image on top on mobile, else right -->
+        <div class="ui grid normal">
+          <div class="ui items tablet computer only row column">
+            <div class="item">
+              <div class="content">
+                <div class="header">
+                  Bill McCord
+                </div>
+                <div class="ui right floated label callout">
+                  {{page.billcallout}}
+                </div>
+                <div class="title">
+                  {{page.billtitle}}
+                </div>
+                <div class="description">
+                  {{page.billblurb}}
+                </div>
+              </div>
+              <div class="image">
+                <img class="ui image profile_pic" src="{{page.billpic}}">
+              </div>
+            </div>
+          </div>
+          <div class="ui items mobile only row column">
+            <div class="item">
+              <div class="image">
+                <img class="ui image profile_pic" src="{{page.billpic}}">
+              </div>
+              <div class="content">
+                <div class="header">
+                  Bill McCord
+                </div>
+                <div class="ui right floated label callout">
+                  {{page.billcallout}}
+                </div>
+                <div class="title">
+                  {{page.billtitle}}
+                </div>
+                <div class="description">
+                  {{page.billblurb}}
                 </div>
               </div>
             </div>
           </div>
-          <div class="ui grid">
-            <div class="eight column row">
-              <div class="ui fifteen wide column items">
-                <div class="item">
-                  <div class="left floated image">
-                    <img class="" src="{{page.dalepic}}">
-                  </div>
-                  <div class="middle aligned content">
-                    <!-- <img class="ui image profile_pic" src="{{page.dalepic}}"> -->
-                    <div class="header">
-                      Dale Foo
-                    </div>
-                    <!-- <div class="ui label callout"> -->
-                    <div class="meta">
-                      {{page.dalecallout}}
-                    </div>
-                    <div class="description">
-                      {{page.daleblurb}}
-                    </div>
-                  </div>
-                </div>
+        </div>
+
+        <!-- Dickson left image -->
+        <div class="ui items">
+          <div class="item">
+            <div class="image">
+              <img class="ui image profile_pic" src="{{page.dicksonpic}}">
+            </div>
+            <div class="content">
+              <div class="header">
+                Dickson Kwong
               </div>
-              <div class="four wide computer only column ico-holder"></div>
+              <div class="ui right floated label callout">
+                {{page.dicksoncallout}}
+              </div>
+              <div class="title">
+                {{page.dicksontitle}}
+              </div>
+              <div class="description">
+                {{page.dicksonblurb}}
+              </div>
             </div>
           </div>
+        </div>
+
+        <!-- Alex right image  -->
+        <!-- image on top on mobile, else right -->
+        <div class="ui grid normal">
+          <div class="ui items tablet computer only row column">
+            <div class="item">
+              <div class="content">
+                <div class="header">
+                  Alex Anzola Jürgenson
+                </div>
+                <div class="ui right floated label callout">
+                  {{page.alexcallout}}
+                </div>
+                <div class="title">
+                  {{page.alextitle}}
+                </div>
+                <div class="description">
+                  {{page.alexblurb}}
+                </div>
+              </div>
+              <div class="image">
+                <img class="ui image profile_pic" src="{{page.alexpic}}">
+              </div>
+            </div>
+          </div>
+          <div class="ui items mobile only row column">
+            <div class="item">
+              <div class="image">
+                <img class="ui image profile_pic" src="{{page.alexpic}}">
+              </div>
+              <div class="content">
+                <div class="header">
+                  Alex Anzola Jürgenson
+                </div>
+                <div class="ui right floated label callout">
+                  {{page.alexcallout}}
+                </div>
+                <div class="title">
+                  {{page.alextitle}}
+                </div>
+                <div class="description">
+                  {{page.alexblurb}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Shivam left image -->
+        <div class="ui items">
+          <div class="item">
+            <div class="image">
+              <img class="ui image profile_pic" src="{{page.shivampic}}">
+            </div>
+            <div class="content">
+              <div class="header">
+                Shivam Gaur
+              </div>
+              <div class="ui right floated label callout">
+                {{page.shivamcallout}}
+              </div>
+              <div class="title">
+                {{page.shivamtitle}}
+              </div>
+              <div class="description">
+                {{page.shivamblurb}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dale right image  -->
+        <!-- image on top on mobile, else right -->
+        <div class="ui grid normal">
+          <div class="ui items tablet computer only row column">
+            <div class="item">
+              <div class="content">
+                <div class="header">
+                  Dale Foo
+                </div>
+                <div class="ui right floated label callout">
+                  {{page.dalecallout}}
+                </div>
+                <div class="title">
+                  {{page.daletitle}}
+                </div>
+                <div class="description">
+                  {{page.daleblurb}}
+                </div>
+              </div>
+              <div class="image">
+                <img class="ui image profile_pic" src="{{page.dalepic}}">
+              </div>
+            </div>
+          </div>
+          <div class="ui items mobile only row column">
+            <div class="item">
+              <div class="image">
+                <img class="ui image profile_pic" src="{{page.dalepic}}">
+              </div>
+              <div class="content">
+                <div class="header">
+                  Dale Foo
+                </div>
+                <div class="ui right floated label callout">
+                  {{page.dalecallout}}
+                </div>
+                <div class="title">
+                  {{page.daletitle}}
+                </div>
+                <div class="description">
+                  {{page.daleblurb}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-
-
-<!-- CARD EXAMPLE http://semantic-ui.com/views/card.html#
-<div class="ui fluid card">
-  <a class="image" href="#">
-    <img src="/images/avatar/large/steve.jpg">
-  </a>
-  <div class="content">
-    <a class="header" href="#">Steve Jobes</a>
-    <div class="meta">
-      <a>Last Seen 2 days ago</a>
     </div>
-  </div>
-</div>
- -->
 
-      
+
+    <!-- A bit of rubbish just here
       <div>Here is a page about us</div>
       <p>Here is some info about the page {{page.title}}</p>
-
 
       <p>Our articles
         {% for article in articles %}
           {{ article.title }}</br>
         {% endfor %}
       </p>
-      hihi
-      <p>Our pages
+      <p>Our pages</br>
         {% for page in pages %}
           {{ page.title }}</br>
         {% endfor %}
@@ -188,7 +272,7 @@
       <div>page.content from .md I guess
         {{page.content}}
       </div>
+    -->
 
-    </div>
     </section><!-- /#content -->
   {% endblock content %}
