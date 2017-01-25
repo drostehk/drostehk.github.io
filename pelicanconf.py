@@ -37,7 +37,7 @@ READERS = {"html": HTMLReader}
 #     'themes/drostehk/templates/playground.html': 'themes/drostehk/templates/playground.html',
 #     'themes/drostehk/templates/about.html': 'themes/drostehk/templates/about.html'
 # }
-STATIC_PATHS = ['extra/CNAME', 'extra/favicon.ico','img','fonts', '2016/community/img']
+STATIC_PATHS = ['extra/CNAME', 'extra/favicon.ico','img','fonts', '2016/community/img', '2017/community/img']
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     'extra/favicon.ico': {'path': 'favicon.ico'},

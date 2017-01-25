@@ -73,15 +73,13 @@ article.hentry {
   }
 }
 
-
-#content img {
-  margin: auto;
+.ui.droste.menu {
+  opacity: 0.95;
+  background-color: #fafafa;
+  .logo.item img {
+    width: 8.5em;
+  }
 }
-
-.ui.droste.menu .logo.item img {
-  width: 8.5em;
-}
-
 .article.divider {
   width: auto;
   border-bottom: 1px solid black;
@@ -200,10 +198,11 @@ article.hentry {
 }
 
 .entry-content, #content {
-  padding-top: 30px;
+  padding-top: 70px;
   height: 100%;
   img {
     max-width: 100%;
+    margin: auto;
   }
 }
 
