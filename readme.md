@@ -1,4 +1,4 @@
-# Droste.hk
+# Droste HQ
 
 The Droste site is based on [Pelican](https://blog.getpelican.com/), a Static Site Generator, Powered by Python.
 
@@ -68,6 +68,8 @@ After it finishes, open a browser at [localhost:8000](http://localhost:8000)
 
 ## Quickstart
 
+### Option 1 : Native
+
 Development is done on the `src` branch.
 
 The dev server watches for changes, builds the static site, and serves up the site on [localhost:8000](localhost:8000). From the project root run
@@ -81,6 +83,12 @@ Semantic UI has a seperate build system. Gulp provides live reload. From the pro
 
 ```bash
 gulp watch
+```
+
+### Option 2 : Docker
+
+```
+sudo docker-compose up
 ```
 
 ## Project Structure
