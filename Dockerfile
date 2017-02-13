@@ -13,7 +13,11 @@ COPY ./ /var/www/drostehk
 
 WORKDIR /var/www/drostehk
 
-RUN conda env create -n drostehk -f environment.yml
+RUN npm install
+
+RUN pip install -U pip
+
+RUN pip install -r requirements.txt
 
 EXPOSE 8000
 
