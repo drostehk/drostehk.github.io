@@ -1,5 +1,5 @@
 #! /bin/bash
-source drostehk-env/bin/activate
+pip install -U -r requirements.txt
 npm install
 gulp build
 make html
