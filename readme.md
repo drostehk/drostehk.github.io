@@ -2,24 +2,44 @@
 
 The Droste site is based on [Pelican](https://blog.getpelican.com/), a Static Site Generator, Powered by Python.
 
+## Contents
+
+* [Installation](#installation)
+* [Quickstart](#quickstart)
+* [Project Structure](#project-structure)
+* [Contribution](#contribution)
+    - [Development](#development)
+    - [Design](#design)
+    - [Content](#content)
+* [Tasks](#tasks)
+* [Configuration Options](#tasks)
+
 ## Installation
 
-### Clone Repo & Submodules from Github
+### Option 1 : Native
+
+#### Source Code
+
+Clone repo & submodules from Github
+
 ```
 git clone git@github.com:drostehk/drostehk.github.io.git
 cd drostehk.github.io && git checkout src
 git submodule update --init --recursive
 ```
 
-### Install Python dependencies
+#### Python Dependencies
+
+Use python > 3.5 with its built-in virtual environment support
+
 ```
-python -m venv drostehk-env
+python3 -m venv drostehk-env
 source drostehk-env/bin/activate
-pip install -r requirements.txt
 pip install -U pip
+pip install -r requirements.txt
 ```
 
-### Install JS dependencies
+#### JavaScript Dependencies
 
 We make use of `package.json` to manage our JS depenencies
 
@@ -27,7 +47,20 @@ We make use of `package.json` to manage our JS depenencies
 npm install
 ```
 
-## Development
+### Option 2 : Docker
+
+Install [Docker native](http://www.docker.com/products/overview) and
+
+```
+git clone git@github.com:drostehk/drostehk.github.io.git
+cd drostehk.github.io && git checkout src
+git submodule update --init --recursive
+docker-compose up
+```
+
+After it finishes, open a browser at [localhost:8000](http://localhost:8000)
+
+## Quickstart
 
 Development is done on the `src` branch.
 
@@ -95,7 +128,6 @@ drostehk.github.io
     `-- drostehk
 ```
 
-
 ### Config Files
 
 So based on the project structure, the config is managed by :
@@ -104,8 +136,33 @@ So based on the project structure, the config is managed by :
 * `publishconf.py`
 * `semantic.json`
 
+## Contribution
 
-## Theme Development
+### Development 
+
+Site development is done following the conventions for `Pelican` [themes](http://docs.getpelican.com/en/3.7.1/themes.html) which uses [Jinja](http://jinja.pocoo.org/docs/dev/) for its templates.
+
+The Jinja templates are located at `themes/drostehk/templates`. Inspect the following three Jinja templates to get an idea of the site structure:
+
+```bash
+themes/drostehk/templates/base.html # All pages should extend the base template
+themes/drostehk/templates/index.html # The landing page
+themes/drostehk/templates/blog.html # An example of a `list` view
+```
+
+#### Pelican and Markdown Extensions
+
+* [Available Markdown Extensions](http://pythonhosted.org/Markdown/extensions/)
+* [Available Pelican Plugins](https://github.com/getpelican/pelican-plugins#pelican-plugins)
+
+#### Adding a Python Dependency
+
+```
+pip install <PACKAGE>
+pip freeze > requirements.txt
+```
+
+### Design
 
 Theme development is done in line with `SemanticUI` [best practices](http://semantic-ui.com/usage/theming.html).
 
@@ -122,69 +179,19 @@ src/site/globals/site.overrides # Additional Styles
 
 **Never make changes in `themes/drostehk/static/` directly**
 
-### Tasks
+### Content
+
+Content can be marked up in Markdown or as Jupyter Notebooks:
+
+* **Markdown** posts should be added to `content/`.
+* **Notebook** posts should be added to `content/notbooks/` with a Markdown posts referencing them.
+
+Content can be extended through [Liquid Tags](https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags#liquid-style-tags).
+
+
+## Tasks
 
 From the project root
-
-#### Build all Semantic UI files in the `src` directory:
-
-```bash
-gulp build
-```
-
-##### To watch for changes in the `src` directory
-
-```bash
-gulp watch
-```
-
-## Site Development
-
-Site development is done following the conventions for `Pelican` [themes](http://docs.getpelican.com/en/3.7.1/themes.html) which uses [Jinja](http://jinja.pocoo.org/docs/dev/) for its templates.
-
-The Jinja templates are located at `themes/drostehk/templates`. Inspect the following three Jinja templates to get an idea of the site structure:
-
-```bash
-themes/drostehk/templates/base.html # All pages should extend the base template
-themes/drostehk/templates/index.html # The landing page
-themes/drostehk/templates/blog.html # An example of a `list` view
-```
-
-### Adding a Python Dependency
-
-```
-pip install <PACKAGE>
-pip freeze > requirements.txt
-```
-
-### Tasks
-
-From the project root
-
-#### Generation for Development
-
-```bash
-pelican # generates the site into the `ourput` folder
-# or
-make html
-```
-
-#### Live Reload
-
-```bash
-pelican -r # tell Pelican to watch for your modifications
-# or
-make regenerate
-```
-
-#### Web Server with Live Reload
-
-```bash
-./develop_server.sh start # generate & run server
-./develop_server.sh stop # stop backgrounded server
-# or
-make devserver
-```
 
 #### Publish to Github Pages
 
@@ -196,28 +203,39 @@ git push origin master
 make github
 ```
 
+##### Build all Semantic UI files in the `src` directory:
 
-## Content Development
+```bash
+gulp build
+```
 
-Content can be marked up in Markdown or as Jupyter Notebooks:
+##### To watch for changes in the `src` directory
 
-* **Markdown** posts should be added to `content/`.
-* **Notebook** posts should be added to `content/notbooks/` with a Markdown posts referencing them.
+```bash
+gulp watch
+```
 
-Content can be extended through [Liquid Tags](https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags#liquid-style-tags).
+##### Static Site Generation
 
+```bash
+pelican # generates the site into the `ourput` folder
+# or
+make html
+```
 
-#### Config Options
+#### Pelican Live Reload
 
-* [Available Markdown Extensions](http://pythonhosted.org/Markdown/extensions/)
-* [Available Pelican Plugins](https://github.com/getpelican/pelican-plugins#pelican-plugins)
+```bash
+pelican -r # tell Pelican to watch for your modifications
+# or
+make regenerate
+```
 
+#### Web Server with Pelican Live Reload
 
-## Alternative Docker install / setup / run option.
-
-1. git clone git@github.com:drostehk/drostehk.github.io.git
-2. cd drostehk.github.io && git checkout src
-3. git submodule update --init --recursive
-4. [Install Docker native](http://www.docker.com/products/overview) **Note:** If you're on a Mac you will need to install the latest [Docker for Mac Beta](https://docs.docker.com/docker-for-mac/) until version 1.13 is available because of [an issue with running npm install on volumes](https://forums.docker.com/t/npm-install-doesnt-complete-inside-docker-container/12640/24).
-5. Run docker-compose up
-6. After it finishes, [connect](http://localhost:8000)
+```bash
+./develop_server.sh start # generate & run server
+./develop_server.sh stop # stop backgrounded server
+# or
+make devserver
+```
