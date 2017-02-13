@@ -70,3 +70,18 @@ if(config.rtl) {
   gulp.task('watch-rtl', 'Watch files as RTL', watchRTL);
   gulp.task('build-rtl', 'Build all files as RTL', buildRTL);
 }
+
+/*--------------
+  LESS LINTING
+---------------*/
+
+const lesshint = require('gulp-lesshint');
+
+gulp.task('lint', () => {
+    return gulp.src('./src/site/globals/*.*')
+        .pipe(lesshint({
+            // Options
+        }))
+        .pipe(lesshint.reporter('reporter-name')) // Leave empty to use the default, "stylish"
+        .pipe(lesshint.failOnError()); // Use this to fail the task on lint errors
+});
