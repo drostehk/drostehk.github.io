@@ -6,7 +6,7 @@ from pelican.readers import HTMLReader
 # Basic Settings
 
 AUTHOR = u'Team Droste'
-SITENAME = u'Droste'
+SITENAME = u'Droste HQ'
 SITEURL = ''
 
 TIMEZONE = 'Asia/Hong_Kong'
