@@ -6,6 +6,7 @@ decorator==4.0.11
 docutils==0.13.1
 entrypoints==0.2.2
 feedgenerator==1.9
+ghp-import==0.5.4
 html5lib==0.9999999
 ipykernel==4.5.2
 ipython==5.2.2
