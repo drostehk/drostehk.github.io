@@ -27,11 +27,18 @@ npm install
 
 ## Development
 
+Development is done on the `src` branch.
+
 Pelican Live Reload, from the project root
 
 ```bash
-source activate drostehk
-pelican -r
+source activate drostehk && pelican -r
+```
+
+Development Server, from the project root
+
+```bash
+./start_dev.sh
 ```
 
 Semantic UI Live Reload, from the project root
@@ -39,13 +46,6 @@ Semantic UI Live Reload, from the project root
 ```bash
 gulp watch
 ```
-
-Development Server, from the project root
-
-```bash
-make devserver
-```
-
 
 ## Project Structure
 
