@@ -24,7 +24,7 @@ Clone repo & submodules from Github
 
 ```
 git clone git@github.com:drostehk/drostehk.github.io.git
-cd drostehk.github.io && git checkout src
+cd drostehk.github.io
 git submodule update --init --recursive
 ```
 
@@ -49,13 +49,19 @@ npm install
 
 ### Option 2 : Docker
 
-Install [Docker native](http://www.docker.com/products/overview) and
+Install [Docker native](http://www.docker.com/products/overview), or on Fedora install docker-compose:
+
+```
+sudo dnf install docker-compose
+```
+
+To setup the docker container, run the following commands:
 
 ```
 git clone git@github.com:drostehk/drostehk.github.io.git
-cd drostehk.github.io && git checkout src
+cd drostehk.github.io
 git submodule update --init --recursive
-docker-compose up
+sudo docker-compose up
 ```
 
 After it finishes, open a browser at [localhost:8000](http://localhost:8000)
