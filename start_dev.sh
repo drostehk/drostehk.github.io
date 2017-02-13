@@ -1,5 +1,5 @@
 #! /bin/bash
-source activate drostehk
+source drostehk-env/bin/activate
 npm install
 gulp build
 make html

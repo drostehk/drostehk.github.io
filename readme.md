@@ -11,10 +11,12 @@ cd drostehk.github.io && git checkout src
 git submodule update --init --recursive
 ```
 
-### Install python dependencies
+### Install Python dependencies
 ```
-conda env create -n drostehk -f environment.yml
-source activate drostehk
+python -m venv drostehk-env
+source drostehk-env/bin/activate
+pip install -r requirements.txt
+pip install -U pip
 ```
 
 ### Install JS dependencies
@@ -29,19 +31,14 @@ npm install
 
 Development is done on the `src` branch.
 
-Pelican Live Reload, from the project root
+The dev server watches for changes, builds the static site, and serves up the site on [localhost:8000](localhost:8000). From the project root run
 
 ```bash
-source activate drostehk && pelican -r
+source drostehk-env/bin/activate
+make devserver
 ```
 
-Development Server, from the project root
-
-```bash
-./start_dev.sh
-```
-
-Semantic UI Live Reload, from the project root
+Semantic UI has a seperate build system. Gulp provides live reload. From the project root run
 
 ```bash
 gulp watch
@@ -143,7 +140,7 @@ gulp watch
 
 ## Site Development
 
-Site development isdone following the conventions for `Pelican` [themes](http://docs.getpelican.com/en/3.6.3/themes.html) which uses [Jinja](http://jinja.pocoo.org/docs/dev/) for its templates.
+Site development is done following the conventions for `Pelican` [themes](http://docs.getpelican.com/en/3.7.1/themes.html) which uses [Jinja](http://jinja.pocoo.org/docs/dev/) for its templates.
 
 The Jinja templates are located at `themes/drostehk/templates`. Inspect the following three Jinja templates to get an idea of the site structure:
 
@@ -151,6 +148,13 @@ The Jinja templates are located at `themes/drostehk/templates`. Inspect the foll
 themes/drostehk/templates/base.html # All pages should extend the base template
 themes/drostehk/templates/index.html # The landing page
 themes/drostehk/templates/blog.html # An example of a `list` view
+```
+
+### Adding a Python Dependency
+
+```
+pip install <PACKAGE>
+pip freeze > requirements.txt
 ```
 
 ### Tasks

@@ -21,10 +21,10 @@ DISPLAY_CATEGORIES_ON_MENU = False
 
 DELETE_OUTPUT_DIRECTORY = True
 
-# JINJA_EXTENSIONS = []
+# JINJA_ENVIRONMENT = []
 # JINJA_FILTERS = {} # See http://jinja.pocoo.org/docs/dev/api/#custom-filters
 
-# MD_EXTENSIONS = ['codehilite(css_class=highlight)','extra'] # See http://pythonhosted.org/Markdown/extensions/
+# MARKDOWN = ['codehilite(css_class=highlight)','extra'] # See http://pythonhosted.org/Markdown/extensions/
 
 PATH = 'content'
 # PAGE_PATHS = ['pages']
