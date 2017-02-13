@@ -5,3 +5,4 @@ output/
 _nb_header.html
 *.pid
 themes/drostehk/static/
+drostehk-env/
