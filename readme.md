@@ -253,3 +253,16 @@ make regenerate
 # or
 make devserver
 ```
+
+
+## Extra
+
+## LiveReload
+
+Optionally, you can use LiveReload to speed up your development experience. From the project root run
+
+```bash
+livereload output -w WAIT
+```
+
+and activate the [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) extension in Google Chrome.
