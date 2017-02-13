@@ -1,4 +1,6 @@
-# Pelican : Droste.hk
+# Droste.hk
+
+The Droste site is based on [Pelican](https://blog.getpelican.com/), a Static Site Generator, Powered by Python.
 
 ## Installation
 
@@ -17,9 +19,11 @@ source activate drostehk
 **NOTE** : You should always run `source activate drostehk` when running the pelican project locally as it activated the conda environment with all the python dependencies in it.
 
 ### Install JS dependencies
+
+We make use of `package.json` to manage our JS depenencies
+
 ```
-npm install semantic-ui --save
-npm install d3 --save
+npm install
 ```
 
 ## Project Structure
