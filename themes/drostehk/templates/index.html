@@ -1,158 +1,28 @@
-{% extends "base.html" %} {% block content %}
-<section id="content" class="index_container">
-  <div class="ui text container">
-      {% block content_title %}
-      <!-- <h2 class="ui center aligned header">Kickass Graphic</h2> {% endblock %} -->
-      <div id="d3"></div>
+{% extends "base.html" %}
+
+{% set show_menu = false %}
+{% set container = true %}
+{% set page_id = 'home' %}
+
+{% block content %}
+
+  <div class="ui two column doubling grid">
+    <div class="column">
+      <p></p>
+      <p></p>
+    </div>
+    <div class="column">
+      <div class="diagonals">
+        <div class="diagonal"></div>
+        <div class="diagonal"></div>
+        <div class="diagonal"></div>
+        <div class="diagonal"></div>
+        <div class="diagonal"></div>
+        <div class="diagonal"></div>
+      </div>
+      <p></p>
+      <p></p>
+    </div>
   </div>
-  <!-- <img class="ui fluid image" src="/img/stripe.png"> -->
-</section>
-
-
-<style type="text/css">
-  #content {background-color:#303162;}
-</style> <!-- // blue -->
-
-
-
-
-
-<script type="text/javascript">
-  
-  var width = 960,
-      height = 500;
-
-  var x = d3.scale.linear()
-      .domain([-5, 5])
-      .range([0, width]);
-
-  var y = d3.scale.linear()
-      .domain([-5, 5])
-      .range([0, height]);
-
-  var data = d3.range(30).map(function(ind) {
-    return {
-      xloc: 0, 
-      yloc: 0,
-      xdel: 0, 
-      ydel: 0
-    };
-  });
-
-  // what we want here is an array of arrays for different colour teams
-  var colours = [
-    ["#C6276C", "#F7B95F", "#FFFFFF"],
-    ["url(#gradient)", "#303162", "#FFFFFF"],
-    ["url(#gradient)", "#303162", "#FFFFFF"]
-  ]
-
-  var colour_scheme = Math.floor(Math.random() * 6) // one of below
-  var stops = [
-    ["#c242a8", "#9525b3", "#251c87", "#d938a5", "#35b1fe"], //nightstalker on white
-    ["#a84094", "#8b4b9b", "#3d3792", "#bf3a94", "#59b4e9"], //ns dark
-    ["#d92777", "#f1228c", "#bf1136", "#fa8284", "#f2b92d"], //sunsinger white
-    ["#c7206b", "#f1228c", "#bf2445", "#fa8284", "#f8c649"], //ss dark
-    ["#dc111c", "#ff5558", "#245768", "#00b0a8", "#50ccd9"], //obversion white
-    ["#dc111c", "#f76b6e", "#245768", "#13b0a9", "#5ab1ba"], //ob dark
-  ] // all stops at 0, 25, 55, 85, 100
-
-  var radii = [height / 3 , height / 3.75 , height / 5 ];
-
-  var svg = d3.select("#d3").append("svg")
-    .attr('width', width)
-    .attr('height', height);
-
-
-  var gradient = svg.append("svg:defs")
-      .append("svg:linearGradient")
-      .attr("id", "gradient")
-      .attr("x1", "0%")
-      .attr("y1", "0%")
-      .attr("x2", "100%") // all in x direction across the screen
-      .attr("y2", "0%")
-      .attr("spreadMethod", "pad");
-
-  gradient.append("svg:stop")
-      .attr("offset", "0%")
-      .attr("stop-color", stops[colour_scheme][0])
-      .attr("stop-opacity", 1);
-  gradient.append("svg:stop")
-      .attr("offset", "25%")
-      .attr("stop-color", stops[colour_scheme][1])
-      .attr("stop-opacity", 1);
-  gradient.append("svg:stop")
-      .attr("offset", "55%")
-      .attr("stop-color", stops[colour_scheme][2])
-      .attr("stop-opacity", 1);
-  gradient.append("svg:stop")
-      .attr("offset", "85%")
-      .attr("stop-color", stops[colour_scheme][3])
-      .attr("stop-opacity", 1);
-  gradient.append("svg:stop")
-      .attr("offset", "100%")
-      .attr("stop-color", stops[colour_scheme][4])
-      .attr("stop-opacity", 1);
-
-  var circles = svg.selectAll('circle')
-      .data(data)
-      .enter().append('circle')
-      .attr("cx", function(d) { return d.xloc; } )
-      .attr("cy", function(d) { return d.yloc; })
-      // .attr("cx", function(d) { return x(d.xloc); } )
-      // .attr("cy", function(d) { return y(d.yloc); })
-      .attr("r", 1 );
-  // var bg = svg.select()
-  
-  var stopSwarm = false;
-
-  d3.timer(function() {
-
-    if (!stopSwarm) {
-      data.forEach(function(d) {
-        d.xloc += d.xdel;
-        d.yloc += d.ydel;
-        d.xdel += 0.03 * (Math.random() - .5) - 0.05 * d.xdel - 0.0005 * d.xloc;
-        d.ydel += 0.03 * (Math.random() - .5) - 0.05 * d.ydel - 0.0005 * d.yloc;
-      });
-
-      circles
-        .transition()
-        .duration(100)
-        .attr("transform", function(d) { return "translate(" + x(d.xloc) + "," + y(d.yloc) + ")"; })
-        .attr("r", function(d) { return Math.min(1 + 1000 * Math.abs(d.xdel * d.ydel), 5); })
-        // .attr("r", 15)
-        .style("stroke", function(d, i) { return stops[colour_scheme][i % 3]; })
-        .style("fill",  "none");
-        // .each(temp_func);
-    } else {
-      data.forEach(function(d, i) {
-        d.xloc = 0;
-        d.yloc = 0;
-        d.xdel = 0;
-        d.ydel = 0;
-        // d.radius = radii[i]; // logo stuff        
-      });
-
-      circles
-        .transition()
-        .duration(100)
-        .attr("transform", function(d) { return "translate(" + x(d.xloc) + "," + y(d.yloc) + ")"; })
-        .attr("r", function(d, i) { return radii[i % 3]; })
-        .style("stroke", "none")
-        .style("fill",  function(d, i) { return colours[1][i % 3]; });
-
-    }
-
-
-
-    // return stopSwarm;
-
-  });
-
-
-
-
-</script>
-
 
 {% endblock content %}

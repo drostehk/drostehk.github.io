@@ -9,7 +9,9 @@
     "semantic-ui": "^2.2.7"
   },
   "no-optional": "true",
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-lesshint": "^3.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

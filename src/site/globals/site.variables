@@ -1,61 +1,69 @@
-/*******************************
-     Droste Global Variables
-*******************************/
-
-@pageMinWidth  : 1049px;
-@pageOverflowX : visible;
-
-/*-------------------
-     Fonts
---------------------*/
-
-@importGoogleFonts : true;
-@headerFont        : 'Cooper Hewitt', 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-@pageFont          : 'Cooper Hewitt', 'Railway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-@googleFontFamily  : 'Lato:400italic, 400|Railway:400,700';
-
-@emSize: 13px;
-@fontSize : 13px;
-
-@bigSize : (18 / 13);
-@h1: 2.25em;
-@h2: 1.714em;
-@h3: 1.4em;
+/*___  _____ _____ _____ _____ _____    _____ _____ 
+|    \| __  |     |   __|_   _|   __|  |  |  |     |
+|  |  |    -|  |  |__   | | | |   __|  |     |  |  |
+|____/|__|__|_____|_____| |_| |_____|  |__|__|__  _|
+                                                |_*/
 
 
-@defaultBorderRadius: 0.2307em;
-@disabledOpacity: 0.3;
+/* === GLOBAL VARIABLES === */
+
+// @pageMinWidth  : 1049px;
+// @pageOverflowX : visible;
 
 
-/* Colors */
-@blue: #80A6CD;
-@green: #78CB5B;
-@orange: #D26911;
-@black: #333333;
-@primaryColor: @green;
-@secondaryColor: @black;
+/* === FONTS === */
 
-/* Links */
-/* @linkColor: #4078C0; */
-@linkColor: tomato;
+// @importGoogleFonts : true;
+// @headerFont        : 'Cooper Hewitt', 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+// @pageFont          : 'Cooper Hewitt', 'Railway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+// @googleFontFamily  : 'Lato:400italic, 400|Railway:400,700';
 
-@linkHoverColor: @linkColor;
-// @linkHoverUnderline: underline;
-@linkHoverUnderline: none;
+// @emSize: 13px;
+// @fontSize : 13px;
 
-/* Borders */
-@borderColor: rgba(0, 0, 0, 0.13);
-@solidBorderColor: #DDDDDD;
-@internalBorderColor: rgba(0, 0, 0, 0.06);
-@selectedBorderColor: #51A7E8;
+// @bigSize : (18 / 13);
+// @h1: 2.25em;
+// @h2: 1.714em;
+// @h3: 1.4em;
 
-/* Breakpoints */
-@largeMonitorBreakpoint: 1049px;
-@computerBreakpoint: @largeMonitorBreakpoint;
-@tabletBreakpoint: @largeMonitorBreakpoint;
+// @defaultBorderRadius: 0.2307em;
+// @disabledOpacity: 0.3;
 
-@infoBackgroundColor: #E6F1F6;
 
-@infoTextColor: #4E575B;
-@warningTextColor: #613A00;
-@errorTextColor: #991111;
+/* === COLOURS === */
+
+// @blue: #80A6CD;
+// @green: #78CB5B;
+// @orange: #D26911;
+// @black: #333333;
+// @primaryColor: @green;
+// @secondaryColor: @black;
+
+
+/* === LINKS === */
+
+// @linkColor: tomato;
+
+// @linkHoverColor: @linkColor;
+// @linkHoverUnderline: none;
+
+
+/* === BORDERS === */
+
+// @borderColor: rgba(0, 0, 0, 0.13);
+// @solidBorderColor: #DDDDDD;
+// @internalBorderColor: rgba(0, 0, 0, 0.06);
+// @selectedBorderColor: #51A7E8;
+
+
+/* === MEDIA QUERIES === */
+
+// @largeMonitorBreakpoint: 1049px;
+// @computerBreakpoint: @largeMonitorBreakpoint;
+// @tabletBreakpoint: @largeMonitorBreakpoint;
+
+// @infoBackgroundColor: #E6F1F6;
+
+// @infoTextColor: #4E575B;
+// @warningTextColor: #613A00;
+// @errorTextColor: #991111;
