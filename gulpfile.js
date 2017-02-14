@@ -75,13 +75,13 @@ if(config.rtl) {
   LESS LINTING
 ---------------*/
 
-const lesshint = require('gulp-lesshint');
+// var lesshint = require('gulp-lesshint');
 
-gulp.task('lint', () => {
-    return gulp.src('./src/site/globals/*.*')
-        .pipe(lesshint({
-            // Options
-        }))
-        .pipe(lesshint.reporter('reporter-name')) // Leave empty to use the default, "stylish"
-        .pipe(lesshint.failOnError()); // Use this to fail the task on lint errors
-});
+// gulp.task('lint', function(){
+//     return gulp.src('./src/site/globals/*.*')
+//         .pipe(lesshint({
+//             // Options
+//         }))
+//         .pipe(lesshint.reporter('reporter-name')) // Leave empty to use the default, "stylish"
+//         .pipe(lesshint.failOnError()); // Use this to fail the task on lint errors
+// });

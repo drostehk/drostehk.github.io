@@ -127,7 +127,7 @@ JS_FILE = 'semantic.min.js'
 
 JS_DIR = 'static/js'
 D3_FILE = 'd3.min.js'
-REQUIRE_FILE = 'require.js'
+# REQUIRE_FILE = 'require.js'
 
 # Plugins 
 
