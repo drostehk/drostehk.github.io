@@ -14,6 +14,14 @@ html {
 
 .column { height: 100% }
 
+.ui.segment {
+  z-index: 10;
+}
+
+button.ui {
+  z-index: 10;
+}
+
 .column:nth-child(1){
   background-color: cadetblue;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
@@ -21,39 +29,51 @@ html {
 .column:nth-child(2){
   background-color: darkseagreen;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-} 
+}
+
+div.ui.inverted.segment {
+  background-color: rgba(0,0,0,0);
+  border: none;
+}
 
 .diagonals {
-    position: fixed;
+    position: static;
     height: 200%;
-    width: 60%;
+    width: 160%;
     display: flex;
     align-items: lime;
+    z-index: 2;
+    background-size: 200%;
 }
 
 .diagonal {
     flex: 1;
     height: 200%;
     background: coral;
+    background: teal url(http://wallpaper-gallery.net/images/nebula-wallpaper/nebula-wallpaper-23.jpg) center center;
     .transform(-35deg, 1, 0deg, -100%, -40%);
     .transition;
     &:hover {
-      margin-right: -30px;
+      // margin-right: -30px;
     }
     &:nth-child(2) {
         background: orange;
+        background: @teal;
     }
     &:nth-child(3) {
         background: yellow;
+        background: @teal;
     }
     &:nth-child(4) {
-        background: teal;
+        background: @teal;
     }
     &:nth-child(5) {
         background: blue;
+        background: @teal;
     }
     &:nth-child(6) {
         background: purple;
+        background: @teal 
     }
 }
 
