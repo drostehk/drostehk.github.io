@@ -4,6 +4,9 @@
 |____/|__|__|_____|_____| |_| |_____|  |__|__|__  _|
                                                 |_*/
 
+@teal : #155a7b;
+
+/* === VARIABLES === */
 
 /* === OVERRIDES === */
 html {
@@ -20,7 +23,20 @@ html {
 
 button.ui {
   z-index: 10;
+  font-size: 10%;
 }
+
+/* === COMPONENTS === */
+
+.ui.landing.segment {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12em;
+}
+
+// HOME PAGE
 
 .column:nth-child(1){
   background-color: cadetblue;
@@ -42,41 +58,81 @@ div.ui.inverted.segment {
     width: 160%;
     display: flex;
     align-items: lime;
-    z-index: 2;
     background-size: 200%;
 }
 
 .diagonal {
     flex: 1;
     height: 200%;
-    background: coral;
-    background: teal url(http://wallpaper-gallery.net/images/nebula-wallpaper/nebula-wallpaper-23.jpg) center center;
+    background: @teal;
     .transform(-35deg, 1, 0deg, -100%, -40%);
+    &:nth-child(1) {
+        background: coral;
+    }
+}
+
+// NYANCAT MODE
+
+.nyancat {
+  .diagonal {
     .transition;
     &:hover {
-      // margin-right: -30px;
+      margin-right: -30px;
+    }
+    &:nth-child(1) {
+      background: red;
     }
     &:nth-child(2) {
         background: orange;
-        background: @teal;
     }
     &:nth-child(3) {
         background: yellow;
-        background: @teal;
     }
     &:nth-child(4) {
         background: @teal;
     }
     &:nth-child(5) {
         background: blue;
-        background: @teal;
     }
     &:nth-child(6) {
         background: purple;
-        background: @teal 
     }
+  }
 }
 
+// NEBULA MODE
+
+.nebula(@n: 1; @color: none){
+  @url : e("/img/nebula@{n}.jpg");
+  background : @color url(@url) center center;
+} 
+
+.nebula {
+  .diagonal {
+    .transition;
+    &:hover {
+      margin-right: -30px;
+    }
+    &:nth-child(1) {
+        .nebula(1, red);
+    }
+    &:nth-child(2) {
+      .nebula(2, orange);
+    }
+    &:nth-child(3) {
+      .nebula(3, yellow);
+    }
+    &:nth-child(4) {
+      .nebula(4, @teal);
+    }
+    &:nth-child(5) {
+      .nebula(5, blue);
+    }
+    &:nth-child(6) {
+      .nebula(6, purple);
+    }
+  }
+}
 
 // LESS MIXINS
 
@@ -99,11 +155,6 @@ div.ui.inverted.segment {
 
 
 /* === LEGACY === */
-
-// html {
-//   margin: 0;
-//   height: 100%;
-// }
 
 // body {
 //   min-width: auto;

@@ -13,10 +13,12 @@
 
 /* === FONTS === */
 
-// @importGoogleFonts : true;
+@importGoogleFonts : true;
+@headerFont        : 'Bitter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 // @headerFont        : 'Cooper Hewitt', 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 // @pageFont          : 'Cooper Hewitt', 'Railway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 // @googleFontFamily  : 'Lato:400italic, 400|Railway:400,700';
+@googleFontFamily  : 'Bitter:400,700';
 
 // @emSize: 13px;
 // @fontSize : 13px;
@@ -31,6 +33,8 @@
 
 
 /* === COLOURS === */
+
+@teal : #155a7b;
 
 // @blue: #80A6CD;
 // @green: #78CB5B;
