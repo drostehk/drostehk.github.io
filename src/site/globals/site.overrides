@@ -158,8 +158,8 @@ div.ui.inverted.segment {
 
 .bg-grain(@color: FFFFFF){
   @hex : replace(@color, "#", "");
-  @url : e("http://api.thumbr.it/whitenoise-361x370.png?background=@{hex}&noise=626262&density=20&opacity=20");
-  background: url(@url);
+  @url : e("http://api.thumbr.it/whitenoise-500x500.png?background=@{hex}&noise=626262&density=40&opacity=20");
+  background: @color url(@url);
 }
 
 /* === LEGACY === */
