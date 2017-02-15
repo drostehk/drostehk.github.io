@@ -4,7 +4,7 @@
 |____/|__|__|_____|_____| |_| |_____|  |__|__|__  _|
                                                 |_*/
 
-@teal : #155a7b;
+@import "site.variables";
 
 /* === VARIABLES === */
 
@@ -64,10 +64,13 @@ div.ui.inverted.segment {
 .diagonal {
     flex: 1;
     height: 200%;
+    width: 160%;
     background: @teal;
+    .bg-grain(@sunslinger-100);
     .transform(-35deg, 1, 0deg, -100%, -40%);
     &:nth-child(1) {
-        background: coral;
+      background: coral;
+      .bg-grain(@sunslinger-0);
     }
 }
 
@@ -153,6 +156,11 @@ div.ui.inverted.segment {
   transition: @prop @time @ease;
 }
 
+.bg-grain(@color: FFFFFF){
+  @hex : replace(@color, "#", "");
+  @url : e("http://api.thumbr.it/whitenoise-361x370.png?background=@{hex}&noise=626262&density=20&opacity=20");
+  background: url(@url);
+}
 
 /* === LEGACY === */
 

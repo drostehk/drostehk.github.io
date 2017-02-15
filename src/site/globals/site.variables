@@ -4,7 +4,6 @@
 |____/|__|__|_____|_____| |_| |_____|  |__|__|__  _|
                                                 |_*/
 
-
 /* === GLOBAL VARIABLES === */
 
 // @pageMinWidth  : 1049px;
@@ -20,6 +19,30 @@
 // @googleFontFamily  : 'Lato:400italic, 400|Railway:400,700';
 @googleFontFamily  : 'Bitter:400,700';
 
+
+/* === BASE SIZES === */
+/* === BORDER RADIUS === */
+/* === BRAND COLOURS === */
+/* === PAGE HEADING === */
+/* === FORM INPUT === */
+/* === FOCUSED INPUT === */
+/* === SIZES === */
+/* === PAGE === */
+/* === PARAGRAPH === */
+/* === LINKS === */
+/* === HIGHLIGHTED TEXT === */
+/* === LOADER === */
+/* === GRID === */
+/* === TRANSITIONS === */
+
+@defaultDuration : 0.3s;
+@defaultEasing   : ease;
+
+/* === BREAKPOINTS === */
+/* === SITE COLOURS === */
+/* === ALPHA COLOURS === */
+/* === ACCENTS === */
+
 // @emSize: 13px;
 // @fontSize : 13px;
 
@@ -34,7 +57,10 @@
 
 /* === COLOURS === */
 
-@teal : #155a7b;
+@teal       : #155a7b;
+@orange     : @sunslinger-0
+@pink       : @sunslinger-100
+
 
 // @blue: #80A6CD;
 // @green: #78CB5B;
@@ -42,6 +68,13 @@
 // @black: #333333;
 // @primaryColor: @green;
 // @secondaryColor: @black;
+
+// 'Sunsinger' // pink-red-yellow // on dark:
+@sunslinger-0   : #c7206b;
+@sunslinger-25  : #f1228c;
+@sunslinger-55  : #bf2445;
+@sunslinger-85  : #fa8284;
+@sunslinger-100 : #f8c649;
 
 
 /* === LINKS === */
