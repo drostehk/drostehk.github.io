@@ -24,7 +24,7 @@ DELETE_OUTPUT_DIRECTORY = True
 # JINJA_ENVIRONMENT = []
 # JINJA_FILTERS = {} # See http://jinja.pocoo.org/docs/dev/api/#custom-filters
 
-# MARKDOWN = ['codehilite(css_class=highlight)','extra'] # See http://pythonhosted.org/Markdown/extensions/
+MD_EXTENSIONS = ['codehilite(css_class=highlight)','extra'] # See http://pythonhosted.org/Markdown/extensions/
 
 PATH = 'content'
 # PAGE_PATHS = ['pages']
