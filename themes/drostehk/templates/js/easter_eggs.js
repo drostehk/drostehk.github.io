@@ -5,3 +5,7 @@ nyancat = function(){
 nebula = function(){
     $('.diagonals').toggleClass('nebula');
 }
+
+waves = function(){
+    $('.diagonals').toggleClass('waves');
+}

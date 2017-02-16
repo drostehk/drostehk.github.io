@@ -1,0 +1,25 @@
+
+// LESS MIXINS
+
+.transform(@rotate: 0deg; @scale: 1; @skew: 0deg; @translateX: 0; @translateY: 0) {
+  transform-origin: top left;
+  -webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translateX(@translateX) translateY(@translateY);
+  -moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translateX(@translateX) translateY(@translateY);
+  -o-transform: rotate(@rotate) scale(@scale) skew(@skew) translateX(@translateX) translateY(@translateY);
+  -ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translateX(@translateX) translateY(@translateY);
+  transform: rotate(@rotate) scale(@scale) skew(@skew) translateX(@translateX) translateY(@translateY);
+}
+
+.transition(@prop: all; @time: 0.3s; @ease: ease) {
+  -webkit-transition: @prop @time @ease;
+  -moz-transition: @prop @time @ease;
+  -o-transition: @prop @time @ease;
+  -ms-transition: @prop @time @ease;
+  transition: @prop @time @ease;
+}
+
+.bg-grain(@color: FFFFFF){
+  @hex : replace(@color, "#", "");
+  @url : e("http://api.thumbr.it/whitenoise-500x500.png?background=@{hex}&noise=626262&density=40&opacity=20");
+  background: @color url(@url);
+}

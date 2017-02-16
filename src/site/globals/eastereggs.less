@@ -1,0 +1,80 @@
+@import "site.variables";
+@import "mixins.less";
+
+// NYANCAT MODE
+
+.nyancat {
+  .diagonal {
+    .transition;
+    &:hover {
+      margin-right: -30px;
+    }
+    &:nth-child(1) {
+      background: red;
+    }
+    &:nth-child(2) {
+        background: orange;
+    }
+    &:nth-child(3) {
+        background: yellow;
+    }
+    &:nth-child(4) {
+        background: @teal;
+    }
+    &:nth-child(5) {
+        background: blue;
+    }
+    &:nth-child(6) {
+        background: purple;
+    }
+  }
+}
+
+// NEBULA MODE
+
+.nebula(@n: 1; @color: none){
+  @url : e("/img/nebula@{n}.jpg");
+  background : @color url(@url) center center;
+} 
+
+.nebula {
+  .diagonal {
+    .transition;
+    &:hover {
+      margin-right: -30px;
+    }
+    &:nth-child(1) {
+        .nebula(1, red);
+    }
+    &:nth-child(2) {
+      .nebula(2, orange);
+    }
+    &:nth-child(3) {
+      .nebula(3, yellow);
+    }
+    &:nth-child(4) {
+      .nebula(4, @teal);
+    }
+    &:nth-child(5) {
+      .nebula(5, blue);
+    }
+    &:nth-child(6) {
+      .nebula(6, purple);
+    }
+  }
+}
+
+// WAVES MODE
+
+.waves {
+  .diagonal:before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    background: url(../img/girl.png) 0 0 repeat !important;
+  }
+}

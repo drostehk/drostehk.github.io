@@ -5,8 +5,11 @@
                                                 |_*/
 
 @import "site.variables";
+@import "mixins.less";
 
 /* === VARIABLES === */
+
+@diagonal : 35deg;
 
 /* === OVERRIDES === */
 html {
@@ -53,7 +56,7 @@ div.ui.inverted.segment {
 }
 
 .diagonals {
-    position: static;
+    position: relative;
     height: 200%;
     width: 160%;
     display: flex;
@@ -67,100 +70,14 @@ div.ui.inverted.segment {
     width: 160%;
     background: @teal;
     .bg-grain(@sunslinger-100);
-    .transform(-35deg, 1, 0deg, -100%, -40%);
+    .transform(-@diagonal, 1, 0deg, -100%, -40%);
     &:nth-child(1) {
       background: coral;
       .bg-grain(@sunslinger-0);
     }
 }
 
-// NYANCAT MODE
-
-.nyancat {
-  .diagonal {
-    .transition;
-    &:hover {
-      margin-right: -30px;
-    }
-    &:nth-child(1) {
-      background: red;
-    }
-    &:nth-child(2) {
-        background: orange;
-    }
-    &:nth-child(3) {
-        background: yellow;
-    }
-    &:nth-child(4) {
-        background: @teal;
-    }
-    &:nth-child(5) {
-        background: blue;
-    }
-    &:nth-child(6) {
-        background: purple;
-    }
-  }
-}
-
-// NEBULA MODE
-
-.nebula(@n: 1; @color: none){
-  @url : e("/img/nebula@{n}.jpg");
-  background : @color url(@url) center center;
-} 
-
-.nebula {
-  .diagonal {
-    .transition;
-    &:hover {
-      margin-right: -30px;
-    }
-    &:nth-child(1) {
-        .nebula(1, red);
-    }
-    &:nth-child(2) {
-      .nebula(2, orange);
-    }
-    &:nth-child(3) {
-      .nebula(3, yellow);
-    }
-    &:nth-child(4) {
-      .nebula(4, @teal);
-    }
-    &:nth-child(5) {
-      .nebula(5, blue);
-    }
-    &:nth-child(6) {
-      .nebula(6, purple);
-    }
-  }
-}
-
-// LESS MIXINS
-
-.transform(@rotate: 0deg; @scale: 1; @skew: 0deg; @translateX: 0; @translateY: 0) {
-  transform-origin: top left;
-  -webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translateX(@translateX) translateY(@translateY);
-  -moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translateX(@translateX) translateY(@translateY);
-  -o-transform: rotate(@rotate) scale(@scale) skew(@skew) translateX(@translateX) translateY(@translateY);
-  -ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translateX(@translateX) translateY(@translateY);
-  transform: rotate(@rotate) scale(@scale) skew(@skew) translateX(@translateX) translateY(@translateY);
-}
-
-.transition(@prop: all; @time: 0.3s; @ease: ease) {
-  -webkit-transition: @prop @time @ease;
-  -moz-transition: @prop @time @ease;
-  -o-transition: @prop @time @ease;
-  -ms-transition: @prop @time @ease;
-  transition: @prop @time @ease;
-}
-
-.bg-grain(@color: FFFFFF){
-  @hex : replace(@color, "#", "");
-  @url : e("http://api.thumbr.it/whitenoise-500x500.png?background=@{hex}&noise=626262&density=40&opacity=20");
-  background: @color url(@url);
-}
+@import "eastereggs.less";
 
 /* === LEGACY === */
 
