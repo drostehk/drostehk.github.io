@@ -1,4 +1,4 @@
-/*___  _____ _____ _____ _____ _____    _____ _____ 
+  /*___  _____ _____ _____ _____ _____    _____ _____ 
 |    \| __  |     |   __|_   _|   __|  |  |  |     |
 |  |  |    -|  |  |__   | | | |   __|  |     |  |  |
 |____/|__|__|_____|_____| |_| |_____|  |__|__|__  _|
@@ -45,21 +45,49 @@ html, body {
   margin-top: 0;
 }
 
-.column {
+.landing.column {
   height: 100%;
-}
-
-.landing .column {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
   
 .inverted.segment {
   background: transparent;
   border: none;
+  z-index: 12;
 }
 
-.panels.inverted.segment {
+.panels.grid {
   background : rgb(2, 41, 59);
+  margin-top: 2em !important;
+  position: relative;
+  z-index: 7;
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.logos.grid {
+  background : rgb(210, 210, 210);
+  margin-top: 2em !important;
+  box-shadow: none;
+  z-index: 1;
+  img {
+    max-height: 90%;
+    max-width: 90%;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    max-height: 26em;
+    > div {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+    }
+  }
 }
 
 .diagonals {
@@ -69,6 +97,7 @@ html, body {
     display: flex;
     align-items: lime;
     background-size: 200%;
+    z-index: 2;
 }
 
 .diagonal {
@@ -76,6 +105,7 @@ html, body {
     height: 200%;
     width: 160%;
     background: @teal;
+    z-index: 2;
     .bg-grain(@sunslinger-100);
     .transform(-@diagonal, 1, 0deg, -100%, -40%);
     &:nth-child(1) {

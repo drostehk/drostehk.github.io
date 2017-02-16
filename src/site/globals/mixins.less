@@ -19,7 +19,8 @@
 }
 
 .bg-grain(@color: FFFFFF){
+  @noise: darken(@color, 20%);
   @hex : replace(@color, "#", "");
-  @url : e("http://api.thumbr.it/whitenoise-500x500.png?background=@{hex}&noise=626262&density=40&opacity=20");
+  @url : e("http://api.thumbr.it/whitenoise-500x500.png?background=@{hex}&noise=@{noise}&density=40&opacity=40");
   background: @color url(@url);
 }
