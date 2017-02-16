@@ -11,7 +11,9 @@
 
 @diagonal : 35deg;
 
+
 /* === OVERRIDES === */
+
 html, body {
   margin: 0;
   padding: 0;
@@ -30,9 +32,14 @@ html, body {
   height: 12em;
 }
 
+
 // HOME PAGE
 
 #home { // <VIEW>
+
+.ui.button {
+  z-index: 10;
+}
 
 .landing.grid {
   margin-top: 0;
@@ -40,12 +47,19 @@ html, body {
 
 .column {
   height: 100%;
+}
+
+.landing .column {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
   
-div.ui.inverted.segment {
-  background-color: rgba(0,0,0,0);
+.inverted.segment {
+  background: transparent;
   border: none;
+}
+
+.panels.inverted.segment {
+  background : rgb(2, 41, 59);
 }
 
 .diagonals {
@@ -69,6 +83,34 @@ div.ui.inverted.segment {
       .bg-grain(@sunslinger-0);
     }
 }
+
+// Sparklines
+
+.graph-wrapper {
+  width: 100%;
+  margin: 20px auto;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+#graph1,
+#graph2 {
+  height: 100px;
+  width:100%;
+  margin: 0 auto;
+
+}
+#graph1 path {
+   stroke: @sunslinger-100;
+   stroke-width: 2;
+   fill: none;
+}
+
+#graph2 path {
+  stroke: @sunslinger-0;
+  stroke-width: 2;
+  fill: none;
+}
+
 
 } // </VIEW>
 

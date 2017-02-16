@@ -6,64 +6,69 @@
 
 {% block content %}
 
-  <div class="ui two column doubling landing grid">
-    <div class="column">
-      <div class="ui very padded text container inverted segment">
-        <h1 class="ui inverted header"><img class="ui large image" src="/img/logo/droste_logo.png"></h1>
-        <h2 class="ui inverted header">Data Science Consultancy</h2>
-        <h1 id="perspective" class="ui inverted header">Fresh Perspective on your <span>Data</span></h1>
-        <h1 class="ui inverted header">We deliver on the promise of <span>Data</span></h1>
-        <h1>We2</h1>
-      </div>
-      <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
+<div class="ui two column doubling landing grid">
+  <div class="column">
+    <div class="ui very padded text container inverted segment">
+      <h1 class="ui inverted header"><img class="ui large image" src="/img/logo/droste_logo.png"></h1>
+      <h2 class="ui inverted header">Data Science Consultancy</h2>
+      <h1 id="perspective" class="ui inverted header">Fresh Perspective on your <span>Data</span></h1>
+      <h1 class="ui inverted header">We deliver on the promise of <span>Data</span></h1>
+      <h1>We</h1>
     </div>
-    <div class="column">
-      <div class="ui center aligned inverted landing segment attached">
-        <button class="ui large button inverted white">services</button>
-        <button class="ui large button inverted white">about us</button>
-        <button class="ui large button white">request proposal</button>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+  </div>
+  <div class="column">
+    <div class="ui center aligned inverted landing segment attached">
+      <button class="ui large button inverted white">services</button>
+      <button class="ui large button inverted white">about us</button>
+      <button class="ui large button white">request proposal</button>
+    </div>
+    <div id="stars3"></div>
+    <div id="stars2"></div>
+    <div id="stars"></div>
+    <div class="diagonals">
+      <div class="diagonal"></div>
+      <div class="diagonal"></div>
+      <div class="diagonal"></div>
+      <div class="diagonal"></div>
+      <div class="diagonal"></div>
+      <div class="diagonal"></div>
+    </div>
+  </div>
+</div>
+<div class="ui vertical very padded stripe inverted segment panels">
+  <div class="ui equal width stackable internally grid">
+    <div class="center aligned row">
+      <div class="column">
+        <h2 class="ui inverted header">Predictive Analytics</h2>
+        <p>When is the best time for application maintenance?</p>
       </div>
-      <div id="stars3"></div>
-      <div id="stars2"></div>
-      <div id="stars"></div>
-      <div class="diagonals">
-        <div class="diagonal"></div>
-        <div class="diagonal"></div>
-        <div class="diagonal"></div>
-        <div class="diagonal"></div>
-        <div class="diagonal"></div>
-        <div class="diagonal"></div>
+      <div class="column">
+        <h2 class="ui inverted header">Data Visualisation</h2>
+        <div class="graph-wrapper"> 
+          <p>
+            <div id="graph1"></div>
+          </p>
+          <p>
+            <div id="graph2"></div>
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <h2 class="ui inverted header">Data Applications</h2>
+        <p>Monetise Loyalty with customer journey prediction</p>
       </div>
     </div>
   </div>
-  <div class="ui vertical stripe quote segment">
-    <div class="ui equal width stackable internally celled grid">
-      <div class="center aligned row">
-        <div class="column">
-          <h3>"What a Company"</h3>
-          <p>That is what they all say about us</p>
-        </div>
-        <div class="column">
-          <h3>"I shouldn't have gone with their competitor."</h3>
-          <p>
-            <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
-          </p>
-        </div>
-        <div class="column">
-          <h3>"I shouldn't have gone with their competitor."</h3>
-          <p>
-            <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
 
+<script src="http://mbostock.github.com/d3/d3.v2.js"></script>
 {% endblock content %}
 
 {% block js %}
   {% include 'js/easter_eggs.js' %}
   {% include 'js/index.js' %}
+  {% include 'js/sparkline.js' %}
 {% endblock js %}
