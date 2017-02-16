@@ -41,12 +41,12 @@ button.ui {
 
 // HOME PAGE
 
+#home {
+  
 .column:nth-child(1){
-  background-color: cadetblue;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }  
 .column:nth-child(2){
-  background-color: darkseagreen;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
 
@@ -75,6 +75,8 @@ div.ui.inverted.segment {
       background: coral;
       .bg-grain(@sunslinger-0);
     }
+}
+
 }
 
 @import "eastereggs.less";
