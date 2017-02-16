@@ -12,22 +12,13 @@
 @diagonal : 35deg;
 
 /* === OVERRIDES === */
-html {
+html, body {
   margin: 0;
-  height: 100%;
+  padding: 0;
+  height: 100vh;
   background: black;
 }
 
-.column { height: 100% }
-
-.ui.segment {
-  z-index: 10;
-}
-
-button.ui {
-  z-index: 10;
-  font-size: 10%;
-}
 
 /* === COMPONENTS === */
 
@@ -41,15 +32,17 @@ button.ui {
 
 // HOME PAGE
 
-#home {
-  
-.column:nth-child(1){
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-}  
-.column:nth-child(2){
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+#home { // <VIEW>
+
+.landing.grid {
+  margin-top: 0;
 }
 
+.column {
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+  
 div.ui.inverted.segment {
   background-color: rgba(0,0,0,0);
   border: none;
@@ -77,7 +70,7 @@ div.ui.inverted.segment {
     }
 }
 
-}
+} // </VIEW>
 
 @import "eastereggs.less";
 
