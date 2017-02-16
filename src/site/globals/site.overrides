@@ -146,6 +146,10 @@ html, body {
 
 @import "eastereggs.less";
 
+/* === TYPED.JS === */
+
+@import "typed.less";
+
 /* === LEGACY === */
 
 // body {

@@ -11,7 +11,7 @@
     <div class="ui very padded text container inverted segment">
       <h1 class="ui inverted header"><img class="ui large image" src="/img/logo/droste_logo.png"></h1>
       <h2 class="ui inverted header">Data Science Consultancy</h2>
-      <h1 id="perspective" class="ui inverted header">Fresh Perspective on your <span>Data</span></h1>
+      <h1 id="perspective" class="ui inverted header">Fresh Perspective on your <span class="typed">Data</span></h1>
       <h1 class="ui inverted header">We deliver on the promise of <span>Data</span></h1>
     </div>
     <div id="stars"></div>
@@ -98,10 +98,12 @@
 </div>
 
 <script src="http://mbostock.github.com/d3/d3.v2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
 {% endblock content %}
 
 {% block js %}
   {% include 'js/easter_eggs.js' %}
   {% include 'js/index.js' %}
   {% include 'js/sparkline.js' %}
+  {% include 'js/types.js' %}
 {% endblock js %}

@@ -47,6 +47,7 @@ help:
 	@echo '   make publish                        generate using production settings '
 	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
 	@echo '   make serve-global [SERVER=0.0.0.0]  serve (as root) to $(SERVER):80    '
+	@echo '   make serve-droste [PORT=8080]  	  serve (as root) to 0.0.0.0:$(PORT)    '
 	@echo '   make devserver [PORT=8000]          start/restart develop_server.sh    '
 	@echo '   make stopserver                     stop local server                  '
 	@echo '   make ssh_upload                     upload the web site via SSH        '
@@ -84,6 +85,12 @@ else
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server 80 0.0.0.0
 endif
 
+serve-droste:
+ifdef PORT
+	cd $(OUTPUTDIR) && $(PY) -m pelican.server $(PORT) 0.0.0.0
+else
+	cd $(OUTPUTDIR) && $(PY) -m pelican.server 8080 0.0.0.0
+endif
 
 devserver:
 ifdef PORT
