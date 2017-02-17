@@ -1,34 +1,34 @@
 $(function () {
     //initialize swiper when document ready
     var mySwiper = new Swiper('.swiper-container', {
-        // direction: 'horizontal',
+        direction: 'horizontal',
         // effect : 'coverflow',
-        // fade: {
-          // crossFade: true
-        // },
-        // speed: 300,
+        speed: 450,
         loop: true,
 
         autoplay: 1000,
-        // autoplayDisableOnInteraction: true,
+        autoplayDisableOnInteraction: true,
 
-        // parallax: true,
-        // grabCursor: true,
-        // paginationClickable: true,
-        // touchEventsTarget: 'wrapper',
+        parallax: true,
+        grabCursor: true,
+        paginationClickable: true,
+        touchEventsTarget: 'wrapper',
         // If we need pagination
 
-        // pagination: '.swiper-pagination',
-        // a11y: true,
-        // keyboardControl: true,
-    
-        // Navigation arrows
-        // nextButton: '.swiper-button-next',
-        // prevButton: '.swiper-button-prev'
+        pagination: '.swiper-pagination',
+        a11y: true,
+        keyboardControl: true,
+        onInit : function(){
+            $('.swiper-slide').each(
+                function(i,e){
+                    $(this).attr('data-swiper-autoplay',getRandomArbitrary(4000,6500))
+                }
+            )
+        },
     })        
 });
 
 
 function getRandomArbitrary(min, max) {
-  return pasrseInt(Math.random() * (max - min) + min);
+  return parseInt(Math.random() * (max - min) + min);
 }
