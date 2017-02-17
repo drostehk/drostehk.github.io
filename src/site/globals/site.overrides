@@ -10,6 +10,10 @@
 /* === VARIABLES === */
 
 @diagonal : 35deg;
+@rowMarginTop : 3em;
+
+@panelBlue : rgb(2, 41, 59);
+@panelGrey : rgb(210, 210, 210);
 
 
 /* === OVERRIDES === */
@@ -18,7 +22,6 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: black;
 }
 
 
@@ -43,6 +46,7 @@ html, body {
 
 .landing.grid {
   margin-top: 0;
+  overflow: hidden;
 }
 
 .landing.column {
@@ -56,21 +60,25 @@ html, body {
   z-index: 12;
 }
 
-.panels.grid {
-  background : rgb(2, 41, 59);
-  margin-top: 2em !important;
+.sliders.wrapper {
+  background : @panelBlue;
+  * {
+    color : white;
+  }
+}
+
+.sliders > .grid {
+  background: @panelBlue;
   position: relative;
-  z-index: 7;
   .column {
     display: flex;
     flex-direction: column;
   }
 }
 
-.logos.grid {
-  background : rgb(210, 210, 210);
-  margin-top: 2em !important;
-  box-shadow: none;
+// Client Logos
+
+.logos > .grid {
   z-index: 1;
   img {
     max-height: 90%;
@@ -114,37 +122,42 @@ html, body {
     }
 }
 
-// Sparklines
+// Swipe
 
-.graph-wrapper {
-  width: 100%;
-  margin: 20px auto;
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
-}
-#graph1,
-#graph2 {
-  height: 100px;
-  width:100%;
-  margin: 0 auto;
-
-}
-#graph1 path {
-   stroke: @sunslinger-100;
-   stroke-width: 2;
-   fill: none;
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 2em;
 }
 
-#graph2 path {
-  stroke: @sunslinger-0;
-  stroke-width: 2;
-  fill: none;
+.swiper-slide img {
+  max-height: 8em;
 }
 
+
+
+// Footer 
+
+footer {
+  .wrapper;
+  height: 100%;
+  background: @panelBlue;
+  p, h3, li, div, i {
+    color: white;
+  }
+}
 
 } // </VIEW>
 
+
+/* === EASTER EGGS === */
+
 @import "eastereggs.less";
+
+/* === SPARKLINES === */
+
+@import "sparkline.less";
 
 /* === TYPED.JS === */
 

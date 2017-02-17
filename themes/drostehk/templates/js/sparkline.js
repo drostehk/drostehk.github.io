@@ -36,9 +36,11 @@ function displayGraphExampleOne(id, width, height, interpolation, animate, updat
                redrawWithoutAnimation();
            }
         }, updateDelay);
-    }
+};
     
-    displayGraphExampleOne("#graph1", 400, 100, "basis", true, 280, 280);
+displayGraphExampleOne("#graph1", 400, 100, "basis", true, 280, 280);
+displayGraphExampleOne("#graph3", 400, 100, "basis", true, 280, 280);
+displayGraphExampleOne("#graph5", 400, 100, "basis", true, 280, 280);
 
 function displayGraphExampleTwo(id, width, height, interpolation, animate, updateDelay, transitionDelay) {
     var graph = d3.select(id).append("svg:svg").attr("width", "100%").attr("height", "100%");
@@ -78,6 +80,8 @@ function displayGraphExampleTwo(id, width, height, interpolation, animate, updat
                redrawWithoutAnimation();
            }
         }, updateDelay);
-    }
+};
     
-    displayGraphExampleTwo("#graph2", 400, 100, "basis", true, 280, 280);
+displayGraphExampleTwo("#graph2", 400, 100, "basis", true, 280, 280);
+displayGraphExampleTwo("#graph4", 400, 100, "basis", true, 280, 280);
+displayGraphExampleTwo("#graph6", 400, 100, "basis", true, 280, 280);
