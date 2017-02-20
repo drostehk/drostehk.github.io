@@ -4,20 +4,23 @@
 |____/|__|__|_____|_____| |_| |_____|  |__|__|__  _|
                                                 |_*/
 
+@import "mixins.less";
+
 /* === GLOBAL VARIABLES === */
 
 // @pageMinWidth  : 1049px;
 // @pageOverflowX : visible;
 
-
 /* === FONTS === */
 
-@importGoogleFonts : true;
-@headerFont        : 'Bitter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+@headerFont           : 'Bitter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@pageFont             : 'Lato', 'Bitter', serif;
+
 // @headerFont        : 'Cooper Hewitt', 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 // @pageFont          : 'Cooper Hewitt', 'Railway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 // @googleFontFamily  : 'Lato:400italic, 400|Railway:400,700';
-@googleFontFamily  : 'Bitter:400,700';
 
 
 /* === BASE SIZES === */

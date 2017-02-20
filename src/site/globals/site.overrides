@@ -13,7 +13,9 @@
 @rowMarginTop : 3em;
 
 @panelBlue : rgb(2, 41, 59);
+@panelBlue : rgb(49, 52, 60)
 @panelGrey : rgb(210, 210, 210);
+@panelGrey : rgb(255, 255, 255);
 
 
 /* === OVERRIDES === */
@@ -40,19 +42,45 @@ html, body {
 
 #home { // <VIEW>
 
-.ui.button {
-  z-index: 10;
-}
+// Landing
 
 .landing.grid {
-  margin-top: 0;
+  margin: 0;
   overflow: hidden;
 }
 
 .landing.column {
-  height: 100%;
+  height: 100vh;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
+
+.diagonals {
+    position: relative;
+    height: 200%;
+    width: 160%;
+    display: flex;
+    align-items: lime;
+    background-size: 200%;
+    z-index: 2;
+  .diagonal {
+      flex: 1;
+      height: 200%;
+      width: 160%;
+      background: @teal;
+      z-index: 2;
+      .bg-grain(@sunslinger-100);
+      .transform(-@diagonal, 1, 0deg, -100%, -40%);
+      &:nth-child(1) {
+        background: coral;
+        .bg-grain(@sunslinger-0);
+      }
+  }
+}
+
+.ui.button {
+  z-index: 10;
+}
+
   
 .inverted.segment {
   background: transparent;
@@ -81,7 +109,7 @@ html, body {
 .logos > .grid {
   z-index: 1;
   img {
-    max-height: 90%;
+    max-height: 70%;
     max-width: 90%;
   }
   .column {
@@ -98,28 +126,10 @@ html, body {
   }
 }
 
-.diagonals {
-    position: relative;
-    height: 200%;
-    width: 160%;
-    display: flex;
-    align-items: lime;
-    background-size: 200%;
-    z-index: 2;
-}
 
-.diagonal {
-    flex: 1;
-    height: 200%;
-    width: 160%;
-    background: @teal;
-    z-index: 2;
-    .bg-grain(@sunslinger-100);
-    .transform(-@diagonal, 1, 0deg, -100%, -40%);
-    &:nth-child(1) {
-      background: coral;
-      .bg-grain(@sunslinger-0);
-    }
+
+.wrapper > h2 {
+
 }
 
 // Swipe
@@ -135,13 +145,11 @@ html, body {
   max-height: 8em;
 }
 
-
-
 // Footer 
 
 footer {
   .wrapper;
-  height: 100%;
+  height: auto;
   background: @panelBlue;
   p, h3, li, div, i {
     color: white;

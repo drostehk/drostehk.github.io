@@ -1,4 +1,3 @@
-
 // LESS MIXINS
 
 .transform(@rotate: 0deg; @scale: 1; @skew: 0deg; @translateX: 0; @translateY: 0) {
@@ -18,7 +17,7 @@
   transition: @prop @time @ease;
 }
 
-.bg-grain(@color: FFFFFF){
+.bg-grain(@color: '#FFFFFF'){
   @noise: darken(@color, 20%);
   @hex : replace(@color, "#", "");
   @url : e("http://api.thumbr.it/whitenoise-500x500.png?background=@{hex}&noise=@{noise}&density=40&opacity=40");
@@ -26,9 +25,14 @@
 }
 
 .wrapper {
+  .vertical-padding;
   background : rgb(210, 210, 210);
   width: 100%;
-  margin-top: 3em;
   position: relative;
   z-index: 10;
+}
+
+.vertical-padding {
+    padding-top: 2.5em;
+    padding-bottom: 3.5em;
 }
