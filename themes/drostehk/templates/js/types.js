@@ -1,6 +1,6 @@
   $(function(){
         $(".typed").typed({
-            strings: ["Data", "Business", "Perspective"],
+            strings: ["Business", "Design", "Clients", "Sourcing", "Investment", "Data"],
             typeSpeed: 55,
             backDelay: 1500,
             backSpeed: 10,
