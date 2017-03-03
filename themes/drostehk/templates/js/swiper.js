@@ -1,13 +1,17 @@
 $(function () {
     //initialize swiper when document ready
     var mySwiper = new Swiper('.swiper-container', {
-        direction: 'horizontal',
+        direction: 'vertical',
         // effect : 'coverflow',
         speed: 450,
         loop: true,
 
-        autoplay: 1000,
+        autoplay: 3000,
         autoplayDisableOnInteraction: true,
+        spaceBetween: 30,
+
+        slidesPerView: 'auto',
+        centeredSlides: true,
 
         parallax: true,
         grabCursor: true,
@@ -21,7 +25,7 @@ $(function () {
         onInit : function(){
             $('.swiper-slide').each(
                 function(i,e){
-                    $(this).attr('data-swiper-autoplay',getRandomArbitrary(4000,6500))
+                    // $(this).attr('data-swiper-autoplay', getRandomArbitrary(4000,6500))
                 }
             )
         },
