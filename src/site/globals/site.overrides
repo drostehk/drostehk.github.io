@@ -1,4 +1,4 @@
-  /*___  _____ _____ _____ _____ _____    _____ _____ 
+/*___  _____ _____ _____ _____ _____    _____ _____ 
 |    \| __  |     |   __|_   _|   __|  |  |  |     |
 |  |  |    -|  |  |__   | | | |   __|  |     |  |  |
 |____/|__|__|_____|_____| |_| |_____|  |__|__|__  _|
@@ -14,6 +14,7 @@
 
 @panelBlue : rgb(2, 41, 59);
 @panelBlue : rgb(49, 52, 60)
+@panelBlue : #071527;
 @panelGrey : rgb(210, 210, 210);
 @panelGrey : rgb(255, 255, 255);
 
@@ -106,16 +107,23 @@ html, body {
 
 // Client Logos
 
+.logos {
+  background: white;
+}
+
 .logos > .grid {
   z-index: 1;
+  background: white;
+  box-shadow: none;
   img {
-    max-height: 70%;
-    max-width: 90%;
+    max-height: 50%;
+    max-width: 65%;
   }
   .column {
     display: flex;
     flex-direction: column;
     max-height: 26em;
+    box-shadow: none;
     > div {
         flex: 1;
         display: flex;
@@ -134,11 +142,34 @@ html, body {
 
 // Swipe
 
+@slide-height : 16em;
+
 .swiper-container {
     width: 100%;
-    height: 100%;
+    height: @slide-height;
+    margin: 20px auto;
     color: white;
     font-size: 2em;
+}
+
+.swiper-slide{
+  text-align: center;
+  font-size: 18px;
+  // background: #fff;
+  height: 60%;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 .swiper-slide img {
