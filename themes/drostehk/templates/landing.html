@@ -1,23 +1,57 @@
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
 <div class="ui two column doubling landing grid">
-  <div class="landing column">
-    <div class="ui very padded text container inverted segment">
-      <h1 class="ui inverted header"><img class="ui large image" src="/img/logo/droste_logo.png"></h1>
-      <h2 class="ui inverted header">Data Science Consultancy</h2>
-      <h1 id="perspective" class="ui inverted header">Fresh Perspective on your <span class="typed">Data</span></h1>
-      <h1 class="ui inverted header">We deliver on the promise of <span>Data</span></h1>
+  <div class="column">
+    <img class="ui image logo" src="/img/logo/droste_logo.png">
+    <div class="ui segments center">
+      <div class="ui basic segment"><p>We are a</p></div>
+      <div class="ui basic segment"><p>data science consultancy</p></div>
+      <div class="ui basic segment"><p>that brings</p></div>
+      <div class="ui basic segment"><p>fresh perspectives on your <span class="typed">data</span></p></div>
+      <div class="ui basic segment"><p>with a mission to</p></div>
+      <div class="ui basic segment"><p>to deliver on the promise of <span>data</span></p></div>
+    </div>
+    <div class="ui segments bottom">
+
+      <a href="#services">
+        <div class="ui basic segment"><p>here's how.</p></div>
+        <div class="ui basic segment"><p>⌄</p></div>
+      </a>
     </div>
   </div>
-  <div class="landing column">
-    <div class="ui center aligned inverted landing segment attached">
-      <button class="ui large button inverted white">services</button>
-      <button class="ui large button inverted white">about us</button>
-      <button class="ui large button white">request proposal</button>
-    </div>
+  <div class="column">
+    <div class="ui center aligned inverted segment attached menu">
+      <a href="#services" class="ui large button inverted">Services</a>
+      <a href="#clients" class="ui large button inverted">Clients</a>
+      <a class="ui large button inverted white">Request proposal</a>
     </div>
   </div>
-  <div id="stars"></div>
-  <div id="stars2"></div>
-  <div id="stars3"></div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+<script type="text/javascript">
+// handle links with @href started with '#' only
+$(document).on('click', 'a[href^="#"]', function(e) {
+    // target element id
+    var id = $(this).attr('href');
+
+    // target element
+    var $id = $(id);
+    if ($id.length === 0) {
+        return;
+    }
+
+    // prevent standard hash navigation (avoid blinking in IE)
+    e.preventDefault();
+
+    // top position relative to the document
+    var pos = $id.offset().top;
+
+    // animated top scrolling
+    $('body, html').animate({scrollTop: pos},{
+                    duration: 'slow',
+                    easing: 'easeInOutCubic'
+                });
+});
+</script>

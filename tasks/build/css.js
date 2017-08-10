@@ -100,7 +100,7 @@ module.exports = function(callback) {
     .pipe(plumber())
     .pipe(clone())
     .pipe(replace(assets.source, assets.compressed))
-    .pipe(minifyCSS(settings.minify))
+    // .pipe(minifyCSS(settings.minify))
     .pipe(rename(settings.rename.minCSS))
     .pipe(gulpif(config.hasPermission, chmod(config.permission)))
     .pipe(gulp.dest(output.compressed))

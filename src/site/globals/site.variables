@@ -14,8 +14,23 @@
 /* === FONTS === */
 
 
+@font-face {
+    font-family: 'Cooper Hewitt' ;
+    src: url(../fonts/CooperHewitt-Medium.otf);
+}
 
-@headerFont           : 'Bitter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@font-face {
+    font-family: 'Cooper Hewitt Bold' ;
+    src: url(../fonts/CooperHewitt-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Cooper Hewitt Light' ;
+    src: url(../fonts/CooperHewitt-Light.otf);
+}
+
+
+@headerFont           : 'Cooper Hewitt', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 @pageFont             : 'Lato', 'Bitter', serif;
 
 // @headerFont        : 'Cooper Hewitt', 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
