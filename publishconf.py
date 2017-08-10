@@ -10,6 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
+DEVMODE = False
 SITEURL = 'http://droste.hk'
 RELATIVE_URLS = False
 

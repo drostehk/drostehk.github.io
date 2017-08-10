@@ -8,6 +8,7 @@ from pelican.readers import HTMLReader
 AUTHOR = u'Team Droste'
 SITENAME = u'Droste HQ'
 SITEURL = ''
+DEVMODE = True
 
 TIMEZONE = 'Asia/Hong_Kong'
 
