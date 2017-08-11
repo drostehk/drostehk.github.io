@@ -335,33 +335,79 @@ h2.ui.header {
 
 // Client Logos
 
-.logos {
+#clients {
   background: white;
-}
 
-.logos > .grid {
-  z-index: 1;
-  background: white;
-  box-shadow: none;
-  img {
-    max-height: 50%;
-    max-width: 65%;
+  h2 {
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    padding-right: 0;
   }
-  .column {
-    display: flex;
-    flex-direction: column;
-    max-height: 26em;
+
+  > .grid {
+    z-index: 1;
+    background: white;
     box-shadow: none;
-    > div {
-        flex: 1;
+
+    img {
+      max-height: 50%;
+      max-width: 65%;
+    }
+
+    .row {
+      box-shadow: none;
+    
+      > .column {
         display: flex;
-        justify-content: center;
         flex-direction: column;
-        overflow: hidden;
+        max-height: 26em;
+        box-shadow: none;
+
+        > div {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+      }
     }
   }
 }
 
+// Call out
+
+#callout {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background: #05226b;
+
+  h2 {
+    color: #05226b;
+    border-color: #0395f0;
+    width: 18%;
+    margin-bottom: 3rem;
+  }
+  p {
+    color: white;
+    font-size: 2rem;
+    width: 31%;
+    text-align: center;
+    margin-bottom: 3rem;
+    line-height: 3rem;
+  }
+  span {
+    color: #0395f0;
+  }
+  a {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
 
 // Footer 
 
