@@ -142,13 +142,7 @@ h2.ui.header {
     align-items: center;
     
     &:before {
-      content: "";
-      background: url(/img/site/glowing_bullet.png);
-      width: 40px;
-      height: 40px;
-      display: inline-block;
-      margin-right: 1em;
-      background-size: cover;
+      .glowing-bullet;
     }
   }
 
@@ -413,15 +407,56 @@ h2.ui.header {
 
 footer {
   .wrapper;
-  height: auto;
-  background: @panelBlue;
-  p, h3, li, div, i {
-    color: white;
+  background: #081945;
+  
+  .footer {
+    padding-top: 3rem;
+    height: auto;
+    h3{
+      font-size: 1.5em;
+      font-weight: lighter;
+      display: inline-flex;
+      align-items: center;
+    }
+    h3:before{
+      .glowing-bullet;
+      margin-right: 1.3em;
+    }
+    p, h3, li, div, i, a, a:link {
+      color: white;
+    }
+    .ui.list {
+      height: auto;
+      border-left: 1px solid rgba(255, 255, 255, 0.7);
+      padding-left: 18px;
+      padding-right: 1.14rem;
+      margin-left: 1.26rem;
+      margin-top: 1rem;
+      color: #b1c0d3;
+      font-size: 1.1rem;
+      .content {
+        padding-left: 1em;
+      } 
+    }
   }
 }
 
 } // </VIEW>
 
+
+
+
+/* === MIXINS === */
+
+.glowing-bullet {
+  content: " ";
+  background: url(/img/site/glowing_bullet.png);
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 1em;
+  background-size: cover;
+}
 
 
 
