@@ -41,7 +41,7 @@ $(function () {
         speed: 450,
         loop: true,
 
-        autoplay: 3000,
+        autoplay: 5000,
         autoplayDisableOnInteraction: true,
         spaceBetween: 0,
 
