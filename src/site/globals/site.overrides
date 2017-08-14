@@ -37,11 +37,11 @@ html, body {
 // SHARED
 
 h2.ui.header {
-  font-size: 3em;
+  font-size: 2.6em;
   color: #8f2eda !important;
   font-weight: lighter;
   border-top: 10px solid;
-  padding: 12px 12px 0 0;
+  padding: 18px 12px 0 0;
   margin-top: 0 !important;
 }
 
@@ -207,7 +207,7 @@ h2.ui.header {
 }
 
 .swiper-pagination-bullet {
-  font-size: 2em;
+  font-size: 1.8rem;
   background: none;
   height: auto;
   width: auto;
@@ -216,7 +216,7 @@ h2.ui.header {
 }
 
 .swiper-pagination-bullet:before {
-  content: "♢";
+  content: "◇";
   margin-left: -6px;
   padding-top: 16px;
   display: inline-block;
@@ -225,8 +225,8 @@ h2.ui.header {
 }
 
 .swiper-pagination-bullet-active:before {
-  content: "♦";
-  width:29px;
+  content: "◆";
+  width:34px;
 }
 
 // Slides Container
@@ -329,6 +329,12 @@ h2.ui.header {
 
 // Client Logos
 
+// TODO : JW Marriot
+// TODO : Replace MOL with Ogilvy
+// TODO : Add Estee Lauder
+// TODO : FOX shouldn't be first
+// TODO : Add NEC
+
 #clients {
   background: white;
 
@@ -337,6 +343,7 @@ h2.ui.header {
     text-align: center;
     margin: 0 auto;
     padding-right: 0;
+    padding-top: 25px;
   }
 
   > .grid {
@@ -355,7 +362,7 @@ h2.ui.header {
       > .column {
         display: flex;
         flex-direction: column;
-        max-height: 26em;
+        max-height: 30em;
         box-shadow: none;
 
         > div {
@@ -424,6 +431,9 @@ footer {
     }
     p, h3, li, div, i, a, a:link {
       color: white;
+    }
+    i {
+      padding-right: 0;
     }
     .ui.list {
       height: auto;
