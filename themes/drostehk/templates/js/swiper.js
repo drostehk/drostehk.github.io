@@ -1,6 +1,6 @@
 $(function () {
     //initialize swiper when document ready
-    var mySwiper = new Swiper('.swiper-container.text', {
+    var predictiveAnalytics = new Swiper('.swiper-container.text', {
         direction: 'vertical',
         // effect : 'coverflow',
         speed: 450,
@@ -29,13 +29,15 @@ $(function () {
                 }
             )
         },
-    })        
-});
+    })   
 
+    $('.swiper-container.text').hover(
+        predictiveAnalytics.stopAutoplay,
+        predictiveAnalytics.startAutoplay);
 
-$(function () {
-    //initialize swiper when document ready
-    var mySwiper = new Swiper('.swiper-container.images', {
+    
+
+    var dataVisualisation = new Swiper('.swiper-container.images', {
         direction: 'vertical',
         // effect : 'coverflow',
         speed: 450,
@@ -64,13 +66,14 @@ $(function () {
                 }
             )
         },
-    })        
-});
+    })
+
+    $('.swiper-container.images').hover(
+        dataVisualisation.stopAutoplay,
+        dataVisualisation.startAutoplay);
 
 
-$(function () {
-    //initialize swiper when document ready
-    var mySwiper = new Swiper('.swiper-container.graphs', {
+    var dataApplications = new Swiper('.swiper-container.graphs', {
         direction: 'vertical',
         // effect : 'coverflow',
         speed: 450,
@@ -100,8 +103,15 @@ $(function () {
             )
         },
     })        
+
+    $('.swiper-container.graphs').hover(
+        dataApplications.stopAutoplay,
+        dataApplications.startAutoplay);
+
 });
 
 function getRandomArbitrary(min, max) {
   return parseInt(Math.random() * (max - min) + min);
 }
+
+
