@@ -294,6 +294,10 @@ h2.ui.header {
       align-self: center;
       white-space: nowrap;
     }
+    video{
+      position: absolute;
+      top:0;
+    }
     img {
       width: 100%;
       opacity: 1;
