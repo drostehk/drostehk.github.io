@@ -1219,6 +1219,10 @@ body {
   top: -10px;
 }
 
+#home .swiper-container .swiper-slide video.runner {
+  margin-top: -5%;
+}
+
 #home .swiper-container .swiper-slide img {
   width: 100%;
   opacity: 1;
