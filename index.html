@@ -1,85 +1,613 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		
-		<title>Droste - Data Science Consultancy</title>
-		
-		<link rel="stylesheet" media="all" href="css/style.css" />
-		
-		<script src="scripts/respond.min.js"></script>
-		
-	</head>
-	<body>
-	<section class="introduction"></section>
-	<div class="container row">
-		<div class="row">
-			
-			<article class="col span_12 first">
-				
-				<i>Data Science</i> is creative problem solving with data as the raw material
-				
-			</article>
-			
-		</div>
-		<div class="row">
-			
-			<article class="col span_12">
-				
-				<i>Droste</i> is a Data Science Consultancy
-				
-			</article>
-			
-		</div>
-		<div class="row">
-			
-			<article class="col span_12">
-				
-				We help companies <em>define</em> and <em>implement</em> strategies to make data part of their organisational DNA.
-				
-			</article>
-			
-		</div>
-		<div class="row">
-			
-			<article class="col span_12">
-				
-				<a href="mailto:info@droste.hk?subject=Enquiry" "email me">Talk to us.</a>
-				
-			</article>
-			
-		</div>
-		<!-- 	<div class="row">
-				<div class="col span_12">
-				
-						We are currently hiring for the following roles
-				
-				</div>
-			
-				<div class="col span_6">
-				
-						<h2>Senior Data Scientist</h2>
-				
-				</div>
-				<div class="col span_6">
-				
-						<h2>Junior Web Dev</h2>
-				
-					<div>
-						
-				</div>
-			</div>
-			<div class="row gutters">
-				
-				
-			</div>
-			
-			<footer role="contentinfo" class="row">
-				
-					<a href="mailto:apply@droste.hk?subject=Here's a little something about me" "email me">APPLY</a>
-				
-			</footer>
-			-->
-		</div>
-	</body>
+<!-- VARIABLES -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <!-- META -->
+
+  <title>Droste HQ</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="http://droste.hk/static/semantic.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Lato" rel="stylesheet">
+
+  <!-- LiveReload -->
+
+  <!-- JS -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+  <script src="http://droste.hk/static/semantic.min.js"></script>
+
+  <!-- FEEDS -->
+  
+    <link href="http://droste.hk/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Droste HQ Atom Feed" />
+
+
+
+</head>
+<body id="home">
+
+
+  <!-- LANDING -->
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
+<div id="starcluster"><img src="/img/site/kv.png"></div>
+<div class="ui two column landing grid">
+  <div class="column">
+    <img class="ui image logo" src="/img/logo/droste_logo.png">
+    <div class="ui segments center">
+      <div class="ui basic segment"><p>We are a</p></div>
+      <div class="ui basic segment"><p>data science consultancy</p></div>
+      <div class="ui basic segment"><p>that brings</p></div>
+      <div class="ui basic segment"><p>fresh perspectives on your <span class="typed">data</span></p></div>
+      <div class="ui basic segment"><p>with a mission to</p></div>
+      <div class="ui basic segment"><p>to deliver on the promise of <span>data</span></p></div>
+    </div>
+    <div class="ui segments bottom">
+      <a href="#services">
+        <div class="ui basic segment"><p>here's how.</p></div>
+        <div class="ui basic segment"><p>⌄</p></div>
+      </a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui center aligned inverted segment attached menu">
+      <a href="#services" class="ui large button inverted">Services</a>
+      <a href="#clients" class="ui large button inverted">Clients</a>
+      <a href="https://tijptjik.typeform.com/to/bIbqVC" class="ui large button inverted white typeform-share" data-mode="drawer_right" target="_blank">Talk to us</a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+<script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })()
+</script>
+<script type="text/javascript">
+// handle links with @href started with '#' only
+$(document).on('click', 'a[href^="#"]', function(e) {
+    // target element id
+    var id = $(this).attr('href');
+
+    // target element
+    var $id = $(id);
+    if ($id.length === 0) {
+        return;
+    }
+
+    // prevent standard hash navigation (avoid blinking in IE)
+    e.preventDefault();
+
+    // top position relative to the document
+    var pos = $id.offset().top;
+
+    // animated top scrolling
+    $('body, html').animate({scrollTop: pos},{
+                    duration: 'slow',
+                    easing: 'easeInOutCubic'
+                });
+});
+</script>
+  <!-- OUR SERVICES -->
+<div id="services" class="sliders wrapper">
+  <div class="ui two column stackable grid container">
+  <h2 class="ui header">Our services</h2>
+
+    <div class="row">
+      <div class="six wide column">
+        <h3 class="ui header">Predictive analytics</h3>
+        <p class="description">Machine Learning and AI are coming to so many of the apps and services you use - with our predictive analytics services you can make them part of your business. Through opportunity discovery, predictive analytics helps you do more with less.</p>
+      </div>
+      <div class="ten wide column">
+        <div class="swiper-pagination swiper-pagination-text"></div>
+        <!-- Slider main container -->
+        <div class="swiper-container text">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            
+            <!-- Slides -->
+
+            <div class="ui centered swiper-slide" data-swiper-autoplay="2000">
+              <div class="text-spacer">
+                <h4>CRM</h4>
+                <p>How do you know which leads are <em>worth pursuing?</em></p>
+              </div>
+            </div>
+            
+            <div class="ui centered swiper-slide">
+              <div class="text-spacer">
+                <h4>Retail</h4>
+                <p>How to organise your shelves for the <em>highest level of sales?</em></p>
+              </div>
+            </div>
+            
+            <div class="ui centered swiper-slide">
+              <div class="text-spacer">
+                <h4>Maintenance</h4>
+                <p>When should you commission repairs to <em>minimise maintenance costs</em>?</p>
+              </div>
+            </div>
+            
+            <div class="ui centered swiper-slide">
+              <div class="text-spacer">
+                <h4>Marketing</h4>
+                <p>Which content will be <em>most relevant </em>to your<em> audience segments</em>?</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="six wide column">
+        <h3 class="ui header">Data visualisation</h3>
+        <p class="description">Data visualisation powers knowledge discovery and provides new insights into your datasets. Our visualisation services range from visual storytelling with unique graphics to powering suites of real-time operational dashboards.</p>
+      </div>
+      <div class="ten wide column">
+        <div class="swiper-pagination swiper-pagination-graphs"></div>
+        <!-- Slider main container -->
+        <div class="swiper-container graphs footered">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            
+            <!-- Slides -->
+            
+            <div class="ui centered swiper-slide">
+              <!-- <video width="860" height="340" autoplay="autoplay" loop="true" class="tableau">
+                <source src="/img/site/home/tableau.mp4" type="video/mp4" />
+            </video> -->
+              <footer class="caption light">
+                <h4>Tableau</h4>
+                <p>Develop operational and management Dashboards in Tableau</p>
+              </footer>
+            </div>
+
+            <div class="ui centered swiper-slide">
+              <img src="img/site/home/energy.gif" alt="">
+              <footer class="caption light">
+                <h4>Interactive Graphics</h4>
+                <p>Empower your communication and insight discovery</p>
+              </footer>
+            </div>
+
+            <div class="ui centered swiper-slide" data-swiper-autoplay="2300">
+              <div class="graph-wrapper"> 
+                <p>
+                  <div id="graph1"></div>
+                </p>
+                <p>
+                  <div id="graph2"></div>
+                </p>
+              </div>
+                <footer class="caption">
+                  <h4>Realtime Analytics</h4>
+                  <p>Remove the delay in the information that's most important to you</p>
+                </footer>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="six wide column">
+        <h3 class="ui header">Data applications</h3>
+        <p class="description">End-to-end handling of data application development. For the most demanding applications we develop tailored solutions leveraging dedicated machine learning pipelines.</p>
+      </div>
+      <div class="ten wide column">
+        <div class="swiper-pagination swiper-pagination-images"></div>
+        <!-- Slider main container -->
+        <div class="swiper-container images footered">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+
+            <div class="ui centered swiper-slide">
+              <img src="img/site/home/portfoliorecommendation.gif" alt="">
+              <footer class="caption">
+                <h4>Data Management</h4>
+                <p>Break away from Excel with dedicated tools</p>
+              </footer>
+            </div>
+
+            <div class="ui centered swiper-slide">
+<!--             <video width="860" height="480" autoplay="autoplay" loop="true">
+              <source src="img/site/home/cv.mp4" type="video/mp4" />
+            </video>
+ -->              <footer class="caption">
+                <h4>Computer Vision</h4>
+                <p>Automate processes which currently require manual inspection</p>
+              </footer>
+            </div>
+
+            <div class="ui centered swiper-slide">
+              <img src="img/site/home/chatbot.gif" alt="">
+              <footer class="caption">
+                <h4>Chatbots</h4>
+                <p>Open up additional sales channels by being available. Always.</p>
+              </footer>
+            </div>
+
+            <div class="ui centered swiper-slide" data-swiper-autoplay="2600">
+              <img src="img/site/home/api.png" alt="">
+                <footer class="caption">
+                  <h4>APIs & Data Pipelines</h4>
+                  <p>Create value from your data by unlocking it through APIs</p>
+                </footer>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/2.8.1/d3.v2.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.0/d3.min.js"></script> -->
+  <!-- OUR CLIENTS -->
+<div id="clients" class="logos wrapper">
+  <h2 class="ui centered header">Trusted across industries</h2>
+  <div class="ui four column celled grid container">
+    <div class="row">
+      <div class="centered column">
+        <div><img class="ui centered image" src="img/client-logo/ogilvy.png"></div>
+        <div><img class="ui centered image" src="img/client-logo/jwmarriot.jpg"></div>
+        <div><img class="ui centered image" src="img/client-logo/euromoney.png"></div>
+        <div><img class="ui centered image" src="img/client-logo/fox.png"></div>
+      </div>
+      <div class="centered column">
+        <div><img class="ui centered image" src="img/client-logo/aia.png"></div>
+        <div><img class="ui centered image" src="img/client-logo/clp.png"></div>
+        <div><img class="ui centered image" src="img/client-logo/elc.png"></div>
+        <div><img class="ui centered image" src="img/client-logo/hotels.png"></div>
+      </div>
+      <div class="centered column">
+        <div><img class="ui centered image" src="img/client-logo/jll.png"></div>
+        <div><img class="ui centered image" src="img/client-logo/lc.png"></div>
+        <div><img class="ui centered image" src="img/client-logo/lf.png"></div>
+        <div><img class="ui centered image" src="img/client-logo/oxr.png"></div>
+      </div>
+      <div class="centered column">
+        <div><img class="ui centered image" src="img/client-logo/ga.png"></div>
+        <div><img class="ui centered image" src="img/client-logo/nec.png"></div>
+        <div><img class="ui centered image" src="img/client-logo/pactera.png"></div>
+        <div><img class="ui centered image" src="img/client-logo/mcs.jpg"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="callout" class="wrapper">
+  <h2 class="ui centered header"> </h2>
+  <p>We help companies <span>define</span> and <span>implement</span> strategies to make data part of their organisational DNA.</p>
+  <!-- TODO : MAKE THE OUTLINE #0395f0 -->
+  <a href="https://tijptjik.typeform.com/to/bIbqVC" class="ui large button inverted white typeform-share" data-mode="drawer_right" target="_blank">Talk to us</a><script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+</div>
+
+
+<footer>
+<div class="ui four column grid centered grid container footer">
+    <div class="column">
+        <h3 class="ui header">Contact</h3>
+        <div class="ui list">
+          <div class="item">
+            <i class="users icon"></i>
+            <div class="content">
+              Droste Limited
+            </div>
+          </div>
+          <div class="item">
+            <i class="marker icon"></i>
+            <div class="content">
+              Prince Edward, Kowloon
+            </div>
+          </div>
+          <div class="item">
+            <i class="mail icon"></i>
+            <div class="content">
+              <a href="mailto:info@droste.hk">info@droste.hk</a>
+            </div>
+          </div>
+          <div class="item">
+            <i class="linkify icon"></i>
+            <div class="content">
+              <a href="http://droste.hk">droste.hk</a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="column">
+        <h3 class="ui header">Resources</h3>
+        <div class="ui list">
+          <div class="item">
+            <i class="linkify icon"></i>
+            <div class="content">
+              <a href="http://datascience.hk">Symbol & Key</a>
+            </div>
+          </div>
+          <div class="item">
+            <i class="linkify icon"></i>
+            <div class="content">
+              <a href="http://prologue.datascience.hk/">Prologue to Data Science</a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="column">
+    <!-- TODO : HORIZONTAL SOCIAL ICONS -->
+        <h3 class="ui header">Connect with us</h3>
+        <div class="ui list">
+          <div class="item">
+            <i class="twitter icon"></i>
+            <div class="content">
+              <a href="https://twitter.com/symbolandkey">Twitter</a>
+            </div>
+          </div>
+          <div class="item">
+            <i class="github icon"></i>
+            <div class="content">
+              <a href="https://github.com/drostehk/">GitHub</a>
+            </div>
+          </div>
+          <div class="item">
+            <i class="facebook icon"></i>
+            <div class="content">
+              <a href="https://www.facebook.com/pages/Droste/140212986311466">Facebook</a>
+            </div>
+          </div>
+          <div class="item">
+            <i class="linkedin icon"></i>
+            <div class="content">
+              <a href="https://www.linkedin.com/company-beta/9453975/">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="column"> -->
+        <!-- <h3 class="ui header">NEWSLETTER</h3> -->
+    <!-- </div> -->
+</div>
+</footer>
+
+  <script type="text/javascript">
+  $(function(){
+        $(".typed").typed({
+            strings: ["business", "design", "clients", "sourcing", "investment", "data"],
+            typeSpeed: 55,
+            backDelay: 1500,
+            backSpeed: 10,
+            shuffle: true,
+            loop: true,
+            showCursor: true,
+        });
+    });$(function () {
+    //initialize swiper when document ready
+    var predictiveAnalytics = new Swiper('.swiper-container.text', {
+        direction: 'vertical',
+        // effect : 'coverflow',
+        speed: 450,
+        loop: true,
+
+        // autoplay: 3000,
+        autoplayDisableOnInteraction: true,
+        spaceBetween: 0,
+
+        slidesPerView: 'auto',
+        centeredSlides: true,
+
+        parallax: true,
+        grabCursor: true,
+        paginationClickable: true,
+        touchEventsTarget: 'wrapper',
+        // If we need pagination
+
+        pagination: '.swiper-pagination-text',
+        a11y: true,
+        keyboardControl: true,
+        onInit : function(){
+            $('.swiper-slide').each(
+                function(i,e){
+                    // $(this).attr('data-swiper-autoplay', getRandomArbitrary(4000,6500))
+                }
+            )
+        },
+    })   
+
+    $('.swiper-container.text').hover(
+        predictiveAnalytics.stopAutoplay,
+        predictiveAnalytics.startAutoplay);
+
+    
+
+    var dataVisualisation = new Swiper('.swiper-container.images', {
+        direction: 'vertical',
+        // effect : 'coverflow',
+        speed: 450,
+        loop: true,
+
+        autoplay: 5000,
+        autoplayDisableOnInteraction: true,
+        spaceBetween: 0,
+
+        slidesPerView: 'auto',
+        centeredSlides: true,
+
+        parallax: true,
+        grabCursor: true,
+        paginationClickable: true,
+        touchEventsTarget: 'wrapper',
+        // If we need pagination
+
+        pagination: '.swiper-pagination-images',
+        a11y: true,
+        keyboardControl: true,
+        onInit : function(){
+            $('.swiper-slide').each(
+                function(i,e){
+                    // $(this).attr('data-swiper-autoplay', getRandomArbitrary(4000,6500))
+                }
+            )
+        },
+    })
+
+    $('.swiper-container.images').hover(
+        dataVisualisation.stopAutoplay,
+        dataVisualisation.startAutoplay);
+
+
+    var dataApplications = new Swiper('.swiper-container.graphs', {
+        direction: 'vertical',
+        // effect : 'coverflow',
+        speed: 450,
+        loop: true,
+
+        autoplay: 6000,
+        autoplayDisableOnInteraction: true,
+        spaceBetween: 0,
+
+        slidesPerView: 'auto',
+        centeredSlides: true,
+
+        parallax: true,
+        grabCursor: true,
+        paginationClickable: true,
+        touchEventsTarget: 'wrapper',
+        // If we need pagination
+
+        pagination: '.swiper-pagination-graphs',
+        a11y: true,
+        keyboardControl: true,
+        onInit : function(){
+            $('.swiper-slide').each(
+                function(i,e){
+                    // $(this).attr('data-swiper-autoplay', getRandomArbitrary(4000,6500))
+                }
+            )
+        },
+    })        
+
+    $('.swiper-container.graphs').hover(
+        dataApplications.stopAutoplay,
+        dataApplications.startAutoplay);
+
+});
+
+function getRandomArbitrary(min, max) {
+  return parseInt(Math.random() * (max - min) + min);
+}
+
+function displayGraphExampleOne(id, width, height, interpolation, animate, updateDelay, transitionDelay) {
+    var graph = d3.select(id).append("svg:svg").attr("width", "100%").attr("height", "100%");
+    
+    var dataOne = [68, 16, 59, 38, 39, 50, 71, 22, 88, 31, 24, 3, 93, 2, 82, 6, 73, 96, 94, 68, 43, 20, 82, 62, 20, 51, 80, 18, 10, 94, 2, 66, 13, 47, 53, 65, 1, 15, 22, 30, 53, 64, 58, 34, 42, 93, 27, 77, 2, 88, 89, 81, 48, 95, 91, 64, 73, 38, 76, 79, 90, 94, 56, 37, 35, 99, 81, 19, 14, 14, 97, 74, 49, 81, 38, 5, 84, 19, 50, 72, 47, 2, 58, 8, 93, 85, 34, 38, 75, 54, 51, 39, 2, 38, 54, 13, 48, 58, 5, 90, 67, 40, 46, 67, 3, 96, 7, 11, 69, 42, 15, 52, 15, 40, 11, 70, 99, 87, 16, 23, 77, 18, 47, 7, 79, 69, 14, 60, 54, 15, 27, 93, 57, 56, 22, 88, 10, 24, 55, 77, 76, 94, 61, 84, 77, 89, 51, 99, 6, 99, 100, 35, 72, 13, 55, 80, 65, 18, 49, 33, 53, 31, 51, 52, 39, 71, 63, 80, 14, 39, 29, 3, 17, 86, 75, 42, 43, 5, 50, 40, 9, 82, 90, 85, 62, 5, 25, 34, 17, 76, 68, 27, 49, 13, 62, 34, 3, 4, 26, 21];
+    
+    var x = d3.scale.linear().domain([0, 48]).range([-5, width]);
+    var y = d3.scale.linear().domain([0, 100]).range([0, height]);
+    var line = d3.svg.line()
+        .x(function(d,i) { 
+            return x(i); 
+        })
+        .y(function(d) { 
+            return y(d); 
+        })
+        .interpolate(interpolation)
+        
+        graph.append("svg:path").attr("d", line(dataOne));
+        
+        function redrawWithAnimation() {
+            graph.selectAll("path")
+                .data([dataOne])
+                .attr("transform", "translate(" + x(1) + ")")
+                .attr("d", line)
+                .transition()
+                .ease("linear")
+                .duration(transitionDelay)
+                .attr("transform", "translate(" + x(0) + ")");
+        }
+        
+        setInterval(function() {
+           var v = dataOne.shift();
+           dataOne.push(v);
+           if(animate) {
+               redrawWithAnimation();
+           } else {
+               redrawWithoutAnimation();
+           }
+        }, updateDelay);
+};
+    
+displayGraphExampleOne("#graph1", 400, 100, "basis", true, 280, 280);
+displayGraphExampleOne("#graph3", 400, 100, "basis", true, 280, 280);
+displayGraphExampleOne("#graph5", 400, 100, "basis", true, 280, 280);
+
+function displayGraphExampleTwo(id, width, height, interpolation, animate, updateDelay, transitionDelay) {
+    var graph = d3.select(id).append("svg:svg").attr("width", "100%").attr("height", "100%");
+
+    var dataTwo = [33, 76, 67, 74, 32, 82, 62, 1, 78, 4, 13, 88, 61, 26, 58, 42, 79, 69, 3, 19, 10, 91, 94, 20, 27, 8, 51, 87, 85, 65, 17, 77, 35, 37, 93, 36, 60, 63, 39, 73, 43, 75, 9, 66, 25, 49, 97, 90, 47, 70, 18, 41, 50, 34, 53, 23, 30, 92, 14, 84, 16, 95, 28, 31, 96, 68, 80, 21, 72, 99, 15, 83, 6, 64, 59, 54, 86, 12, 55, 71, 7, 22, 52, 24, 5, 29, 56, 2, 100, 98, 48, 11, 40, 57, 45, 81, 89, 38, 46, 44];
+    
+    var x = d3.scale.linear().domain([0, 48]).range([-5, width]);
+    var y = d3.scale.linear().domain([0, 100]).range([0, height]);
+    var line = d3.svg.line()
+        .x(function(d,i) { 
+            return x(i); 
+        })
+        .y(function(d) { 
+            return y(d); 
+        })
+        .interpolate(interpolation)
+        
+        graph.append("svg:path").attr("d", line(dataTwo));
+        
+        function redrawWithAnimation() {
+            graph.selectAll("path")
+                .data([dataTwo])
+                .attr("transform", "translate(" + x(1) + ")")
+                .attr("d", line)
+                .transition()
+                .ease("linear")
+                .duration(transitionDelay)
+                .attr("transform", "translate(" + x(0) + ")");
+        }
+        
+        setInterval(function() {
+           var v = dataTwo.shift();
+           dataTwo.push(v);
+           if(animate) {
+               redrawWithAnimation();
+           } else {
+               redrawWithoutAnimation();
+           }
+        }, updateDelay);
+};
+    
+displayGraphExampleTwo("#graph2", 400, 100, "basis", true, 280, 280);
+displayGraphExampleTwo("#graph4", 400, 100, "basis", true, 280, 280);
+displayGraphExampleTwo("#graph6", 400, 100, "basis", true, 280, 280);nyancat = function(){
+    $('.diagonals').toggleClass('nyancat');
+};
+
+nebula = function(){
+    $('.diagonals').toggleClass('nebula');
+};
+
+waves = function(){
+    $('.diagonals').toggleClass('waves');
+};  </script>
+
+</body>
 </html>
