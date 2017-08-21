@@ -452,7 +452,7 @@ footer {
     }
     h3:before{
       .glowing-bullet;
-      margin-right: 1.3em;
+      margin-right: 20px;
     }
     p, h3, li, div, i, a, a:link {
       color: white;
@@ -462,54 +462,22 @@ footer {
     }
     .ui.list {
       height: auto;
-      border-left: 1px solid rgba(255, 255, 255, 0.7);
-      padding-left: 18px;
-      padding-right: 1.14rem;
-      margin-left: 1.26rem;
+      padding-right: 32px;
+      margin-left: 9px;
       margin-top: 1rem;
       color: #b1c0d3;
       font-size: 1.1rem;
       .content {
-        padding-left: 1em;
+        padding-left: 33px;
       } 
+      &:hover {
+        color: #8fbae4;
+      }
     }
   }
 }
 
 } // </VIEW>
-
-
-/* === RESPONSIVE : MOBILE === */
-
-// Width  100%
-// Gutter Size  1em
-// Variable  $largestMobileScreen
-// Device Width  below 768px
-
-
-/* === RESPONSIVE : TABLET === */
-
-// Width  723px
-// Gutter Size  Fluid
-// Variable  $mobileBreakpoint
-// Device Width   768px - 991px
-
-
-/* === RESPONSIVE : SMALL MONITOR === */
-
-// Width  933px
-// Gutter Size  Fluid
-// Variable  $smallMonitorBreakpoint
-// Device Width  992px - 1200px
-
-
-/* === RESPONSIVE : LARGER MONITOR === */
-
-// Width  1127px
-// Gutter Size  Fluid
-// Variable  $largeMonitorBreakpoint
-// Device Width  above 1200px
-
 
 
 
@@ -529,3 +497,325 @@ footer {
 .typed {
   color: #03a2ff;
 }
+
+
+
+/* === RESPONSIVE : LARGER MONITOR === */
+
+@media only screen and (max-width: @largeMonitorBreakpoint ) and (min-width: @computerBreakpoint) {
+
+// Width  1127px
+// Gutter Size  Fluid
+// Variable  $largeMonitorBreakpoint
+// Device Width  above 1200px
+
+#home .ui.grid.landing .ui.segments .segment:nth-child(even) {
+  font-size: 2em;
+}
+
+#home .swiper-container.footered {
+  height: 378px;
+}
+
+#home .swiper-container {
+  &.images, &.graphs {
+    .swiper-slide {
+      height: 378px !important;
+    }
+  }
+}
+
+
+#home .swiper-container .swiper-slide video,
+#home .swiper-container .swiper-slide img {
+  height: 300px !important;
+}
+
+#home #callout p {
+  width : 44%;
+}
+
+}
+
+
+/* === RESPONSIVE : SMALL MONITOR === */
+
+@media only screen and (max-width: @computerBreakpoint ) and (min-width: @tabletBreakpoint ) {
+
+// Width  933px
+// Gutter Size  Fluid
+// Variable  $smallMonitorBreakpoint
+// Device Width  992px - 1200px
+
+
+#home .ui.grid.landing .ui.segments .segment:nth-child(even) {
+  // font-size: 1.5em;
+}
+
+#home .swiper-container.footered {
+  height: 356px;
+  footer {
+    height: 80px;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+#home .swiper-container {
+  &.images, &.graphs {
+    .swiper-slide {
+      height: 356px !important;
+    }
+  }
+}
+
+#home .swiper-container .swiper-slide p {
+  white-space: normal;
+  width: 520px;
+}
+
+#home .swiper-container .swiper-slide {
+  video, img {
+    height: 280px !important;
+  }
+}
+
+#home #callout p {
+  width : 44%;
+}
+  
+}
+
+
+/* === RESPONSIVE : TABLET === */
+
+@media only screen and (max-width: @tabletBreakpoint ) and (min-width: @mobileBreakpoint ) {
+
+// Width  100%
+// Gutter Size  1em
+// Variable  $largestMobileScreen
+// Device Width  below 768px
+
+#home .ui.grid.landing .ui.image.logo {
+  margin-top: 14px;
+  margin-left: 18px; 
+}
+
+#starcluster {
+  display: none !important;
+}
+
+#home .ui.grid.landing>.column:not(.row),
+#home .ui.grid.landing>.row>.column {
+  position: absolute;
+  right: 0;
+}
+
+#home .ui.grid.landing>.column:nth-child(1) {
+  left: 0;
+}
+
+#home .sliders.wrapper {
+  padding: 0 16px;
+  padding-bottom: 3rem;
+}
+
+#home .sliders>.grid>h2 {
+  margin-bottom: 2rem;
+}
+
+.ui.stackable.grid:not(.vertically)>.row {
+  margin-top: 1.5rem;
+}
+
+#home #services .six.wide.column {
+  padding-left: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#home #services .description {
+  padding-left: 24px; 
+}
+
+#home #services h3.ui.header {
+    margin-bottom: 0px;
+    &:before {
+      position: relative;
+      top: -3px;
+      margin-right: 16px;
+    }
+}
+
+#home .sliders>.grid .ten.column {
+  border-top: none; 
+}
+
+#home #clients {
+  padding-bottom: 8px;
+  > .grid img {
+    transform: scale(1.5);
+    padding-bottom: 7px;
+  }
+
+  >.grid .row>.column>div {
+    margin-bottom: 6px;
+  }
+}
+
+#home #callout p {
+  width : 70%;
+}
+
+.footer {
+  padding-top: 2rem;
+  width: 100% !important;
+  margin-left: 0 !important;
+  transform: scale(.9);
+  &.ui[class*="four column"].grid>.column:not(.row),
+  &.ui[class*="four column"].grid>.row>.column {
+    width: 33.3%;
+  }
+}
+
+}
+
+
+/* === RESPONSIVE : MOBILE === */
+
+@media only screen and (max-width: 520px ) {
+
+// LANDING
+
+#home .ui.grid.landing>.column:not(.row),
+#home .ui.grid.landing>.row>.column {
+  margin-top: 0;
+}
+
+.ui.segment.bottom {
+  margin-top: 0;
+}
+
+#home .ui.grid.landing .ui.image.logo {
+  width: 67%;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+
+#home .ui.grid.landing .ui.segments .segment {
+  &:nth-child(odd) {
+    padding-bottom: 6px;
+    padding-top: 12px;
+  }
+  &:nth-child(even) {
+    font-size: 1.8em;
+    white-space: normal;
+    width: 87%;
+  }
+} 
+
+#home .ui.grid.landing .ui.segments.bottom .segment {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.ui.attached.inverted.menu {
+  display: none;
+}
+
+// SERVICES
+
+#home .sliders>.grid>h2 {
+  margin-bottom: 1rem;
+}
+
+#home .swiper-pagination,
+#home .swiper-pagination-text {
+  display: none;
+}
+
+#home .swiper-container.text .swiper-slide {
+  height: 70%;
+}
+
+#home .swiper-container {
+  height: 280px;
+}
+
+#home .swiper-container.footered {
+  height: 204px;
+  footer {
+    height: 36px;
+  }
+  h4 {
+    font-size: .5rem;
+  }
+  p {
+    display: none;
+  }
+}
+
+#home .swiper-container .swiper-slide footer.caption {
+    height: 39px;
+    h4 {
+      margin-bottom: -18px!important;
+    }
+}
+
+#home .swiper-container {
+  &.images, &.graphs {
+    .swiper-slide {
+      height: 204px !important;
+    }
+  }
+}
+
+#home .swiper-container .swiper-slide p {
+  white-space: normal;
+  width: 240px;
+}
+
+#home .swiper-container .swiper-slide {
+  video, img {
+    margin-top: -10px;
+    height: 180px !important;
+  }
+}
+
+// CLIENTS
+
+#home #clients h2 {
+  width: 80%; 
+}
+
+#home #clients>.grid .row > div:nth-child(n+3){
+  display: none;
+}
+
+#home #clients>.grid .row>.column {
+  width: 50%; 
+}
+
+#home #callout {
+  padding-bottom: 2em;
+}
+
+#home #callout p {
+  width : 90%;
+}
+
+// FOOTER
+
+#home > footer {
+  display: none;
+}
+
+}
+
+// Width  723px
+// Gutter Size  Fluid
+// Variable  $mobileBreakpoint
+// Device Width   768px - 991px

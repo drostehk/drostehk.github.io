@@ -98,11 +98,12 @@
 /* === BREAKPOINTS === */
 
 @mobileBreakpoint            : 320px;
-@tabletBreakpoint            : 768px;
+// @tabletBreakpoint            : 768px; // DEFAULT
+@tabletBreakpoint            : 992px;
 // @computerBreakpoint          : 992px; // DEFAULT
-@computerBreakpoint          : 1280px;
+@computerBreakpoint          : 1279px;
 // @largeMonitorBreakpoint      : 1200px; // DEFAULT
-@largeMonitorBreakpoint      : 1440px;
+@largeMonitorBreakpoint      : 1439px;
 @widescreenMonitorBreakpoint : 1920px;
 
 /* === SITE COLOURS === */
