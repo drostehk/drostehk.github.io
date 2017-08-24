@@ -345,7 +345,7 @@ body {
 #home .ui.button {
   z-index: 10;
   border-radius: 0;
-  padding-top: 2em;
+  padding-top: 1em;
   -webkit-box-shadow: 0 0 0 1px #fff inset!important;
           box-shadow: 0 0 0 1px #fff inset!important;
 }
@@ -440,7 +440,6 @@ body {
   background-size: cover;
 }
 #home #services .description {
-  height: 100%;
   border-left: 1px solid white;
   padding-left: 3.14rem;
   padding-right: 1.14rem;
@@ -464,12 +463,9 @@ body {
 }
 #home .sliders > .grid .column {
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 #home .sliders > .grid .ten.column {
   border-top: solid 1px white;
@@ -605,9 +601,6 @@ body {
 #home .swiper-container .swiper-slide video.tableau {
   top: -10px;
 }
-#home .swiper-container .swiper-slide video.runner {
-  margin-top: -5%;
-}
 #home .swiper-container .swiper-slide img {
   width: 100%;
   opacity: 1;
@@ -676,7 +669,7 @@ body {
           box-shadow: none;
 }
 #home #clients > .grid img {
-  max-height: 50%;
+  max-height: 55%;
   max-width: 65%;
 }
 #home #clients > .grid .row {
@@ -691,7 +684,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-height: 30em;
+  height: 30em;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -710,6 +703,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
+  max-height: 12em;
 }
 #home #callout {
   display: -webkit-box;
@@ -1109,11 +1103,6 @@ body {
   }
   #home #clients {
     padding-bottom: 8px;
-  }
-  #home #clients > .grid img {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-    padding-bottom: 7px;
   }
   #home #clients > .grid .row > .column > div {
     margin-bottom: 6px;
