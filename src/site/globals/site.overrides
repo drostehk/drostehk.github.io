@@ -149,7 +149,6 @@ h2.ui.header {
   }
 
   .description {
-    height: 100%;
     border-left: 1px solid white;
     padding-left: 3.14rem;
     padding-right: 1.14rem;
@@ -177,7 +176,10 @@ h2.ui.header {
     margin-bottom: 3rem;
   }
   .column {
-    display: flex;
+    // display: flex; // breaking safari
+    // chrome can use this - not sure about IE..?
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
     flex-direction: column;
   }
   .ten.column {
@@ -662,8 +664,8 @@ footer {
 #home #clients {
   padding-bottom: 8px;
   > .grid img {
-    transform: scale(1.5);
-    padding-bottom: 7px;
+    // transform: scale(1.5);
+    // padding-bottom: 7px;
   }
 
   >.grid .row>.column>div {
