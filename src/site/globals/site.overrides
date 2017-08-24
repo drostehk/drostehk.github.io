@@ -50,7 +50,7 @@ h2.ui.header {
 .ui.button {
     z-index: 10;
     border-radius: 0;
-    padding-top: 2em;
+    padding-top: 1em;
     box-shadow: 0 0 0 1px #fff inset!important;
     &:not(:last-child) {
       box-shadow: none!important;
