@@ -43,7 +43,7 @@ $(function () {
         speed: 450,
         loop: true,
 
-        autoplay: 5000,
+        // autoplay: 5000,
         autoplayDisableOnInteraction: true,
         spaceBetween: 0,
 
@@ -79,7 +79,7 @@ $(function () {
         speed: 450,
         loop: true,
 
-        autoplay: 6000,
+        // autoplay: 6000,
         autoplayDisableOnInteraction: true,
         spaceBetween: 0,
 
