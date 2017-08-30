@@ -299,22 +299,31 @@ h2.ui.header {
       white-space: nowrap;
     }
     video{
-      position: absolute;
+      position: relative;
       top:0;
+      width: auto;
       &.tableau{
         top:-10px;
       }
+    }
+    .center-video { // firefox does not do this automagically
+      position: absolute;
+      top: 0; bottom: 0; left: 0; right: 0;
+      margin: auto;
+      overflow: auto;
     }
     img {
       width: 100%;
       opacity: 1;
       position: absolute;
       top:0;
+      left:0; // for firefox
       height: 320px;
     }
     footer.caption {
       position: absolute;
       bottom:0;
+      left:0; // for firefox
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -531,7 +540,6 @@ footer {
     }
   }
 }
-
 
 #home .swiper-container .swiper-slide video,
 #home .swiper-container .swiper-slide img {
@@ -750,6 +758,7 @@ footer {
 
 #home .swiper-container {
   height: 280px;
+  width: 100%;
 }
 
 #home .swiper-container.footered {
