@@ -297,8 +297,11 @@ h2.ui.header {
     video{
       position: absolute;
       top:0;
-      &.tableau{
+      &.tableau {
         top:-10px;
+      }
+      &.runner {
+         margin-top:-5%;
       }
     }
     img {
