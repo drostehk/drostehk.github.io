@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.2.2 - Visit
+ * # Semantic UI 2.2.13 - Visit
  * http://github.com/semantic-org/semantic-ui/
  *
  *
