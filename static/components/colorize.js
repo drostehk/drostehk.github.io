@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.2.13 - Colorize
+ * # Semantic UI 2.2.2 - Colorize
  * http://github.com/semantic-org/semantic-ui/
  *
  *
