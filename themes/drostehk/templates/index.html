@@ -6,6 +6,10 @@
 
 {% block content %}
 
+  <!--[if lt IE 7]>
+  <h2 id="ie_msg" style="text-align:center;">Please upgrade Internet Explorer</h2>
+  <![endif]-->
+
   <!-- LANDING -->
   {% include 'landing.html' %}
 
@@ -22,4 +26,5 @@
   {% include 'js/swiper.js' %}
   {% include 'js/sparkline.js' %}
   {% include 'js/easter_eggs.js' %}
+  {% include 'js/ie_version.js' %}
 {% endblock js %}
