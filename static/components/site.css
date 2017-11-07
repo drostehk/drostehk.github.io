@@ -334,6 +334,9 @@ body {
 .wrapper {
   padding-top: 0 !important;
 }
+#home #starcluster {
+  zoom: 120%;
+}
 #home h2.ui.header {
   font-size: 2.6em;
   color: #8f2eda !important;
