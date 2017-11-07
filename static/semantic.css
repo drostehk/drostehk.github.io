@@ -1305,60 +1305,55 @@ body {
   padding-top: 25px;
 }
 
-#home #clients > .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 60px;
-  grid-auto-rows: minmax(12em, auto);
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-#home #clients > .container .col1 {
-  grid-column: 0.25;
-}
-
-#home #clients > .container .col2 {
-  grid-column: 0.5;
-}
-
-#home #clients > .container .col3 {
-  grid-column: 0.75;
-}
-
-#home #clients > .container .col4 {
-  grid-column: 1;
-}
-
-#home #clients > .container .row1 {
-  grid-row: 1;
-}
-
-#home #clients > .container .row2 {
-  grid-row: 2;
-}
-
-#home #clients > .container .row3 {
-  grid-row: 3;
-}
-
-#home #clients > .container .row4 {
-  grid-row: 4;
-}
-
 #home #clients > .grid {
   z-index: 1;
   background: white;
   -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 #home #clients > .grid img {
-  max-height: 100px;
+  max-height: 55%;
+  max-width: 65%;
+}
+
+#home #clients > .grid .row {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#home #clients > .grid .row > .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 30em;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#home #clients > .grid .row > .column > div {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 12em;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 #home #callout {
@@ -2031,31 +2026,20 @@ body {
     width: 80%;
   }
 
+  #home #clients > .grid .row > div:nth-child(n+3) {
+    display: none;
+  }
+
+  #home #clients > .grid .row > .column {
+    width: 50%;
+  }
+
   #home #callout {
     padding-bottom: 2em;
   }
 
   #home #callout p {
     width: 90%;
-  }
-
-  #home #clients .container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 15px;
-    grid-auto-rows: minmax(10em, auto);
-  }
-
-  #home #clients .container .col1 {
-    grid-column: 0.5;
-  }
-
-  #home #clients .container .col2 {
-    grid-column: 1;
-  }
-
-  #home #clients .container .col3,
-  #home #clients .container .col4 {
-    display: none;
   }
 
   #home > footer {
