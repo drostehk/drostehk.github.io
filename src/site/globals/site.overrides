@@ -436,6 +436,29 @@ h2.ui.header {
   }
 }
 
+// 2021 Override to fix the above
+#home #clients .ui.grid {
+    justify-content: space-evenly;
+}
+#home #clients .ui.grid > * {
+    height: 100px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+#home #clients > .grid img{
+    max-width: 20vw;
+    max-height: 100px;
+    padding: 20px;
+}
+
+
 // Call out
 
 #callout {
