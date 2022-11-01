@@ -5,8 +5,8 @@
   "main": "gulpfile.js",
   "dependencies": {
     "d3": "^4.10.0",
-    "gulp": "^3.9.1",
-    "semantic-ui": "^2.2.13",
+    "gulp": "^4.0.2",
+    "semantic-ui": "^2.5.0",
     "swiper": "^3.4.2"
   },
   "no-optional": "true",
